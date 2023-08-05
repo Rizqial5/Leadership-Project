@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using Leadership.Core;
+using UnityEngine;
+
+namespace Leadership.Management
+{
+    public class DoneMeeting : BaseState
+    {
+        protected MeetingSM _meetingSM;
+        public DoneMeeting(MeetingSM stateMachine) : base("DoneMeeting", stateMachine)
+        {
+            _meetingSM = (MeetingSM) stateMachine;
+        }
+
+        public override void UpdateLogic()
+        {
+            base.UpdateLogic();
+
+            // _meetingSM.GetLoadingText().SetActive(false);
+            _meetingSM.DestroySpawnMeeting();
+            _meetingSM.SetMeetingTotal(0) ;
+            _meetingSM.SetMeetingTime(0);
+            
+
+            if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().planState)
+            {
+                _meetingSM.ChangeState(_meetingSM.planMeetingState);
+            }
+
+           
+        }
+
+        
+    }
+}

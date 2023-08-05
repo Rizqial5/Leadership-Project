@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54852eac858bc474abcda625a836aca1, type: 3}
+  m_Name: Meeting Event 2
+  m_EditorClassIdentifier: 
+  meetingEventName: Kejadian tak terduga
+  meetingEventDescription: Pada saat ditengah meeting terdapat kejadian yang tak
+    terduga. Banyak anggota yang saling bantah membantah. Semakin lama ketegangan
+    meeting tersebut meningkat sehingga menimbulkan pertengkaran mulut yang tidak
+    sesuai dengan tujuan rapat. Apa yang anda lakukan ?
+  caseAnswers:
+  - nameDes: Berusaha untuk menengahi dan membelikan solusi
+    caseEffects:
+    - leadershipEnum: 0
+      effectAttribute: -5
+    - leadershipEnum: 2
+      effectAttribute: 5
+  - nameDes: Menghentikan rapat dan mencoba untuk mediasi orang yang terlibat
+    caseEffects:
+    - leadershipEnum: 3
+      effectAttribute: -5
+    - leadershipEnum: 0
+      effectAttribute: 5
+  - nameDes: Menyuruh pemimpin rapat untuk menyelesaikan permasalahan diluar dan
+      anda mengambil alih rapat.
+    caseEffects:
+    - leadershipEnum: 1
+      effectAttribute: -5
+    - leadershipEnum: 3
+      effectAttribute: 5

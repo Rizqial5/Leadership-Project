@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54852eac858bc474abcda625a836aca1, type: 3}
+  m_Name: Meeting Event 1
+  m_EditorClassIdentifier: 
+  meetingEventName: Sambutan Meeting
+  meetingEventDescription: Meeting sudah dimulai. Anda diberi kesempatan oleh pemimpin
+    meeting untuk melakukan sambutan kepada seluruh anggota meeting. apa yang ingin
+    kamu sampaikan ?
+  caseAnswers:
+  - nameDes: Memberikan sambutan yang berapi-api
+    caseEffects:
+    - leadershipEnum: 3
+      effectAttribute: 10
+    - leadershipEnum: 0
+      effectAttribute: 5
+    - leadershipEnum: 2
+      effectAttribute: 5
+    - leadershipEnum: 1
+      effectAttribute: 5
+  - nameDes: Memberikan sambutan yang santun
+    caseEffects:
+    - leadershipEnum: 0
+      effectAttribute: 10
+    - leadershipEnum: 1
+      effectAttribute: 5
+    - leadershipEnum: 2
+      effectAttribute: 5
+    - leadershipEnum: 3
+      effectAttribute: 5
+  - nameDes: Memberikan sambutan yang memotivasi
+    caseEffects:
+    - leadershipEnum: 1
+      effectAttribute: 10
+    - leadershipEnum: 0
+      effectAttribute: 5
+    - leadershipEnum: 2
+      effectAttribute: 5
+    - leadershipEnum: 3
+      effectAttribute: 5
