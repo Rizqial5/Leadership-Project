@@ -2,20 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 namespace Leadership.Attribute
 {
     public class AttributesMechanic : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI moneyText;
-        [SerializeField] AttributesSO attributesSO;
+        [SerializeField] OrganisationAttributesSO orgAttributesSO;
 
-        
-        public void AddAttributes()
+        void Update()
         {
-            attributesSO.Money += 10;
-            moneyText.text = attributesSO.Money.ToString();
+            // if(Input.GetKeyDown(KeyCode.M))
+            // {
+            //     AddAttributes(OrganisationEnum.Money,10);
+            //     moneyText.text = orgAttributesSO.GetOrgAttributes(OrganisationEnum.Money).ToString();
+            // }
+        }
+        public void AddAttributes(OrganisationEnum organisationEnum,float value)
+        {
+            orgAttributesSO.SetOrgAttributes(organisationEnum,value);
+        }
+
+        public void AddAllAttributes(float value)
+        {
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Activity,value);
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Money,value);
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Performance,value);
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Reputation,value);
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Unity ,value);
         }
     }
 }
