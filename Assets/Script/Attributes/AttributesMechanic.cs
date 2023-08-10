@@ -8,7 +8,6 @@ namespace Leadership.Attribute
 {
     public class AttributesMechanic : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI moneyText;
         [SerializeField] OrganisationAttributesSO orgAttributesSO;
 
         void Update()
@@ -22,6 +21,11 @@ namespace Leadership.Attribute
         public void AddAttributes(OrganisationEnum organisationEnum,float value)
         {
             orgAttributesSO.SetOrgAttributes(organisationEnum,value);
+        }
+
+        public void AddMoney()
+        {
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Money,25);
         }
 
         public void AddAllAttributes(float value)
