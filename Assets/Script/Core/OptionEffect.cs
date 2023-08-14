@@ -10,6 +10,7 @@ namespace Leadership.Core
     {
 
         [SerializeField] bool isAdded;
+        [SerializeField] DivisionEnum divisionEnum;
         Dictionary<LeadershipEnum,float> effectOption;
 
         
@@ -24,6 +25,12 @@ namespace Leadership.Core
                 isAdded = true;
             }
         }
+
+        public void SetDivisionEffect(DivisionEnum setDivisionEnum)
+        {
+            divisionEnum = setDivisionEnum;
+        }
+
 
         public void BuildLookup()
         {
@@ -43,7 +50,7 @@ namespace Leadership.Core
                 //Changed in the future just test
                 
                 
-                leadershipMechanic.AddEachMemberAttribute(item.Key,item.Value);
+                leadershipMechanic.AddEachMemberAttribute(divisionEnum,item.Key,item.Value);
                 print(item.Key + " Effect has been activated total " + item.Value);
             }
         }

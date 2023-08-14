@@ -55,7 +55,7 @@ public class DecisionEventUI : MonoBehaviour
        
     }
 
-    public void SpawnButton( string name, int i, float beda, CaseEffect[] caseEffect )
+    public void SpawnButton( string name, int i, float beda, CaseEffect[] caseEffect, DivisionEnum divisionEnum )
     {
         
 
@@ -65,6 +65,7 @@ public class DecisionEventUI : MonoBehaviour
 
         answerOption.GetComponentInChildren<TextMeshProUGUI>().text = name;
         answerOption.GetComponent<OptionEffect>().SetEffect(caseEffect);
+        answerOption.GetComponent<OptionEffect>().SetDivisionEffect(divisionEnum);
         
     }
 

@@ -10,7 +10,11 @@ namespace Leadership.Character
     [CreateAssetMenu(menuName = "Leadership Project/CharacterAttributesSO")]
     public class CharacterAttributesSO : ScriptableObject
     {
+        [SerializeField] string nameCharacter;
+        [SerializeField] DivisionEnum divisionEnum;
         [SerializeField] CharacterLeaderStats[] characterLeaderStatsTotal;
+        [SerializeField] int leadershpLevel;
+        
 
         Dictionary<LeadershipEnum, float> characterValueStatsTable;
 
@@ -32,6 +36,21 @@ namespace Leadership.Character
 
             return characterValueStatsTable[category];
 
+        }
+
+        public string GetNameCharacter()
+        {
+            return nameCharacter;
+        }
+
+        public DivisionEnum GetDivisionCharacter()
+        {
+            return divisionEnum;
+        }
+
+        public int GetLeadershipLevel()
+        {
+            return leadershpLevel;
         }
 
         public void AddStatValue(LeadershipEnum category, float value)

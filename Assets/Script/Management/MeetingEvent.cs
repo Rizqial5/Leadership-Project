@@ -10,6 +10,7 @@ namespace Leadership.Management
     {
         [SerializeField] MeetingEventSO[] meetingEvents;
         [SerializeField] DecisionEventUI decisionEventUI;
+        [SerializeField] DivisionEnum divisionEnum;
         [SerializeField] float waitTimeUntilEvents = 2f;
         [SerializeField] float beda = 1f;
 
@@ -18,17 +19,27 @@ namespace Leadership.Management
 
         private int i;
 
-        public IEnumerator StartEvent()
+        // public IEnumerator StartEvent()
+        // {
+        //     yield return new WaitForSeconds(waitTimeUntilEvents);
+
+            
+        //     // FindObjectOfType<LeaderTag>().gameObject.SetActive(false);
+
+        //     ShowMeetingEvent();
+        // }
+
+        public IEnumerator StartEvent(DivisionEnum setDivisionEnum)
         {
             yield return new WaitForSeconds(waitTimeUntilEvents);
 
             
             // FindObjectOfType<LeaderTag>().gameObject.SetActive(false);
 
-            ShowMeetingEvent();
+            ShowMeetingEvent(setDivisionEnum);
         }
 
-        public void ShowMeetingEvent()
+        public void ShowMeetingEvent(DivisionEnum setDivisionEnum)
         {
             // if(Input.GetKeyDown(KeyCode.Q))
             if(isDoneJoinMeeting == true) return;
@@ -47,7 +58,7 @@ namespace Leadership.Management
 
             foreach (AnswerCaseMeeting ansCase in answerCaseMeetings)
             {
-                decisionEventUI.SpawnButton(ansCase.GetNameDesc(),i,beda, ansCase.GetCaseEffects());
+                decisionEventUI.SpawnButton(ansCase.GetNameDesc(),i,beda, ansCase.GetCaseEffects(),setDivisionEnum);
                 i++;
             }
             i = 0;

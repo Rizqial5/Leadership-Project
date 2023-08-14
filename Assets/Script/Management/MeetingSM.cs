@@ -129,7 +129,7 @@ namespace Leadership.Management
             
             MeetingUI = Instantiate(statusGameobject,positionStatus.transform.position,positionStatus.transform.rotation,parentSpawn);
 
-            MeetingUI.GetComponentInChildren<Button>().onClick.AddListener(() => StartCoroutine(meetingEvent.StartEvent()));
+            MeetingUI.GetComponentInChildren<Button>().onClick.AddListener(() => StartCoroutine(meetingEvent.StartEvent(manageDB.GetDivisionEnum())));
             MeetingUI.GetComponent<SpawnDescChanger>().SetDivisionEnum(manageDB.GetDivisionEnum());
             
         }

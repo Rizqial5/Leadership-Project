@@ -63,6 +63,20 @@ namespace Leadership.Core
             }
 
         }
+
+        public void AddEachMemberAttribute(DivisionEnum divisionEnum,LeadershipEnum category, float value)
+        {
+
+            for (int i = 0; i < totalChacracter.Length; i++)
+            {
+                if(totalChacracter[i].GetDivisionCharacter() != divisionEnum) continue;
+                totalChacracter[i].AddStatsCharacter(category, value);
+                // print("bsia");
+            }
+
+        }
+
+
      
        
 

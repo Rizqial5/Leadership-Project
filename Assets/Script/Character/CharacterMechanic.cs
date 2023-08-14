@@ -19,5 +19,15 @@ namespace Leadership.Character
         {
             characterAttributes.AddStatValue(leadershipEnum,value);
         }
+
+        public string GetNameCharacter()
+        {
+            return characterAttributes.GetNameCharacter();
+        }
+
+        public DivisionEnum GetDivisionCharacter()
+        {
+            return characterAttributes.GetDivisionCharacter();
+        }
     }
 }

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea84dd52b06e8c7418c433aa31793f75, type: 3}
   m_Name: Character B
   m_EditorClassIdentifier: 
+  nameCharacter: Rizqial
+  divisionEnum: 0
   characterLeaderStatsTotal:
   - category: 0
     value: 50
@@ -21,3 +23,4 @@ MonoBehaviour:
     value: 50
   - category: 3
     value: 50
+  leadershpLevel: 0
