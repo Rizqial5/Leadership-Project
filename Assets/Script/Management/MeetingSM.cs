@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leadership.Core;
 using Leadership.UI;
+using Leadership.Attribute;
 using UnityEngine.UI;
 
 namespace Leadership.Management
@@ -17,6 +18,8 @@ namespace Leadership.Management
         [SerializeField] GameObject statusLeaderUI;
         [SerializeField] MeetingEvent meetingEvent;
         [SerializeField] DecisionEventUI decisionEventUI;
+        
+        
 
         [HideInInspector] public BeginMeeting beginMeetingState;
         [HideInInspector] public PlanMeeting planMeetingState;
@@ -29,6 +32,7 @@ namespace Leadership.Management
         private Manage manageDB;
         private int startMeetingDate;
         private GameObject MeetingUI;
+        private AttributesMechanic attributesMechanic;
         
         
 
@@ -45,6 +49,7 @@ namespace Leadership.Management
 
             meetingSystem = FindObjectOfType<MeetingSystem>();
             manageDB = GetComponent<Manage>();
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();
 
  
         }
@@ -93,6 +98,10 @@ namespace Leadership.Management
             return meetingEvent;
         }
 
+        public AttributesMechanic AttributesMechanic()
+        {
+            return attributesMechanic;
+        }
     
 
         private void OnGUI() 

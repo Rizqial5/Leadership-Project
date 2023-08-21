@@ -25,7 +25,7 @@ namespace Leadership.Attribute
 
         public void AddMoney()
         {
-            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Money,25);
+            orgAttributesSO.SetOrgAttributes(OrganisationEnum.Money,10);
         }
 
         public void AddAllAttributes(float value)

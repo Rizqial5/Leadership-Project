@@ -13,6 +13,11 @@ namespace Leadership.Management
             _meetingSM = (MeetingSM) stateMachine;
         }
 
+        public override void Enter()
+        {
+            _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Activity,5);
+            _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Performance,5);
+        }
         public override void UpdateLogic()
         {
             base.UpdateLogic();
@@ -21,6 +26,7 @@ namespace Leadership.Management
             _meetingSM.DestroySpawnMeeting();
             _meetingSM.SetMeetingTotal(0) ;
             _meetingSM.SetMeetingTime(0);
+            
             
 
             if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().planState)
