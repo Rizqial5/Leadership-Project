@@ -10,10 +10,11 @@ namespace Leadership.Core
     public class LeadershipMechanic : MonoBehaviour
     {
         [SerializeField] LeadershipAttributesSO leadershipAttributes;
+        
 
         [SerializeField] CharacterMechanic[] totalChacracter;
         [SerializeField] Text trustNumber;
-        
+        [SerializeField] int levelNow;
 
         private float[] totalAllMemberRelation;
 
@@ -25,7 +26,7 @@ namespace Leadership.Core
             
             if(Input.GetKeyDown(KeyCode.Z))
             {
-                CalculateAttributeRate(LeadershipEnum.Influence);
+                AddAllMemberAttribute(50);
             }
             
 
@@ -50,6 +51,8 @@ namespace Leadership.Core
                 leadershipAttributes.SetLeadershipAttributes(category, averageTrust);
 
         }
+
+        
 
 
         //Change in the future
@@ -76,8 +79,22 @@ namespace Leadership.Core
 
         }
 
+        //Testing Function----------------------------------------------
+        public void AddAllMemberAttribute(float value)
+        {
 
-     
+            for (int i = 0; i < totalChacracter.Length; i++)
+            {
+                totalChacracter[i].AddStatsCharacter(LeadershipEnum.Relation, value);
+                totalChacracter[i].AddStatsCharacter(LeadershipEnum.Influence, value);
+                totalChacracter[i].AddStatsCharacter(LeadershipEnum.Trust, value);
+                totalChacracter[i].AddStatsCharacter(LeadershipEnum.Morale, value);
+                // print("bsia");
+            }
+
+        }
+
+        
        
 
     

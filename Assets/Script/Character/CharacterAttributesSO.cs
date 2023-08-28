@@ -38,6 +38,12 @@ namespace Leadership.Character
 
         }
 
+        public Dictionary<LeadershipEnum,float> GetAllStat()
+        {
+            BuildLookupTable();
+            return characterValueStatsTable;
+        }
+
         public string GetNameCharacter()
         {
             return nameCharacter;
@@ -56,7 +62,7 @@ namespace Leadership.Character
         public void AddStatValue(LeadershipEnum category, float value)
         {
             BuildLookupTable();
-
+            if(characterValueStatsTable[category] >= 500) return;
             characterValueStatsTable[category] += value;
         }
 

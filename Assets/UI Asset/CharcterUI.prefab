@@ -2477,3 +2477,4 @@ MonoBehaviour:
   relationAttribute: {fileID: 1067869449743457286}
   influenceAttribute: {fileID: 2840827514482978079}
   moraleAttribute: {fileID: 1830814952295761874}
+  leadershipLevels: {fileID: 3363915255354959717}

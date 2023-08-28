@@ -17,6 +17,8 @@ namespace Leadership.Character
         [SerializeField] public TextMeshProUGUI influenceAttribute;
         [SerializeField] public TextMeshProUGUI moraleAttribute;
 
+        [SerializeField] public TextMeshProUGUI leadershipLevels;
+
         public void CloseUI()
         {
             gameObject.SetActive(false);
