@@ -12,3 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1157d38093b978046a82c2e1af5c6922, type: 3}
   m_Name: LeadershipProgression
   m_EditorClassIdentifier: 
+  progressionLeadershipLevels:
+  - levelLeadership: 1
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 50
+    - leadershipEnum: 1
+      requirementStat: 50
+    - leadershipEnum: 2
+      requirementStat: 50
+    - leadershipEnum: 3
+      requirementStat: 50
+  - levelLeadership: 2
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 120
+    - leadershipEnum: 1
+      requirementStat: 100
+    - leadershipEnum: 2
+      requirementStat: 100
+    - leadershipEnum: 3
+      requirementStat: 100
+  - levelLeadership: 3
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 200
+    - leadershipEnum: 1
+      requirementStat: 200
+    - leadershipEnum: 2
+      requirementStat: 200
+    - leadershipEnum: 3
+      requirementStat: 220
+  - levelLeadership: 4
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 300
+    - leadershipEnum: 1
+      requirementStat: 320
+    - leadershipEnum: 2
+      requirementStat: 300
+    - leadershipEnum: 3
+      requirementStat: 300
+  - levelLeadership: 5
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 500
+    - leadershipEnum: 1
+      requirementStat: 500
+    - leadershipEnum: 2
+      requirementStat: 500
+    - leadershipEnum: 3
+      requirementStat: 500

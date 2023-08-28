@@ -4975,6 +4975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterAttributes: {fileID: 11400000, guid: 9d820155717c9d447909a9384cc72332, type: 2}
+  leadershipProgression: {fileID: 11400000, guid: d28fd4def187d074484055406f47e32d, type: 2}
+  levelLeadNow: 1
 --- !u!212 &394551107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6878,6 +6880,7 @@ MonoBehaviour:
   leadershipAttributes: {fileID: 11400000, guid: 488c7397882860545bf42f6311d913eb, type: 2}
   totalChacracter: []
   trustNumber: {fileID: 993013210}
+  levelNow: 0
 --- !u!4 &570671798
 Transform:
   m_ObjectHideFlags: 0
@@ -8257,6 +8260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterAttributes: {fileID: 11400000, guid: 3923c8cde09cff14d85b6bceb38cd098, type: 2}
+  leadershipProgression: {fileID: 11400000, guid: d28fd4def187d074484055406f47e32d, type: 2}
+  levelLeadNow: 1
 --- !u!95 &676608764
 Animator:
   serializedVersion: 3
