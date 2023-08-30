@@ -24,7 +24,7 @@ namespace Leadership.UI
     private Vector3 positionSpawn;
 
     private string meetingNameTemp;
-    private int startMeetingTemp;
+    private int startMeetingDayTemp;
     private int totalObject;
     private DivisionEnum divisionEnumTemp;
 
@@ -48,7 +48,7 @@ namespace Leadership.UI
             }
 
 
-            startMeetingTemp = meetingSystem.startTimeTemp;
+            startMeetingDayTemp = meetingSystem.startDayTemp;
             meetingNameTemp = meetingSystem.meetingCategoryTemp;
             divisionEnumTemp = meetingSystem.DivisionEnum;
 
@@ -65,8 +65,8 @@ namespace Leadership.UI
         
             ColourBehaviour();
             spawnObject.GetComponent<TextMeshProUGUI>().text = meetingNameTemp;
-            spawnObject.GetComponentInChildren<ChildrenTag>().startMeetingTime = startMeetingTemp;
-            spawnObject.GetComponentInChildren<ChildrenTag>().GetComponent<TextMeshProUGUI>().text = "Day " + startMeetingTemp ;
+            spawnObject.GetComponentInChildren<ChildrenTag>().startMeetingDay = startMeetingDayTemp;
+            spawnObject.GetComponentInChildren<ChildrenTag>().GetComponent<TextMeshProUGUI>().text = "Day " + startMeetingDayTemp ;
             spawnObject.GetComponent<SpawnOutlinerTag>().divisionName = divisionEnumTemp.ToString();
 
 
@@ -114,10 +114,10 @@ namespace Leadership.UI
         
         for (int i = 0; i < spawnCount.Length; i++)
         {
-            int meetStartTime = spawnCount[i].GetComponentInChildren<ChildrenTag>().startMeetingTime;
+            int meetStartDay = spawnCount[i].GetComponentInChildren<ChildrenTag>().startMeetingDay;
             
            
-            if(meetingSystem.GetCalenderTime() > meetStartTime)
+            if(meetingSystem.GetCalenderTime() > meetStartDay)
             {
                 Destroy(spawnCount[i].gameObject);
             }

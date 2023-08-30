@@ -117,7 +117,7 @@ namespace Leadership.Management
 
         public int StartMeeting()
         {
-            startMeetingDate = manageDB.startMeeting;
+            startMeetingDate = manageDB.startMeetingDay;
 
             return startMeetingDate;
         }
@@ -165,7 +165,7 @@ namespace Leadership.Management
 
         public void PrintCurrentState()
         {
-            stateNow = manageDB.startMeeting.ToString();
+            stateNow = manageDB.startMeetingDay.ToString();
         }
 
         public int GetMeetingTotal()
@@ -174,7 +174,7 @@ namespace Leadership.Management
         }
         public int SetMeetingTime(int value)
         {
-            return manageDB.startMeeting = 0;
+            return manageDB.startMeetingDay = 0;
         }
         public int SetMeetingTotal(int value)
         {

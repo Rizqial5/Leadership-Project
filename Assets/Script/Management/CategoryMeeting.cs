@@ -9,10 +9,10 @@ namespace Leadership.Management
     {
         // Start is called before the first frame update
         [SerializeField] CategoryMeetingEnum categoryMeeting;
-        [SerializeField] int startMeetingTime;
+        [SerializeField] int startMeetingDay;
         [SerializeField] string DescMeeting;
         [SerializeField] TextMeshProUGUI DescText;
-        [SerializeField] TextMeshProUGUI startMeetingTtimeText;
+        [SerializeField] TextMeshProUGUI startMeetingDayText;
         [SerializeField] TextMeshProUGUI EffectText;
         
         private MeetingSystem meetingSystem;
@@ -27,18 +27,18 @@ namespace Leadership.Management
 
             //Effect Desc Change
             //EffectText.text = effectMeeting
-            startMeetingTtimeText.text = "Day " + startMeetingTime.ToString();
+            startMeetingDayText.text = "Day " + startMeetingDay.ToString();
         }
 
-        public string GetStartMeeting()
+        public string GetStartMeetingDay()
         {
-            return startMeetingTime.ToString();
+            return startMeetingDay.ToString();
         }
 
         public void MakePlan()
         {
            meetingSystem = FindObjectOfType<MeetingSystem>();
-           meetingSystem.startTimeTemp = startMeetingTime;
+           meetingSystem.startDayTemp = startMeetingDay;
            meetingSystem.meetingCategoryTemp = categoryMeeting.ToString();
         }
 

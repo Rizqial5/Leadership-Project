@@ -79,7 +79,7 @@ namespace Leadership.Management
             {
                 if(item.GetDivisionEnum() == name)
                 {
-                    item.startMeeting += number;
+                    item.startMeetingDay += number;
                 }
             }
 

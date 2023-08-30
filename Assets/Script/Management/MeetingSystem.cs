@@ -17,10 +17,9 @@ namespace Leadership.Management
         
 
 
-        private float timerMeeting;
-        private int startMeeting ;
-        private bool meetingStart;
-        private int startTimeSementara;
+        
+        
+        private int startDaySementara;
         private int meetingGoingCount;
         private string meetingCategoryNameTemp;
         private string meetingCategoryName;
@@ -94,9 +93,9 @@ namespace Leadership.Management
             
         }
 
-        public int startTimeTemp
+        public int startDayTemp
         {
-            get{return startTimeSementara;} set{startTimeSementara = value;}
+            get{return startDaySementara;} set{startDaySementara = value;}
         }
 
         public string meetingCategoryTemp
@@ -122,7 +121,7 @@ namespace Leadership.Management
             
             _manageDatabase.SetMeetingCount(_divisionEnum, 1);
             
-            _manageDatabase.SetStartMeetingDate(_divisionEnum,startTimeTemp);
+            _manageDatabase.SetStartMeetingDate(_divisionEnum,startDayTemp);
            
             meetingCategoryName = meetingCategoryNameTemp;
 

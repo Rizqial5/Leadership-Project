@@ -7,7 +7,7 @@ public class ChildrenTag : MonoBehaviour
 {
 
     private string textEffect;
-    [SerializeField] private int _startMeetingTime;
+    [SerializeField] private int _startMeetingDay;
 
     
     public string ChangeTextEffect(string value)
@@ -15,8 +15,8 @@ public class ChildrenTag : MonoBehaviour
         return GetComponent<TextMeshProUGUI>().text = value;
     }
 
-    public int startMeetingTime
+    public int startMeetingDay
     {
-        get{return _startMeetingTime;} set{_startMeetingTime = value;}
+        get{return _startMeetingDay;} set{_startMeetingDay = value;}
     }
 }

@@ -121,7 +121,7 @@ namespace Leadership.Management
             get{return meetingCountTotal;} set{meetingCountTotal = value;}
         }
 
-        public int startMeeting
+        public int startMeetingDay
         {
             get{return startMeetingDate;} set{startMeetingDate = value;}
         }
