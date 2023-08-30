@@ -11,6 +11,7 @@ namespace Leadership.Core
     {
 
         private float turnTime;
+        private float timeInADay;
         private int calenderTime = 1;
         private bool isPlay = false;
 
@@ -23,6 +24,8 @@ namespace Leadership.Core
         [SerializeField] TextMeshProUGUI SpeedModText;
 
         [SerializeField] TextMeshProUGUI calenderTimeText ;
+        [SerializeField] Text TimeDayText;
+        
         
 
       
@@ -48,7 +51,7 @@ namespace Leadership.Core
                 speedModifier -= 2f;
             }
            
-
+            
             // if (!isPlay) return;
 
             // turnTime += Time.deltaTime * SpeedModifier;
@@ -73,6 +76,7 @@ namespace Leadership.Core
 
             SpeedModText.text = speedModifier.ToString();
             calenderTimeText.text = calenderTime.ToString();
+            TimeDayText.text = timeInADay.ToString();
 
             
 
@@ -115,6 +119,21 @@ namespace Leadership.Core
         public float SpeedModifier
         {
             get{return speedModifier;} set{speedModifier =value;}
+        }
+
+        public float ChangeTimeADay( float value)
+        {
+            return timeInADay += value;
+        }
+
+        public float GetTimeDay()
+        {
+            return timeInADay;
+        }
+
+        public float SetTimeDay(float value)
+        {
+            return timeInADay = value;
         }
 
         
