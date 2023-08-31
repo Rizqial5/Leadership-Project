@@ -73,13 +73,15 @@ namespace Leadership.Management
             return 0;
         }
 
-        public int SetStartMeetingDate(DivisionEnum name, int number)
+        public int SetStartMeetingDate(DivisionEnum name, int dayMeeting, int timeMeeting)
         {
             foreach (Manage item in totalInteractionRooms)
             {
                 if(item.GetDivisionEnum() == name)
                 {
-                    item.startMeetingDay += number;
+                    item.startMeetingDay = dayMeeting;
+                    item.startMeetingTime = timeMeeting;
+                    print(timeMeeting);
                 }
             }
 

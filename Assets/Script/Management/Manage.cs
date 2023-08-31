@@ -22,6 +22,7 @@ namespace Leadership.Management
 
         private int meetingCountTotal;
         private int startMeetingDate;
+        
         private string statusNow;
 
         //Mengatur apakah leader join meeting
@@ -33,8 +34,7 @@ namespace Leadership.Management
         private Color colorTextSementara;
         private SpriteRenderer spriteImage;
         private RoomDesc roomNameDesc;
-        
-       
+        private int startTimeMeeting;
 
         private void Awake() 
         {
@@ -124,6 +124,11 @@ namespace Leadership.Management
         public int startMeetingDay
         {
             get{return startMeetingDate;} set{startMeetingDate = value;}
+        }
+
+        public int startMeetingTime
+        {
+            get{return startTimeMeeting;} set{startTimeMeeting = value;}
         }
 
         public int GetMeetingLimit()

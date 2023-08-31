@@ -24,9 +24,17 @@ namespace Leadership.Management
         {
             base.UpdateLogic();
 
-            if(_meetingSM.GetMeetingSystem().GetCalenderTime() > _meetingSM.StartMeeting()  )
+            // if(_meetingSM.GetMeetingSystem().GetCalenderTime() > _meetingSM.StartMeeting()  )
+            // {
+            //     _meetingSM.ChangeState(_meetingSM.doneMeetingState);
+            // }
+
+            //Start Time Mechanic Changes
+
+            if(_meetingSM.GetStartMeetingTime() < _meetingSM.GetMeetingSystem().GetStartMeetingNow())
             {
                 _meetingSM.ChangeState(_meetingSM.doneMeetingState);
+                _meetingSM.PrintString("bisa");
             }
 
             if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().pauseState)

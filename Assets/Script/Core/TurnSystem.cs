@@ -11,7 +11,7 @@ namespace Leadership.Core
     {
 
         private float turnTime;
-        private float timeInADay;
+        private int timeInADay;
         private int calenderTime = 1;
         private bool isPlay = false;
 
@@ -121,17 +121,17 @@ namespace Leadership.Core
             get{return speedModifier;} set{speedModifier =value;}
         }
 
-        public float ChangeTimeADay( float value)
+        public int ChangeTimeADay( int value)
         {
             return timeInADay += value;
         }
 
-        public float GetTimeDay()
+        public int GetTimeDay()
         {
             return timeInADay;
         }
 
-        public float SetTimeDay(float value)
+        public float SetTimeDay(int value)
         {
             return timeInADay = value;
         }

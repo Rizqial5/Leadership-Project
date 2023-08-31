@@ -40,7 +40,7 @@ namespace Leadership.Core
                 
                
             }
-            if (_gameSM.turnSystem.GetTimeDay() > 3f)
+            if (_gameSM.turnSystem.GetTimeDay() == 4)
             {
                 _gameSM.turnSystem.SetTimeDay(1);
                 _gameSM.turnSystem.CalenderTime += 1;

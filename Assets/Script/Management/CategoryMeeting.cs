@@ -13,12 +13,20 @@ namespace Leadership.Management
         [SerializeField] string DescMeeting;
         [SerializeField] TextMeshProUGUI DescText;
         [SerializeField] TextMeshProUGUI startMeetingDayText;
+        [SerializeField] TextMeshProUGUI startMeetingTimeText;
         [SerializeField] TextMeshProUGUI EffectText;
         
         private MeetingSystem meetingSystem;
         private string effectMeeting;
-
         
+        void Awake()
+        {
+            meetingSystem = FindObjectOfType<MeetingSystem>();
+        }
+        void Update()
+        {
+            startMeetingTimeText.text = meetingSystem.GetStartMeetingTime().ToString();
+        }
 
         public void ShowPlan()
         {
@@ -27,7 +35,7 @@ namespace Leadership.Management
 
             //Effect Desc Change
             //EffectText.text = effectMeeting
-            startMeetingDayText.text = "Day " + startMeetingDay.ToString();
+            startMeetingDayText.text = startMeetingDay.ToString();
         }
 
         public string GetStartMeetingDay()
@@ -37,10 +45,13 @@ namespace Leadership.Management
 
         public void MakePlan()
         {
-           meetingSystem = FindObjectOfType<MeetingSystem>();
+           
            meetingSystem.startDayTemp = startMeetingDay;
            meetingSystem.meetingCategoryTemp = categoryMeeting.ToString();
+           
         }
+
+       
 
         
     }

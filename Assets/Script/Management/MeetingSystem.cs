@@ -13,6 +13,7 @@ namespace Leadership.Management
         
         [SerializeField] TurnSystem turnSystem;
         
+        
 
         
 
@@ -20,7 +21,8 @@ namespace Leadership.Management
         
         
         private int startDaySementara;
-        private int meetingGoingCount;
+        private int startMeetingTime;
+        private int startMeetingTemp;
         private string meetingCategoryNameTemp;
         private string meetingCategoryName;
         private SpawnObject[] statusMeetingUI;
@@ -97,7 +99,7 @@ namespace Leadership.Management
         {
             get{return startDaySementara;} set{startDaySementara = value;}
         }
-
+        
         public string meetingCategoryTemp
         { 
             get{return meetingCategoryNameTemp;} set{meetingCategoryNameTemp = value;}
@@ -107,6 +109,7 @@ namespace Leadership.Management
         {
             return turnSystem.CalenderTime;
         }
+        
 
         public DivisionEnum DivisionEnum
         {
@@ -118,10 +121,12 @@ namespace Leadership.Management
         public void MeetingPlan()
         {
             if(meetingCategoryNameTemp == null) return;
+            if(IsMeetingFull()) return;
+            if(startMeetingTime == 0) return;
             
             _manageDatabase.SetMeetingCount(_divisionEnum, 1);
             
-            _manageDatabase.SetStartMeetingDate(_divisionEnum,startDayTemp);
+            _manageDatabase.SetStartMeetingDate(_divisionEnum,startDayTemp,startMeetingTime);
            
             meetingCategoryName = meetingCategoryNameTemp;
 
@@ -173,6 +178,32 @@ namespace Leadership.Management
             //function untuk apabila dipencet maka leader join rapat sesuai divisi yang mengadakan
             statusLeader.SetActive(true);
             
+        }
+
+
+//Meeting Time Mechanuc
+        public void SelectTime(int value)
+        {
+            if(value == -1)
+            {
+                if(startMeetingTime == 0) return;
+            }
+            else if(value == 1)
+            {
+                if(startMeetingTime == 3) return;
+            }
+
+            startMeetingTime += value;
+        }
+
+        public int GetStartMeetingTime()
+        {
+            return startMeetingTime;
+        }
+
+        public int GetStartMeetingNow()
+        {
+            return turnSystem.GetTimeDay();
         }
 
         

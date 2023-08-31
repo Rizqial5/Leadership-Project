@@ -31,7 +31,7 @@ namespace Leadership.Management
         private GameObject loadingText;
         private Manage manageDB;
         private int startMeetingDate;
-        private GameObject MeetingUI;
+        private GameObject MeetingUI; 
         private AttributesMechanic attributesMechanic;
         
         
@@ -218,6 +218,12 @@ namespace Leadership.Management
         {
             return decisionEventUI.gameObject.activeSelf ;
             
+        }
+
+        //Start Meeting Mechanic
+        public int GetStartMeetingTime()
+        {
+            return manageDB.startMeetingTime;
         }
 
         

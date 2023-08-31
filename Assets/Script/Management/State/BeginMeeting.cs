@@ -49,18 +49,26 @@ namespace Leadership.Management
 
             if(_meetingSM.GetMeetingTotal() == 0) return;
             
-            _meetingSM.GetStatusScript().ChangeStatus("Prepare Meeting");
+            
             _meetingSM.StillPoisiton();
 
             _meetingSM.ShowStatusLeader();
             
-
+            //dimodifikasi untuk sesuai dengan starttime terus jika harinya sama maka diganti prepare meeting
             if(_meetingSM.GetMeetingSystem().GetCalenderTime() == _meetingSM.StartMeeting())
             {
-                
-                _meetingSM.ChangeState(_meetingSM.startMeetingState);
+                _meetingSM.GetStatusScript().ChangeStatus("Prepare Meeting");
+
+                if(_meetingSM.GetStartMeetingTime() == _meetingSM.GetMeetingSystem().GetStartMeetingNow())
+                {
+                    _meetingSM.ChangeState(_meetingSM.startMeetingState);
+                }
+
+                // _meetingSM.ChangeState(_meetingSM.startMeetingState);
                 
             } 
+
+            
 
             
             
