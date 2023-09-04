@@ -10,12 +10,13 @@ namespace Leadership.Character
         [HideInInspector] public FreeState freeState;
         [HideInInspector] public WorkState workState;
 
-        private MovementSM _movementSM;
+        private GameSM _gameSM;
         private void Awake() 
         {
             freeState = new FreeState(this);
             workState = new WorkState(this);
-            _movementSM = GetComponent<MovementSM>();
+
+            _gameSM = FindObjectOfType<GameSM>();
         }
 
         protected override BaseState GetInitialState()
