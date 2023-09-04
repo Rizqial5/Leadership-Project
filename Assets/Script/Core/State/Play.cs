@@ -37,6 +37,7 @@ namespace Leadership.Core
             {
                 _gameSM.turnSystem.TurnTime  = 0f;
                 _gameSM.turnSystem.ChangeTimeADay(1);
+                _gameSM.turnSystem.OnChangeTime.Invoke();
                 
                
             }

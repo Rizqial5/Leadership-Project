@@ -27,11 +27,12 @@ namespace Leadership.UI
     private int startMeetingDayTemp;
     private int totalObject;
     private DivisionEnum divisionEnumTemp;
+    private int startTimeTemp;
 
-    // Start is called before the first frame update
+        // Start is called before the first frame update
 
-    
-    void Start()
+
+        void Start()
     {
         meetingSystem = FindObjectOfType<MeetingSystem>();
 
@@ -51,6 +52,7 @@ namespace Leadership.UI
             startMeetingDayTemp = meetingSystem.startDayTemp;
             meetingNameTemp = meetingSystem.meetingCategoryTemp;
             divisionEnumTemp = meetingSystem.DivisionEnum;
+            startTimeTemp = meetingSystem.GetStartMeetingTime();
 
             spawnCount = FindObjectsOfType<SpawnOutlinerTag>();
 
@@ -66,7 +68,8 @@ namespace Leadership.UI
             ColourBehaviour();
             spawnObject.GetComponent<TextMeshProUGUI>().text = meetingNameTemp;
             spawnObject.GetComponentInChildren<ChildrenTag>().startMeetingDay = startMeetingDayTemp;
-            spawnObject.GetComponentInChildren<ChildrenTag>().GetComponent<TextMeshProUGUI>().text = "Day " + startMeetingDayTemp ;
+             spawnObject.GetComponentInChildren<ChildrenTag>().startTime = startTimeTemp;
+            spawnObject.GetComponentInChildren<ChildrenTag>().GetComponent<TextMeshProUGUI>().text = "Day " + startMeetingDayTemp + " Time " + startTimeTemp ; //diganti
             spawnObject.GetComponent<SpawnOutlinerTag>().divisionName = divisionEnumTemp.ToString();
 
 
@@ -115,9 +118,12 @@ namespace Leadership.UI
         for (int i = 0; i < spawnCount.Length; i++)
         {
             int meetStartDay = spawnCount[i].GetComponentInChildren<ChildrenTag>().startMeetingDay;
-            
+            //time mechanci
+            int startTimeDay = spawnCount[i].GetComponentInChildren<ChildrenTag>().startTime;
            
-            if(meetingSystem.GetCalenderTime() > meetStartDay)
+            if(meetingSystem.GetCalenderTime() != meetStartDay ) return;
+
+            if(meetingSystem.GetStartMeetingNow() > startTimeDay)
             {
                 Destroy(spawnCount[i].gameObject);
             }

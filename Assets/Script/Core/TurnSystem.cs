@@ -17,6 +17,7 @@ namespace Leadership.Core
 
         public UnityEvent OnChangeDays;
         public UnityEvent OnChangeWeek;
+        public UnityEvent OnChangeTime;
 
 
         [SerializeField] float speedModifier = 2f;
