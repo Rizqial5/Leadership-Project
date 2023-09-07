@@ -8,7 +8,7 @@ namespace Leadership.Character
     public class ComradeState : BaseState
     {
         protected StatusPlayerSM _statusSM;
-        public ComradeState(StatusPlayerSM stateMachine) : base("ComradeState", stateMachine)
+        public ComradeState(StatusPlayerSM stateMachine) : base("Comrade", stateMachine)
         {
             _statusSM = (StatusPlayerSM) stateMachine;
         }

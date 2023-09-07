@@ -8,7 +8,7 @@ namespace Leadership.Character
     public class GoldenState : BaseState
     {
         protected StatusPlayerSM _statusSM;
-        public GoldenState(StatusPlayerSM stateMachine) : base("GoldenState", stateMachine)
+        public GoldenState(StatusPlayerSM stateMachine) : base("Golden", stateMachine)
         {
             _statusSM = (StatusPlayerSM) stateMachine;
         }

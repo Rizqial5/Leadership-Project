@@ -73,5 +73,10 @@ namespace Leadership.Character
         {
             return levelLeadNow;
         }
+
+        public bool IsLevelUp
+        {
+            get{return isLevelUp;} set{isLevelUp = value;}
+        }
     }
 }

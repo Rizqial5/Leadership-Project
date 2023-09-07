@@ -19,6 +19,8 @@ namespace Leadership.Character
 
         [SerializeField] public TextMeshProUGUI leadershipLevels;
 
+        [SerializeField] public TextMeshProUGUI statusState;
+
         public void CloseUI()
         {
             gameObject.SetActive(false);

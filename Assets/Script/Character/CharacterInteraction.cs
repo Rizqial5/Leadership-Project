@@ -36,6 +36,7 @@ namespace Leadership.Character
             characterUI.moraleAttribute.text = characterAttributesSO.GetStatValue(Attribute.LeadershipEnum.Morale).ToString();
 
             characterUI.leadershipLevels.text = GetComponent<CharacterMechanic>().GetLevelLead().ToString();
+            characterUI.statusState.text = GetComponent<StatusPlayerSM>().GetCurentStatusStateText();
 
                 
                 

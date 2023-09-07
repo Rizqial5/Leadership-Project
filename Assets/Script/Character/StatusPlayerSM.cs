@@ -36,6 +36,23 @@ namespace Leadership.Character
         {
             return characterMechanic.CheckLevelUp() && levelCheck == characterMechanic.GetLevelLead();
         }
+
+        public string GetCurentStatusStateText()
+        {
+            return currentState.name;
+        }
+
+        public void PrintText(string value)
+        {
+            print(value);
+        }
+
+        public bool IsCharacterLevelUp(bool value)
+        {
+            characterMechanic.IsLevelUp = value;
+           
+            return characterMechanic.IsLevelUp ;
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Leadership.Core;
 using UnityEngine;
 
@@ -8,9 +9,25 @@ namespace Leadership.Character
     public class MemberState : BaseState
     {
         protected StatusPlayerSM _statusSM;
-        public MemberState(StatusPlayerSM stateMachine) : base("MemberState", stateMachine)
+        public MemberState(StatusPlayerSM stateMachine) : base("Member", stateMachine)
         {
             _statusSM = (StatusPlayerSM) stateMachine;
+        }
+
+
+        public override void UpdateLogic()
+        {
+            if(_statusSM.EligbleToNextLevel(1))
+            {
+                //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
+                _statusSM.IsCharacterLevelUp(true);
+
+                //disini check lagi apakah case nya betul semua
+                // if(_statusSM.CheckCaseLevelUp())
+
+                //Jika betul semua nanti state pindah ke selanjutnya
+                // _statusSM.ChangeState(_statusSM.friendState)
+            }
         }
 
         

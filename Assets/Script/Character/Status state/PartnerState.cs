@@ -8,7 +8,7 @@ namespace Leadership.Character
     public class PartnerState : BaseState
     {
         protected StatusPlayerSM _statusSM;
-        public PartnerState(StatusPlayerSM stateMachine) : base("PartnerState", stateMachine)
+        public PartnerState(StatusPlayerSM stateMachine) : base("Partner", stateMachine)
         {
             _statusSM = (StatusPlayerSM) stateMachine;
         }
