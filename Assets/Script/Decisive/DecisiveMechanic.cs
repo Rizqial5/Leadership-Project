@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Leadership.UI;
 
-public class DecisiveMechanic : MonoBehaviour
+namespace Leadership.Decisive
 {
-    // Start is called before the first frame update
-    void Start()
+    public class DecisiveMechanic : MonoBehaviour
     {
+
+        [SerializeField] DecisivieCaseSO[] decisiveCases;
+
+        [SerializeField] DecisionEventUI decisionEventUI;
+        void Awake()
+        {
+            
+        }
         
+        void Update()
+        {
+            print(decisionEventUI);
+        }
+        public void SpawnDecisiveCase(int leadershipLevelCase)
+        {
+            if(leadershipLevelCase == 1)
+            {
+
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

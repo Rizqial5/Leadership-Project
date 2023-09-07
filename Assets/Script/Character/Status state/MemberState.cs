@@ -19,8 +19,15 @@ namespace Leadership.Character
         {
             if(_statusSM.EligbleToNextLevel(1))
             {
+                _statusSM.ChangeState(_statusSM.friendState);
+
+                _statusSM.IsCharacterLevelUpTwo(true);
+
+                //test---
+                // _statusSM.GetCharacterMechanic().LevelUP();
+                //test----
                 //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
-                _statusSM.IsCharacterLevelUp(true);
+                
 
                 //disini check lagi apakah case nya betul semua
                 // if(_statusSM.CheckCaseLevelUp())

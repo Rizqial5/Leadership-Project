@@ -7063,6 +7063,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e8fbef422569b4db77457ca91dcd91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisiveCases:
+  - {fileID: 11400000, guid: 7776bcbfb9742984487ec909fad9c867, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  decisionEventUI: {fileID: 1080257543}
 --- !u!1 &574514062
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,16 +42,42 @@ namespace Leadership.Character
             return currentState.name;
         }
 
+        public CharacterMechanic GetCharacterMechanic()
+        {
+            return characterMechanic;
+        }
+
         public void PrintText(string value)
         {
             print(value);
         }
 
-        public bool IsCharacterLevelUp(bool value)
+        public bool IsCharacterLevelUpTwo(bool value)
         {
-            characterMechanic.IsLevelUp = value;
+            characterMechanic.IsLevelUpTwo = value;
            
-            return characterMechanic.IsLevelUp ;
+            return characterMechanic.IsLevelUpTwo ;
+        }
+
+        public bool IsCharacterLevelUpThree(bool value)
+        {
+            characterMechanic.IsLevelUpThree = value;
+           
+            return characterMechanic.IsLevelUpThree ;
+        }
+
+        public bool IsCharacterLevelUpFour(bool value)
+        {
+            characterMechanic.IsLevelUpFour = value;
+           
+            return characterMechanic.IsLevelUpFour ;
+        }
+
+        public bool IsCharacterLevelUpFive(bool value)
+        {
+            characterMechanic.IsLevelUpFive = value;
+           
+            return characterMechanic.IsLevelUpFive;
         }
     }
 

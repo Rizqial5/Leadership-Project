@@ -11,6 +11,12 @@ namespace Leadership.Decisive
     {
         [SerializeField] int levelLeadershipEvent;
         [SerializeField] DecisiveQuestion[] decisiveQuestion;
+
+
+        public void GetDecisiveQuestion(int i)
+        {
+            decisiveQuestion[i].GetQuestion();
+        }
     }
 
     [System.Serializable]
@@ -19,6 +25,11 @@ namespace Leadership.Decisive
         [TextArea(3,10)]
         [SerializeField] string questionField;
         [SerializeField] DecisiveAnswer[] decisiveAnswer;
+
+        public string GetQuestion()
+        {
+            return questionField;
+        }
         
     }
 
