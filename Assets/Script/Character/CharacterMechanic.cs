@@ -17,7 +17,7 @@ namespace Leadership.Character
 
         void Update()
         {
-            LevelUP();
+            // LevelUP();
         }
         public float GetStatsCharacter(LeadershipEnum leadershipEnum)
         {
@@ -29,24 +29,24 @@ namespace Leadership.Character
             return characterAttributes.GetAllStat();
         }
 
-        public void LevelUP()
-        {
-            if(levelLeadNow == 5) return;
-            if(CheckLevelUp())
-            {
-                print("Bisa");
+        // public void LevelUP()
+        // {
+        //     if(levelLeadNow == 5) return;
+        //     if(CheckLevelUp())
+        //     {
+        //         print("Bisa");
 
-                isLevelUp = true;
-            }
+        //         isLevelUp = true;
+        //     }
 
-            if(isLevelUp == true)
-            {
-                levelLeadNow += 1;
-                isLevelUp = false;
-            }
-        }
+        //     if(isLevelUp == true)
+        //     {
+        //         levelLeadNow += 1;
+        //         isLevelUp = false;
+        //     }
+        // }
 
-        private bool CheckLevelUp()
+        public bool CheckLevelUp()
         {
             return GetStatsCharacter(LeadershipEnum.Relation) >= leadershipProgression.GetRequireStat(LeadershipEnum.Relation, levelLeadNow + 1) &&
                         GetStatsCharacter(LeadershipEnum.Trust) >= leadershipProgression.GetRequireStat(LeadershipEnum.Trust, levelLeadNow + 1) &&

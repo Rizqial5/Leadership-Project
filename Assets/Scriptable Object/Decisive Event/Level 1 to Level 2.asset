@@ -13,4 +13,31 @@ MonoBehaviour:
   m_Name: Level 1 to Level 2
   m_EditorClassIdentifier: 
   levelLeadershipEvent: 0
-  decisiveQuestion: []
+  decisiveQuestion:
+  - questionField: Menurutmu, Apakah Pemimpin itu harus bisa menguasai skill segalanya?
+    decisiveAnswer:
+    - answerField: 'Diusahakan harus mengerti, tidak harus menguasai keseluruhan. '
+      correctAnswer: 1
+    - answerField: Harus bisa menguasai seluruh kemampuan skill
+      correctAnswer: 0
+    - answerField: Tidak perlu mengerti, karena kita bisa melimpahkan kemampuan itu
+        ke anggota
+      correctAnswer: 0
+  - questionField: Apakah dengan mengandalkan jabatan akan menjadikan pemimpin yang
+      hebat?
+    decisiveAnswer:
+    - answerField: Pasti, karena jabatan pemimpin itu akan bisa menggerakkan organisasi
+        dengan baik serta memberikan arahan yang jelas
+      correctAnswer: 0
+    - answerField: Tidak, karena jabatan hanya sebuah kendaraan , perlu adanya pemahaman
+        dengan anggota untuk memaksimalkan kepemimpinan
+      correctAnswer: 0
+  - questionField: Bagaimana menurut anda keterlibatan anggota sebagai menentukan
+      keputusan pemimpin
+    decisiveAnswer:
+    - answerField: Anggota hanya berperan sebagai pemberi nasihat saja, semuanya
+        hanya ketentuan pemimpin
+      correctAnswer: 0
+    - answerField: Anggota sangat terlibat dalam menentukan arah kepemimpinan dari
+        segi pikiran, suara dan kemampuan
+      correctAnswer: 1

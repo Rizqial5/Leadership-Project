@@ -7,21 +7,34 @@ namespace Leadership.Character
 {
     public class StatusPlayerSM : StateMachine
     {
-        [HideInInspector] public FreeState freeState;
-        [HideInInspector] public WorkState workState;
+        [HideInInspector] public MemberState memberState;
+        [HideInInspector] public FriendState friendState;
+        [HideInInspector] public PartnerState partnerState;
+        [HideInInspector] public ComradeState comradeState;
+        [HideInInspector] public GoldenState goldenState;
 
         private GameSM _gameSM;
+        private CharacterMechanic characterMechanic;
         private void Awake() 
         {
-            freeState = new FreeState(this);
-            workState = new WorkState(this);
+            memberState = new MemberState(this);
+            friendState = new FriendState(this);
+            partnerState = new PartnerState(this);
+            comradeState = new ComradeState(this);
+            goldenState = new GoldenState(this);
 
             _gameSM = FindObjectOfType<GameSM>();
+            characterMechanic = GetComponent<CharacterMechanic>();
         }
 
         protected override BaseState GetInitialState()
         {
-            return freeState;
+            return memberState;
+        }
+
+        public bool EligbleToNextLevel(int levelCheck)
+        {
+            return characterMechanic.CheckLevelUp() && levelCheck == characterMechanic.GetLevelLead();
         }
     }
 
