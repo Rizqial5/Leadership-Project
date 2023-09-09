@@ -13,9 +13,14 @@ namespace Leadership.Decisive
         [SerializeField] DecisiveQuestion[] decisiveQuestion;
 
 
-        public void GetDecisiveQuestion(int i)
+        public string GetDecisiveQuestion(int i)
         {
-            decisiveQuestion[i].GetQuestion();
+            return decisiveQuestion[i].GetQuestion();
+        }
+
+        public DecisiveAnswer[] GetDecisiveAnswer(int i)
+        {
+            return decisiveQuestion[i].GetDecisiveAnswers();
         }
     }
 
@@ -30,6 +35,11 @@ namespace Leadership.Decisive
         {
             return questionField;
         }
+
+        public DecisiveAnswer[] GetDecisiveAnswers()
+        {
+            return decisiveAnswer;
+        }
         
     }
 
@@ -37,8 +47,8 @@ namespace Leadership.Decisive
     public class DecisiveAnswer
     {
         [TextArea(3,10)]
-        [SerializeField] string answerField;
-        [SerializeField] bool correctAnswer;
+        [SerializeField] public string answerField;
+        [SerializeField] public bool correctAnswer;
 
     }
 }

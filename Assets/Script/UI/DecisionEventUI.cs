@@ -6,6 +6,7 @@ using Leadership.Attribute;
 using Leadership.Core;
 using TMPro;
 using Leadership.Management;
+using Leadership.Decisive;
 
 public class DecisionEventUI : MonoBehaviour
 {
@@ -66,6 +67,19 @@ public class DecisionEventUI : MonoBehaviour
         answerOption.GetComponentInChildren<TextMeshProUGUI>().text = name;
         answerOption.GetComponent<OptionEffect>().SetEffect(caseEffect);
         answerOption.GetComponent<OptionEffect>().SetDivisionEffect(divisionEnum);
+        
+    }
+
+    public void SpawnButton( string name, int i, float beda, bool correctAnswer)
+    {
+        
+
+        var answerOption = Instantiate(answerButton,spawnLoc.position,spawnLoc.rotation,transform);
+        
+        answerOption.transform.position = new Vector3(answerOption.transform.position.x, (answerOption.transform.position.y + (i - 1) * beda));
+
+        answerOption.GetComponentInChildren<TextMeshProUGUI>().text = name;
+        answerOption.GetComponent<DecAnswerButtonBehave>().correctAnswer = correctAnswer;
         
     }
 
