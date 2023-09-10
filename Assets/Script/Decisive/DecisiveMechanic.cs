@@ -15,6 +15,7 @@ namespace Leadership.Decisive
 
         private int totalCorrectAnswer;
         private int numberQuestion = 1;
+        private bool isDecisiveCase;
 
         public UnityEvent OnAfterChooseAnswer;
         
@@ -60,6 +61,7 @@ namespace Leadership.Decisive
 
         public void NextButton()
         {
+            if(isDecisiveCase == false) return;
             StartCoroutine(NextQuestion());
         }
 

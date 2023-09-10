@@ -28,7 +28,7 @@ MonoBehaviour:
     decisiveAnswer:
     - answerField: Pasti, karena jabatan pemimpin itu akan bisa menggerakkan organisasi
         dengan baik serta memberikan arahan yang jelas
-      correctAnswer: 0
+      correctAnswer: 1
     - answerField: Tidak, karena jabatan hanya sebuah kendaraan , perlu adanya pemahaman
         dengan anggota untuk memaksimalkan kepemimpinan
       correctAnswer: 0

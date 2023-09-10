@@ -17,6 +17,7 @@ namespace Leadership.Management
         {
             _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Activity,5);
             _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Performance,5);
+            
         }
         public override void UpdateLogic()
         {

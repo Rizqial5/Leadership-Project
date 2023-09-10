@@ -226,6 +226,18 @@ namespace Leadership.Management
             return manageDB.startMeetingTime;
         }
 
+        private IEnumerator StartMEetingTimed(float second)
+        {
+            yield return new WaitForSeconds(second);
+
+            ChangeState(doneMeetingState);
+        }
+
+        public void StartTimed(float second)
+        {
+            StartCoroutine(StartMEetingTimed(second));
+        }
+
         
 
     }   

@@ -68,7 +68,7 @@ namespace Leadership.UI
             ColourBehaviour();
             spawnObject.GetComponent<TextMeshProUGUI>().text = meetingNameTemp;
             spawnObject.GetComponentInChildren<ChildrenTag>().startMeetingDay = startMeetingDayTemp;
-             spawnObject.GetComponentInChildren<ChildrenTag>().startTime = startTimeTemp;
+            spawnObject.GetComponentInChildren<ChildrenTag>().startTime = startTimeTemp;
             spawnObject.GetComponentInChildren<ChildrenTag>().GetComponent<TextMeshProUGUI>().text = "Day " + startMeetingDayTemp + " Time " + startTimeTemp ; //diganti
             spawnObject.GetComponent<SpawnOutlinerTag>().divisionName = divisionEnumTemp.ToString();
 
@@ -121,7 +121,7 @@ namespace Leadership.UI
             //time mechanci
             int startTimeDay = spawnCount[i].GetComponentInChildren<ChildrenTag>().startTime;
            
-            if(meetingSystem.GetCalenderTime() != meetStartDay ) return;
+            if(meetingSystem.GetCalenderTime() != meetStartDay ) continue;
 
             if(meetingSystem.GetStartMeetingNow() > startTimeDay)
             {

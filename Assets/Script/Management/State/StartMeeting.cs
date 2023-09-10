@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Leadership.Core;
 using UnityEngine;
 
@@ -31,10 +32,16 @@ namespace Leadership.Management
 
             //Start Time Mechanic Changes
 
-            if(_meetingSM.GetStartMeetingTime() < _meetingSM.GetMeetingSystem().GetStartMeetingNow())
+            if(_meetingSM.GetStartMeetingTime() < _meetingSM.GetMeetingSystem().GetStartMeetingNow() )
             {
+                
                 _meetingSM.ChangeState(_meetingSM.doneMeetingState);
                 _meetingSM.PrintString("bisa");
+            }
+
+            if(_meetingSM.GetMeetingSystem().GetStartMeetingNow() == 3)
+            {
+                _meetingSM.StartTimed(2f);
             }
 
             if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().pauseState)
@@ -53,6 +60,8 @@ namespace Leadership.Management
 
             
         }
+
+        
 
         public override void Exit()
         {

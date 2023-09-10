@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Leadership.UI;
 using UnityEngine;
 
 public class MenuSetting : MonoBehaviour
@@ -23,6 +24,13 @@ public class MenuSetting : MonoBehaviour
         {
             item.SetActive(false);
         }
+    }
+
+    public void CloseInteractionRoom()
+    {
+        if(!FindObjectOfType<RoomDesc>().gameObject.activeInHierarchy) return;
+
+        FindObjectOfType<RoomDesc>().gameObject.SetActive(false);
     }
 
     public void SetActiveObject(bool value)
