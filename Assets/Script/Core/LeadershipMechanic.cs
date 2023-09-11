@@ -6,6 +6,8 @@ using Leadership.Character;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using Leadership.Decisive;
+using Leadership.UI;
 
 namespace Leadership.Core
 {
@@ -16,7 +18,9 @@ namespace Leadership.Core
 
         [SerializeField] CharacterMechanic[] totalChacracter;
         [SerializeField] Text trustNumber;
-        [SerializeField] int levelNow;
+        [SerializeField] int levelNow = 1;
+        private DecisiveMechanic decisiveMechanic;
+        [SerializeField] OurCharacterUI ourCharacterUI;
 
         private float[] totalAllMemberRelation;
         private int totalEligibleCharLevelUpTwo;
@@ -25,8 +29,13 @@ namespace Leadership.Core
         private int totalEligibleCharLevelUpFive;
 
         private float calculatedTrusRate;
+        private bool canLevelUp;
 
-        
+        void Awake()
+        {
+            decisiveMechanic = GetComponent<DecisiveMechanic>();
+              
+        }
         private void Update() 
         {
             //Testing-----------
@@ -42,9 +51,20 @@ namespace Leadership.Core
             {
                 CountCharEligibleLevelUp(2);
             }
+            if(Input.GetKeyDown(KeyCode.V))
+            {
+                if(!CanLevelUp(levelNow + 1)) return;
+
+                decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
+
+            }
             
 
-            
+            ourCharacterUI.ChangeLevelText(levelNow);
+
+
+
+
             // trustNumber.text = leadershipAttributes.GetLeadershipAttributes(LeadershipEnum.Trust).ToString();
             if(totalChacracter == null) return;
             totalChacracter = FindObjectsOfType<CharacterMechanic>();
@@ -52,10 +72,7 @@ namespace Leadership.Core
             
             
 
-            if(totalEligibleCharLevelUpTwo == totalChacracter.Length)
-            {
-                print("Bisa naik level");
-            }
+            
             
         }
 
@@ -180,6 +197,18 @@ namespace Leadership.Core
        public void SetMeetingDivision(DivisionEnum divisionEnum)
        {
             leadershipAttributes.SetJoinedMeetingDivision(divisionEnum);
+       }
+
+       public bool CanLevelUp(int levelUp)
+       {
+            if(levelUp == 2)
+            {
+                if(totalEligibleCharLevelUpTwo != totalChacracter.Length) return false;
+
+                return true;
+            }
+
+            return false;
        }
 
         

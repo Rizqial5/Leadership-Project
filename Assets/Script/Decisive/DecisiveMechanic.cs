@@ -26,14 +26,12 @@ namespace Leadership.Decisive
         
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.V))
-            {
-                SpawnDecisiveCase(0,0);
-            }
+            
         }
         public void SpawnDecisiveCase(int leadershipLevelCase, int decisiveQuestionNumber)
         {
             DecisivieCaseSO decisiveCase = decisiveCases[leadershipLevelCase];
+            isDecisiveCase = true;
 
             if(numberQuestion > 2)
             {

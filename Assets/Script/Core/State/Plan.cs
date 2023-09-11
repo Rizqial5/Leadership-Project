@@ -15,6 +15,8 @@ namespace Leadership.Core
         public override void Enter()
         {
             base.Enter();
+
+            
         }
 
         public override void UpdateLogic()
