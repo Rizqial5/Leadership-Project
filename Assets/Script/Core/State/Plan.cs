@@ -16,6 +16,13 @@ namespace Leadership.Core
         {
             base.Enter();
 
+            if(_gameSM.GetLeadershipMechanic().CanLevelUp(_gameSM.GetLeadershipMechanic().GetLevelLeadershipPlayer() + 1))
+            {
+                // _gameSM.PrintNow("Bisa Level ON");
+                //Notif untuk naik level nyala atau langsung pop up kalo sudah eligile level up
+            }
+
+            
             
         }
 

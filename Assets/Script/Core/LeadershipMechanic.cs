@@ -49,10 +49,12 @@ namespace Leadership.Core
             }
             if(Input.GetKeyDown(KeyCode.M))
             {
-                CountCharEligibleLevelUp(2);
+                
             }
             if(Input.GetKeyDown(KeyCode.V))
             {
+                
+
                 if(!CanLevelUp(levelNow + 1)) return;
 
                 decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
@@ -199,10 +201,16 @@ namespace Leadership.Core
             leadershipAttributes.SetJoinedMeetingDivision(divisionEnum);
        }
 
+       public int GetLevelLeadershipPlayer()
+       {
+            return levelNow;
+       }
+
        public bool CanLevelUp(int levelUp)
        {
             if(levelUp == 2)
             {
+                CountCharEligibleLevelUp(levelUp);
                 if(totalEligibleCharLevelUpTwo != totalChacracter.Length) return false;
 
                 return true;

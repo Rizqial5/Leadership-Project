@@ -14,6 +14,7 @@ namespace Leadership.Core
         private int timeInADay;
         private int calenderTime = 1;
         private bool isPlay = false;
+        private int totalWeek;
 
         public UnityEvent OnChangeDays;
         public UnityEvent OnChangeWeek;
@@ -110,6 +111,10 @@ namespace Leadership.Core
         public int CalenderTime
         {
             get{return calenderTime;} set{calenderTime = value;}
+        }
+        public int ToatlWeek
+        {
+            get{return totalWeek;} set{totalWeek += value;}
         }
 
         public float TurnTime

@@ -45,12 +45,15 @@ namespace Leadership.Core
             {
                 _gameSM.turnSystem.SetTimeDay(1);
                 _gameSM.turnSystem.CalenderTime += 1;
+                
                 _gameSM.turnSystem.OnChangeDays.Invoke();
                 
             }
             if (_gameSM.ChangeWeek())
             {
                 _gameSM.turnSystem.CalenderTime = 1;
+                _gameSM.turnSystem.ToatlWeek += 1;
+
                 _gameSM.turnSystem.OnChangeWeek.Invoke();
                 stateMachine.ChangeState(_gameSM.planState);
                

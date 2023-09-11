@@ -13,6 +13,8 @@ namespace Leadership.Core
         public Pause pauseState;
 
         [SerializeField] public TurnSystem turnSystem;
+
+        private LeadershipMechanic leadershipMechanic;
         
 
         
@@ -23,6 +25,8 @@ namespace Leadership.Core
             planState = new Plan(this);
             playState = new Play(this);
             pauseState = new Pause(this);
+
+            leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
         }
 
         public override void PlayButton()
@@ -55,6 +59,11 @@ namespace Leadership.Core
             return planState;
         }
 
+        public void PrintNow(string value)
+        {
+            print(value);
+        }
+
         
 
         // private void OnGUI() 
@@ -62,5 +71,11 @@ namespace Leadership.Core
         //     string content = currentState != null ? currentState.name : "(no current state)";
         //     GUILayout.Label($"<color='black'><size=40>{content}</size></color>");    
         // }
+
+
+        public LeadershipMechanic GetLeadershipMechanic()
+        {
+            return leadershipMechanic;
+        }
     }
 }
