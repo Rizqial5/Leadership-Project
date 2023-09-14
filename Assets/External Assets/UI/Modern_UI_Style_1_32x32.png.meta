@@ -1789,10 +1789,10 @@ TextureImporter:
     second: Modern_UI_Style_1_32x32_594
   - first:
       213: 620931493013962507
-    second: Modern_UI_Style_1_32x32_595
+    second: Profile_Button_1
   - first:
       213: -391766320215518259
-    second: Modern_UI_Style_1_32x32_596
+    second: Profile_Button_2
   - first:
       213: 3509619941572161165
     second: Modern_UI_Style_1_32x32_597
@@ -1894,10 +1894,10 @@ TextureImporter:
     second: Modern_UI_Style_1_32x32_629
   - first:
       213: -780693606333205155
-    second: Modern_UI_Style_1_32x32_630
+    second: Mission_Button_1
   - first:
       213: 4254063496168505286
-    second: Modern_UI_Style_1_32x32_631
+    second: Mission_Button_2
   - first:
       213: 6309961974176616607
     second: Modern_UI_Style_1_32x32_632
@@ -14794,7 +14794,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_Style_1_32x32_595
+      name: Profile_Button_1
       rect:
         serializedVersion: 2
         x: 802
@@ -14803,7 +14803,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 8, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -14815,16 +14815,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_Style_1_32x32_596
+      name: Profile_Button_2
       rect:
         serializedVersion: 2
         x: 834
         y: 512
         width: 28
-        height: 28
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 7, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -15508,7 +15508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_Style_1_32x32_630
+      name: Mission_Button_1
       rect:
         serializedVersion: 2
         x: 1186
@@ -15517,7 +15517,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 6, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -15529,16 +15529,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modern_UI_Style_1_32x32_631
+      name: Mission_Button_2
       rect:
         serializedVersion: 2
         x: 1218
         y: 448
         width: 28
-        height: 28
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 4, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0

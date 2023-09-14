@@ -533,6 +533,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 340935389652393956}
+        m_TargetAssemblyTypeName: Leadership.UI.LevelLeadershipUI, Assembly-CSharp
+        m_MethodName: CheckIfEligible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1335842851385226328
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +778,8 @@ MonoBehaviour:
   approxRequire: {fileID: 3559805997606734462}
   ChangeBox: {fileID: 2634128440781684342}
   spawnDescList: {fileID: 1501028416923489186, guid: b32b2f7eb08f3af468c939d15f175ceb, type: 3}
+  checkedImage: {fileID: 0}
+  uncheckedImage: {fileID: 0}
 --- !u!1 &1665357148273842718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1315,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 340935389652393956}
+        m_TargetAssemblyTypeName: Leadership.UI.LevelLeadershipUI, Assembly-CSharp
+        m_MethodName: CheckIfEligible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4496690922261825200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1674,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 340935389652393956}
+        m_TargetAssemblyTypeName: Leadership.UI.LevelLeadershipUI, Assembly-CSharp
+        m_MethodName: CheckIfEligible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7611340309347419439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,6 +1944,18 @@ MonoBehaviour:
       - m_Target: {fileID: 340935389652393956}
         m_TargetAssemblyTypeName: Leadership.UI.LevelLeadershipUI, Assembly-CSharp
         m_MethodName: ShowLevelRequirements
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 340935389652393956}
+        m_TargetAssemblyTypeName: Leadership.UI.LevelLeadershipUI, Assembly-CSharp
+        m_MethodName: CheckIfEligible
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -36,7 +36,7 @@ namespace Leadership.Character
         public void LevelUP()
         {
             if(levelLeadNow == 5) return;
-            if(CheckLevelUp())
+            if(CheckLevelUp(1))
             {
                 print("Bisa");
 
@@ -50,22 +50,24 @@ namespace Leadership.Character
             }
         }
 
-        public bool CheckLevelUp()
+        public bool CheckLevelUp(int add)
         {
-            return GetStatsCharacter(LeadershipEnum.Relation) >= leadershipProgression.GetRequireStat(LeadershipEnum.Relation, levelLeadNow + 1) &&
-                        GetStatsCharacter(LeadershipEnum.Trust) >= leadershipProgression.GetRequireStat(LeadershipEnum.Trust, levelLeadNow + 1) &&
-                        GetStatsCharacter(LeadershipEnum.Influence) >= leadershipProgression.GetRequireStat(LeadershipEnum.Influence, levelLeadNow + 1) &&
-                        GetStatsCharacter(LeadershipEnum.Morale) >= leadershipProgression.GetRequireStat(LeadershipEnum.Morale, levelLeadNow + 1);
+            return GetStatsCharacter(LeadershipEnum.Relation) >= leadershipProgression.GetRequireStat(LeadershipEnum.Relation, levelLeadNow + add ) &&
+                        GetStatsCharacter(LeadershipEnum.Trust) >= leadershipProgression.GetRequireStat(LeadershipEnum.Trust, levelLeadNow + add ) &&
+                        GetStatsCharacter(LeadershipEnum.Influence) >= leadershipProgression.GetRequireStat(LeadershipEnum.Influence, levelLeadNow + add ) &&
+                        GetStatsCharacter(LeadershipEnum.Morale) >= leadershipProgression.GetRequireStat(LeadershipEnum.Morale, levelLeadNow + add );
         }
 
         public void AddStatsCharacter(LeadershipEnum leadershipEnum, float value)
         {
+            if(CheckLevelUp(1)) return;
             characterAttributes.AddStatValue(leadershipEnum,value);
         }
 
         // testing------------------
         public void AddAllStatsChar(float value)
         {
+            
             characterAttributes.AddStatValue(LeadershipEnum.Relation,value);
             characterAttributes.AddStatValue(LeadershipEnum.Trust,value);
             characterAttributes.AddStatValue(LeadershipEnum.Influence,value);

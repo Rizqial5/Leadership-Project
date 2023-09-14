@@ -34,7 +34,7 @@ namespace Leadership.Character
 
         public bool EligbleToNextLevel(int levelCheck)
         {
-            return characterMechanic.CheckLevelUp() && levelCheck == characterMechanic.GetLevelLead();
+            return characterMechanic.CheckLevelUp(1) && levelCheck == characterMechanic.GetLevelLead();
         }
 
         public string GetCurentStatusStateText()

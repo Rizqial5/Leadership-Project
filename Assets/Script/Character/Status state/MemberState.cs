@@ -19,7 +19,7 @@ namespace Leadership.Character
         {
             if(_statusSM.EligbleToNextLevel(1))
             {
-                _statusSM.ChangeState(_statusSM.friendState);
+                
 
                 _statusSM.IsCharacterLevelUpTwo(true);
 

@@ -21,6 +21,7 @@ namespace Leadership.Core
         [SerializeField] int levelNow = 1;
         private DecisiveMechanic decisiveMechanic;
         [SerializeField] OurCharacterUI ourCharacterUI;
+        [SerializeField] LevelLeadershipUI levelLeadershipUI;
 
         private float[] totalAllMemberRelation;
         private int totalEligibleCharLevelUpTwo;
@@ -34,6 +35,7 @@ namespace Leadership.Core
         void Awake()
         {
             decisiveMechanic = GetComponent<DecisiveMechanic>();
+            
               
         }
         private void Update() 
@@ -55,11 +57,12 @@ namespace Leadership.Core
             {
                 
 
-                if(!CanLevelUp(levelNow + 1)) return;
+                if(CanLevelUp(levelNow+1) == true)
 
                 decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
 
             }
+
             
 
             ourCharacterUI.ChangeLevelText(levelNow);
@@ -148,7 +151,7 @@ namespace Leadership.Core
 
         }
 
-        public void CountCharEligibleLevelUp(int leadershipLevelCheck)
+        public int CountCharEligibleLevelUp(int leadershipLevelCheck)
         {
             if(leadershipLevelCheck == 2)
             {
@@ -159,7 +162,7 @@ namespace Leadership.Core
                     totalEligibleCharLevelUpTwo += 1; 
                 
                 }
-                print(totalEligibleCharLevelUpTwo);
+                return totalEligibleCharLevelUpTwo;
             }else if(leadershipLevelCheck == 3)
             {
                 totalEligibleCharLevelUpThree = 0;
@@ -169,7 +172,7 @@ namespace Leadership.Core
                     totalEligibleCharLevelUpThree += 1; 
                 
                 }
-                print(totalEligibleCharLevelUpThree);
+                return totalEligibleCharLevelUpThree;
             }else if(leadershipLevelCheck == 4)
             {
                 totalEligibleCharLevelUpFour= 0;
@@ -179,7 +182,7 @@ namespace Leadership.Core
                     totalEligibleCharLevelUpFour += 1; 
                 
                 }
-                print(totalEligibleCharLevelUpFour);
+                return totalEligibleCharLevelUpFour;
             }else if(leadershipLevelCheck == 5)
             {
                 totalEligibleCharLevelUpFive = 0;
@@ -189,8 +192,10 @@ namespace Leadership.Core
                     totalEligibleCharLevelUpFive += 1; 
                 
                 }
-                print(totalEligibleCharLevelUpFive);
-            }           
+                return totalEligibleCharLevelUpFive;
+            }  
+
+            return 0;         
            
         }
        
@@ -210,8 +215,13 @@ namespace Leadership.Core
        {
             if(levelUp == 2)
             {
-                CountCharEligibleLevelUp(levelUp);
-                if(totalEligibleCharLevelUpTwo != totalChacracter.Length) return false;
+                print(CountCharEligibleLevelUp(levelUp));
+                
+                if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
+                {
+                    print("masuk");
+                    return false;
+                }
 
                 return true;
             }
