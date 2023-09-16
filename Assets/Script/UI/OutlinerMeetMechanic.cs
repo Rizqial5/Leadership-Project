@@ -97,7 +97,8 @@ namespace Leadership.UI
 
     public void SpawnOutliner()
     {
-        if(meetingNameTemp == null) return ;
+        if(meetingNameTemp == null) return;
+        if(startTimeTemp == 0) return;
 
         
         

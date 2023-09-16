@@ -211,23 +211,38 @@ namespace Leadership.Core
             return levelNow;
        }
 
+       public LevelLeadershipUI GetLevelLeadershipUI()
+       {
+            return levelLeadershipUI;
+       }
+
        public bool CanLevelUp(int levelUp)
        {
+            
             if(levelUp == 2)
             {
                 print(CountCharEligibleLevelUp(levelUp));
                 
                 if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
                 {
-                    print("masuk");
+                    
                     return false;
                 }
-
+                
+                levelLeadershipUI.IsCheckedLevel2 = true;
                 return true;
             }
 
+            
             return false;
        }
+
+       public void DecisiveCaseStart()
+       {
+         decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
+       }
+
+       
 
         
     }

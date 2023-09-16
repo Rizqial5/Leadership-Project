@@ -69,7 +69,7 @@ namespace Leadership.Decisive
 
             ///edit untuk menentukan maks
             
-            SpawnDecisiveCase(0,numberQuestion);
+            SpawnDecisiveCase(0,numberQuestion); // perlu diedit
             numberQuestion++;
             
         }
@@ -79,7 +79,7 @@ namespace Leadership.Decisive
         public int CountCorrectAnswer()
         {
             totalCorrectAnswer += 1;
-            print(totalCorrectAnswer);
+            print("Total jawaban betul " + totalCorrectAnswer);
             return totalCorrectAnswer;
             
         }

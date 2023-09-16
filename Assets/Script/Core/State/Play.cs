@@ -63,13 +63,21 @@ namespace Leadership.Core
         public override void Exit()
         {
             base.Exit();
+            int levelPlayerNow = _gameSM.GetLeadershipMechanic().GetLevelLeadershipPlayer() + 1;
 
-            if(_gameSM.GetLeadershipMechanic().CanLevelUp(_gameSM.GetLeadershipMechanic().GetLevelLeadershipPlayer() + 1))
+
+            
+
+            if(_gameSM.GetLeadershipMechanic().CanLevelUp(levelPlayerNow))
             {
                 _gameSM.PrintNow("Bisa Level ON");
                 
+                
                 //Notif untuk naik level nyala atau langsung pop up kalo sudah eligile level up
             }
+                
+
+            
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Leadership.UI
         [SerializeField] GameObject approxRequire;
         [SerializeField] GameObject ChangeBox;
         [SerializeField] GameObject spawnDescList;
+        [SerializeField] GameObject upgradeButton;
         [SerializeField] Sprite checkedImage;
         [SerializeField] Sprite uncheckedImage;
 
@@ -74,6 +75,8 @@ namespace Leadership.UI
         public void CheckIfEligible(int level)
         {
             if(spawnedObjects == null) return;
+            SetUpgradeButton(false);
+
             foreach (GameObject item in spawnedObjects)
             {
                 item.GetComponentInChildren<Image>().sprite = uncheckedImage;
@@ -84,43 +87,41 @@ namespace Leadership.UI
                 if(isCheckedLevel2 == false) return;
                 if(isCheckedLevel2 == true)
                 {
-                    foreach (GameObject item in spawnedObjects)
-                    {
-                        item.GetComponentInChildren<Image>().sprite = checkedImage;
-                    }
+                    EligibleMethod();
                 }
-            }else if(level == 3)
+            }
+            else if(level == 3)
             {
                 if(isCheckedLevel3 == false) return;
                 if(isCheckedLevel3 == true)
                 {
-                    foreach (GameObject item in spawnedObjects)
-                    {
-                        item.GetComponentInChildren<Image>().sprite = checkedImage;
-                    }
+                    EligibleMethod();
                 }
             }else if(level == 4)
             {
                 if(isCheckedLevel4 == false) return;
                 if(isCheckedLevel4 == true)
                 {
-                    foreach (GameObject item in spawnedObjects)
-                    {
-                        item.GetComponentInChildren<Image>().sprite = checkedImage;
-                    }
+                    EligibleMethod();
                 }
             }else if(level == 5)
             {
                 if(isCheckedLevel5 == false) return;
                 if(isCheckedLevel5 == true)
                 {
-                    foreach (GameObject item in spawnedObjects)
-                    {
-                        item.GetComponentInChildren<Image>().sprite = checkedImage;
-                    }
+                    EligibleMethod();
                 }
             }
             
+        }
+
+        private void EligibleMethod()
+        {
+            foreach (GameObject item in spawnedObjects)
+            {
+                item.GetComponentInChildren<Image>().sprite = checkedImage;
+            }
+            SetUpgradeButton(true);
         }
 
         public bool IsCheckedLevel2
@@ -150,6 +151,11 @@ namespace Leadership.UI
 
             descList.GetComponentInChildren<TextMeshProUGUI>().text = name;
 
+        }
+
+        public void SetUpgradeButton(bool active)
+        {
+            upgradeButton.SetActive(active);
         }
 
         public void CloseUI()
