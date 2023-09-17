@@ -20,14 +20,13 @@ namespace Leadership.Character
                 _statusSM.ChangeState(_statusSM.comradeState);
                 //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
                 //test---
-                _statusSM.GetCharacterMechanic().LevelUP();
-                //test----
-
-                //disini check lagi apakah case nya betul semua
-                // if(_statusSM.CheckCaseLevelUp())
-
-                //Jika betul semua nanti state pindah ke selanjutnya
-                // _statusSM.ChangeState(_statusSM.friendState)
+               
+                if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(2))
+                {
+                    _statusSM.PrintText("Anggota level Up");
+                    _statusSM.GetCharacterMechanic().LevelUP();
+                    _statusSM.NextLevel();
+                }
             }
         }
     }

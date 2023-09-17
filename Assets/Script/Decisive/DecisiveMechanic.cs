@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leadership.UI;
 using UnityEngine.Events;
+using System.Dynamic;
 
 namespace Leadership.Decisive
 {
@@ -16,8 +17,11 @@ namespace Leadership.Decisive
         private int totalCorrectAnswer;
         private int numberQuestion = 1;
         private bool isDecisiveCase;
+        private int levelNow;
 
         public UnityEvent OnAfterChooseAnswer;
+        public UnityEvent OnLevelUp;
+        
         
         void Awake()
         {
@@ -27,6 +31,12 @@ namespace Leadership.Decisive
         void Update()
         {
             
+        }
+
+
+        public int LevelNow
+        {
+            set{levelNow = value;} get{return levelNow;}
         }
         public void SpawnDecisiveCase(int leadershipLevelCase, int decisiveQuestionNumber)
         {
@@ -69,18 +79,26 @@ namespace Leadership.Decisive
 
             ///edit untuk menentukan maks
             
-            SpawnDecisiveCase(0,numberQuestion); // perlu diedit
+            SpawnDecisiveCase(LevelNow - 1,numberQuestion); // perlu diedit
             numberQuestion++;
+
+            print("Total pertanyaan : " + numberQuestion);
             
         }
 
         
 
-        public int CountCorrectAnswer()
+        public void CountCorrectAnswer()
         {
             totalCorrectAnswer += 1;
             print("Total jawaban betul " + totalCorrectAnswer);
-            return totalCorrectAnswer;
+            
+            if(totalCorrectAnswer == 3)
+            {
+                OnLevelUp.Invoke();
+                totalCorrectAnswer = 0;
+            }
+            
             
         }
 

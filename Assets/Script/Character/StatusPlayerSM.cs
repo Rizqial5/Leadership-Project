@@ -15,6 +15,7 @@ namespace Leadership.Character
 
         private GameSM _gameSM;
         private CharacterMechanic characterMechanic;
+        private LeadershipMechanic leadershipMechanic;
         private void Awake() 
         {
             memberState = new MemberState(this);
@@ -25,6 +26,7 @@ namespace Leadership.Character
 
             _gameSM = FindObjectOfType<GameSM>();
             characterMechanic = GetComponent<CharacterMechanic>();
+            leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
         }
 
         protected override BaseState GetInitialState()
@@ -35,6 +37,27 @@ namespace Leadership.Character
         public bool EligbleToNextLevel(int levelCheck)
         {
             return characterMechanic.CheckLevelUp(1) && levelCheck == characterMechanic.GetLevelLead();
+        }
+
+        public void NextLevel()
+        {
+            if(currentState == memberState)
+            {
+                ChangeState(friendState);
+
+            }else if(currentState == friendState)
+            {
+                ChangeState(partnerState);
+
+            }else if(currentState == partnerState)
+            {
+                ChangeState(comradeState);
+
+            }else if(currentState == comradeState)
+            {
+                ChangeState(goldenState);
+
+            }
         }
 
         public string GetCurentStatusStateText()
@@ -59,11 +82,20 @@ namespace Leadership.Character
             return characterMechanic.IsLevelUpTwo ;
         }
 
+        public bool GetCharacterLevelUpTwo()
+        {
+            return characterMechanic.IsLevelUpTwo;
+        }
+
         public bool IsCharacterLevelUpThree(bool value)
         {
             characterMechanic.IsLevelUpThree = value;
            
             return characterMechanic.IsLevelUpThree ;
+        }
+        public bool GetCharacterLevelUpThree()
+        {
+            return characterMechanic.IsLevelUpThree;
         }
 
         public bool IsCharacterLevelUpFour(bool value)
@@ -72,12 +104,30 @@ namespace Leadership.Character
            
             return characterMechanic.IsLevelUpFour ;
         }
+        public bool GetCharacterLevelUpFour()
+        {
+            return characterMechanic.IsLevelUpFour;
+        }
 
         public bool IsCharacterLevelUpFive(bool value)
         {
             characterMechanic.IsLevelUpFive = value;
            
             return characterMechanic.IsLevelUpFive;
+        }
+        public bool GetCharacterLevelUpFive()
+        {
+            return characterMechanic.IsLevelUpFive;
+        }
+
+        public bool LeadershipIsLevelUp(int levelCap)
+        {
+            if(leadershipMechanic.GetLevelLeadershipPlayer() >= levelCap)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 

@@ -32,7 +32,12 @@ namespace Leadership.Character
                 //disini check lagi apakah case nya betul semua
                 // if(_statusSM.CheckCaseLevelUp())
 
-                //Jika betul semua nanti state pindah ke selanjutnya
+                if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(2))
+                {
+                    _statusSM.PrintText("Anggota level Up");
+                    _statusSM.GetCharacterMechanic().LevelUP();
+                    _statusSM.NextLevel();
+                }
                 // _statusSM.ChangeState(_statusSM.friendState)
             }
         }

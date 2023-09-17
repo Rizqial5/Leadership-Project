@@ -36,18 +36,7 @@ namespace Leadership.Character
         public void LevelUP()
         {
             if(levelLeadNow == 5) return;
-            if(CheckLevelUp(1))
-            {
-                print("Bisa");
-
-                isLevelUp = true;
-            }
-
-            if(isLevelUp == true)
-            {
-                levelLeadNow += 1;
-                isLevelUp = false;
-            }
+            levelLeadNow ++;
         }
 
         public bool CheckLevelUp(int add)

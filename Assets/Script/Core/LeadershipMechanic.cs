@@ -30,7 +30,7 @@ namespace Leadership.Core
         private int totalEligibleCharLevelUpFive;
 
         private float calculatedTrusRate;
-        private bool canLevelUp;
+        
 
         void Awake()
         {
@@ -237,9 +237,15 @@ namespace Leadership.Core
             return false;
        }
 
+       public void LevelUp()
+       {
+            levelNow++;
+       }
+
        public void DecisiveCaseStart()
        {
-         decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
+            decisiveMechanic.LevelNow = levelNow;
+            decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
        }
 
        
