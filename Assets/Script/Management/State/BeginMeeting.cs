@@ -32,7 +32,8 @@ namespace Leadership.Management
             base.UpdateLogic();
 
             
-            
+            _meetingSM.GetStatusScript().ChangeStatus("Waiting....");
+
         
 
             if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().planState)

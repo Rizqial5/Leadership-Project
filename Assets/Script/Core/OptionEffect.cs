@@ -51,6 +51,8 @@ namespace Leadership.Core
                 
                 
                 leadershipMechanic.AddEachMemberAttribute(divisionEnum,item.Key,item.Value);
+
+                //Notif.Invoke() 
                 print(item.Key + " Effect has been activated total " + item.Value);
             }
         }

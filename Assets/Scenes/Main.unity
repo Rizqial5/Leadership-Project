@@ -7229,7 +7229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisiveCases:
   - {fileID: 11400000, guid: 7776bcbfb9742984487ec909fad9c867, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 77fd6fccb1b33ab43ba14622140e2766, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   decisionEventUI: {fileID: 1080257543}
@@ -7239,6 +7239,21 @@ MonoBehaviour:
       - m_Target: {fileID: 570671799}
         m_TargetAssemblyTypeName: Leadership.Decisive.DecisiveMechanic, Assembly-CSharp
         m_MethodName: NextButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLevelUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 570671797}
+        m_TargetAssemblyTypeName: Leadership.Core.LeadershipMechanic, Assembly-CSharp
+        m_MethodName: LevelUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7286,7 +7301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meeting '
+  m_text: Advokasi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7849,7 +7864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meeting '
+  m_text: PSDM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22198,7 +22213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meeting '
+  m_text: Humas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

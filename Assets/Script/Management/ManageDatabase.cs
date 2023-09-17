@@ -81,7 +81,7 @@ namespace Leadership.Management
                 {
                     item.startMeetingDay = dayMeeting;
                     item.startMeetingTime = timeMeeting;
-                    print(timeMeeting);
+                    // print(timeMeeting);
                 }
             }
 

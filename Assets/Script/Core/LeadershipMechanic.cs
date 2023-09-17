@@ -221,7 +221,7 @@ namespace Leadership.Core
             
             if(levelUp == 2)
             {
-                print(CountCharEligibleLevelUp(levelUp));
+               
                 
                 if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
                 {

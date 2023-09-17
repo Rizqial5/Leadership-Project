@@ -13,4 +13,39 @@ MonoBehaviour:
   m_Name: Level 2 to 3
   m_EditorClassIdentifier: 
   levelLeadershipEvent: 0
-  decisiveQuestion: []
+  decisiveQuestion:
+  - questionField: Sebagai pemimpin, apakah dengan menjalin hubungan yang erat dengan
+      anggota cukup membuat organisasi menjadi lebih naik?
+    decisiveAnswer:
+    - answerField: Belum cukup, perlu adanya produktifitas yang terjalin juga diseluruh
+        anggota untuk meningkatkan hasil organisasi
+      correctAnswer: 1
+    - answerField: Sudah cukup, Karena dengan menjalin hubungan yang maksimal dapat
+        meningkatkan semangat anggota
+      correctAnswer: 0
+    - answerField: Belum cukup, perlu adanya program - program kerja yang dikerjakan
+        oleh organisasi agar meningkatkan performa pada organisasi
+      correctAnswer: 0
+  - questionField: Dengan hubungan yang sudah terjalin saat ini, bagaimana anda sebagai
+      pemimpin membawa anggota anda untuk mengeluarkan potensi yang maksimal?
+    decisiveAnswer:
+    - answerField: Pemimpin harus menggunakan otoritasnya dengan maksimal untuk mendapatkan
+        hasil yang maksimal
+      correctAnswer: 0
+    - answerField: Pemimpin hanya perlu menyampaikan visi organisasi kepada anggota
+      correctAnswer: 0
+    - answerField: Pemimpin harus berani untuk membawa anggota untuk mengambil resiko
+        dalam mengerjakan tugas - tugas organisasi
+      correctAnswer: 1
+  - questionField: Bagaimana menurut pandangan anda kepada anggota yang masih belum
+      memiliki kemampuan yang berkaitan dengan organisasi
+    decisiveAnswer:
+    - answerField: Sebagai pemimpin harus menindak lanjuti anggota tersebut apakah
+        anggota itu masih mampu atau tidak mampu
+      correctAnswer: 0
+    - answerField: Sebagai pemimpin perlu adanya ajakan kepada anggota itu mengenai
+        untuk berkembang bersama sama
+      correctAnswer: 1
+    - answerField: Sebagai pemimpin tidak perlu mengkhawatirkan itu, yang terpenting
+        komunikasi terus menerus agar terjalin kerjasama yang baik
+      correctAnswer: 0
