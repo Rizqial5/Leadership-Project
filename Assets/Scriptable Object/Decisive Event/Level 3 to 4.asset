@@ -13,4 +13,37 @@ MonoBehaviour:
   m_Name: Level 3 to 4
   m_EditorClassIdentifier: 
   levelLeadershipEvent: 0
-  decisiveQuestion: []
+  decisiveQuestion:
+  - questionField: Sebagai pemimpin, bagaimana cara anda menyampaikan visi atau gambaran
+      masa depan mengenai organisasi anda
+    decisiveAnswer:
+    - answerField: Hanya perlu disampaikan sekali saja pada saat awal pertemuan dan
+        dituliskan agar anggota bisa melihat
+      correctAnswer: 0
+    - answerField: Perlu adanya penyampaian yang jelas dan sering mengenai visi organisasi
+        agar anggota bisa memahami sampai akar
+      correctAnswer: 1
+  - questionField: Bagaimana cara anda membuat anggota anda memiliki karakteristik
+      seperti yang anda harapkan sebagai pemimpin
+    decisiveAnswer:
+    - answerField: Hanya perlu disampaikan apa yang harus diakukan kepada anggota
+        tersebut dan pengawasan yang terus menerus
+      correctAnswer: 0
+    - answerField: Sebagai pemimpin tidak perlu mengharapkan karakter yang sesuai,
+        yang terpenting sudah melaksanakn jobdesc sudah cukup
+      correctAnswer: 0
+    - answerField: Sebagai pemimpin perlu mencontohkan karakter yang diharapkan kepada
+        anggota. karena anggota mencontoh pemimpinnya
+      correctAnswer: 1
+  - questionField: 'Dengan tim anda yang sudah produktif, menurut anda apakah ada
+      perkembangan organisasi yang harus dilakukan? '
+    decisiveAnswer:
+    - answerField: Ada, dengan memperhatikan kemampuan dari anggota serta dari kemampuan
+        itu pemimpin mengembangkan kemampuan tersebut
+      correctAnswer: 1
+    - answerField: Ada, dengan memperhatikan hasil kinerja anggota agar produktifitas
+        selalu meningkat
+      correctAnswer: 0
+    - answerField: Ada, dengan memperbanyak jumlah sdm anggota organisasi karena
+        dnegan banyak anggota hasil akan meningkat
+      correctAnswer: 0

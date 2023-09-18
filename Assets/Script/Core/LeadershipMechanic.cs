@@ -221,8 +221,6 @@ namespace Leadership.Core
             
             if(levelUp == 2)
             {
-               
-                
                 if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
                 {
                     
@@ -232,6 +230,8 @@ namespace Leadership.Core
                 levelLeadershipUI.IsCheckedLevel2 = true;
                 return true;
             }
+
+            //Penambahan untuk level selanjutnya janlup
 
             
             return false;

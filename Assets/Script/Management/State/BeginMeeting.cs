@@ -22,6 +22,8 @@ namespace Leadership.Management
             if(_meetingSM.GetMeetingUI() != null) return;
             if(_meetingSM.StartMeeting() == 0) return;
             _meetingSM.SpawnStatusUI();
+            _meetingSM.FindStatusButton();
+            _meetingSM.SetStatusButton(false);
 
             
 
@@ -31,8 +33,12 @@ namespace Leadership.Management
         {
             base.UpdateLogic();
 
+            if(_meetingSM.GetStatusScript() != null)
+            {
+                _meetingSM.GetStatusScript().ChangeStatus("Waiting....");
+            }
+           
             
-            _meetingSM.GetStatusScript().ChangeStatus("Waiting....");
 
         
 
@@ -59,6 +65,7 @@ namespace Leadership.Management
             if(_meetingSM.GetMeetingSystem().GetCalenderTime() == _meetingSM.StartMeeting())
             {
                 _meetingSM.GetStatusScript().ChangeStatus("Prepare Meeting");
+                _meetingSM.SetStatusButton(true);
 
                 if(_meetingSM.GetStartMeetingTime() == _meetingSM.GetMeetingSystem().GetStartMeetingNow())
                 {

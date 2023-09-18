@@ -4,6 +4,7 @@ using UnityEngine;
 using Leadership.UI;
 using UnityEngine.Events;
 using System.Dynamic;
+using UnityEngine.Rendering;
 
 namespace Leadership.Decisive
 {
@@ -13,14 +14,17 @@ namespace Leadership.Decisive
         [SerializeField] DecisivieCaseSO[] decisiveCases;
 
         [SerializeField] DecisionEventUI decisionEventUI;
+        private int penaltyDecisiveCaseCount = 0;
 
         private int totalCorrectAnswer;
         private int numberQuestion = 1;
         private bool isDecisiveCase;
         private int levelNow;
-
+        
         public UnityEvent OnAfterChooseAnswer;
         public UnityEvent OnLevelUp;
+        public UnityEvent onDecisiveCaseDone;
+        public UnityEvent onPenaltyActive;
         
         
         void Awake()
@@ -40,12 +44,14 @@ namespace Leadership.Decisive
         }
         public void SpawnDecisiveCase(int leadershipLevelCase, int decisiveQuestionNumber)
         {
+            if(penaltyDecisiveCaseCount > 0) return;
             DecisivieCaseSO decisiveCase = decisiveCases[leadershipLevelCase];
             isDecisiveCase = true;
 
             if(numberQuestion > 2)
             {
                 numberQuestion = 0;
+                onDecisiveCaseDone.Invoke();
                 return;
             } 
 
@@ -100,6 +106,23 @@ namespace Leadership.Decisive
             }
             
             
+        }
+
+        public void PenaltyAccumulation()
+        {
+            if(totalCorrectAnswer < 3)
+            {
+                penaltyDecisiveCaseCount = 3;
+                onPenaltyActive.Invoke();
+                totalCorrectAnswer = 0;
+            }
+        }
+
+        public void ReducePenalty()
+        {
+            if(penaltyDecisiveCaseCount == 0) return;
+            penaltyDecisiveCaseCount--;
+            print(penaltyDecisiveCaseCount);
         }
 
 

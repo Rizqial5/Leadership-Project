@@ -33,6 +33,7 @@ namespace Leadership.Management
         private int startMeetingDate;
         private GameObject MeetingUI; 
         private AttributesMechanic attributesMechanic;
+        private GameObject statusRoomButton;
         
         
 
@@ -82,6 +83,19 @@ namespace Leadership.Management
         public void SaveOldState(BaseState state)
         {
             oldState = state;
+        }
+
+        public void SetStatusButton(bool active)
+        {
+            
+            if (statusRoomButton == null) return;
+
+            statusRoomButton.SetActive(active);
+        }
+
+        public void FindStatusButton()
+        {
+            statusRoomButton = GameObject.FindGameObjectWithTag("ToggledButton");
         }
 
         public MeetingSystem GetMeetingSystem()
@@ -145,6 +159,7 @@ namespace Leadership.Management
 
         public SpawnDescChanger GetStatusScript()
         {
+            if(MeetingUI == null) return null;
             return MeetingUI.GetComponent<SpawnDescChanger>();
         }
 
