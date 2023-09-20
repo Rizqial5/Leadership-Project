@@ -233,6 +233,41 @@ namespace Leadership.Core
                 
                 levelLeadershipUI.IsCheckedLevel2 = true;
                 return true;
+            }else if(levelUp == 3)
+            {
+                if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
+                {
+                    levelLeadershipUI.IsCheckedLevel3 = false;
+                    return false;
+                    
+                }
+                
+                levelLeadershipUI.IsCheckedLevel3 = true;
+                return true;
+                
+            }else if(levelUp == 4)
+            {
+                if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
+                {
+                    levelLeadershipUI.IsCheckedLevel4 = false;
+                    return false;
+                    
+                }
+                
+                levelLeadershipUI.IsCheckedLevel4 = true;
+                return true;
+
+            }else if(levelUp == 5)
+            {
+                if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
+                {
+                    levelLeadershipUI.IsCheckedLevel5 = false;
+                    return false;
+                    
+                }
+                
+                levelLeadershipUI.IsCheckedLevel5 = true;
+                return true;
             }
 
             //Penambahan untuk level selanjutnya janlup
