@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Leadership.Attribute;
+using System;
 
 
 
@@ -66,6 +67,10 @@ namespace Leadership.Character
             characterValueStatsTable[category] += value;
         }
 
+        internal void AddStatValue(LeadershipEnum leadershipEnum, object value)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [System.Serializable]

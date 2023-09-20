@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Leadership.Core;
+using Leadership.Attribute;
 using UnityEngine;
 
 namespace Leadership.Character
@@ -26,14 +27,6 @@ namespace Leadership.Character
             {
                 _statusSM.IsCharacterLevelUpTwo(true);
 
-                //test---
-                // _statusSM.GetCharacterMechanic().LevelUP();
-                //test----
-                //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
-                
-
-                //disini check lagi apakah case nya betul semua
-                // if(_statusSM.CheckCaseLevelUp())
 
                 if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(2))
                 {
@@ -46,6 +39,11 @@ namespace Leadership.Character
             {
                 _statusSM.IsCharacterLevelUpTwo(false);
             }
+
+            // if(Input.GetKeyDown(KeyCode.G))
+            // {
+            //     _statusSM.NextLevel();
+            // }
         }
 
         
