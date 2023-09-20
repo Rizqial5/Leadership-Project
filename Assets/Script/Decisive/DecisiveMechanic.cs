@@ -112,7 +112,7 @@ namespace Leadership.Decisive
         {
             if(totalCorrectAnswer < 3)
             {
-                penaltyDecisiveCaseCount = 3;
+                // penaltyDecisiveCaseCount = 3;
                 onPenaltyActive.Invoke();
                 totalCorrectAnswer = 0;
             }

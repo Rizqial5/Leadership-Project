@@ -69,6 +69,10 @@ namespace Leadership.Character
         {
             return characterMechanic;
         }
+        public LeadershipMechanic GetLeadershipMechanic()
+        {
+            return leadershipMechanic;
+        }
 
         public void PrintText(string value)
         {

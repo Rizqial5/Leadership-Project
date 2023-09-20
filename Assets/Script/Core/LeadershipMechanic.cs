@@ -29,7 +29,9 @@ namespace Leadership.Core
         private int totalEligibleCharLevelUpFour;
         private int totalEligibleCharLevelUpFive;
 
+
         private float calculatedTrusRate;
+        private float penalyTotal = -5;
         
 
         void Awake()
@@ -40,6 +42,7 @@ namespace Leadership.Core
         }
         private void Update() 
         {
+            CanLevelUp(levelNow+1);
             //Testing-----------
             if(Input.GetKeyDown(KeyCode.Z))
             {
@@ -223,8 +226,9 @@ namespace Leadership.Core
             {
                 if(CountCharEligibleLevelUp(levelUp) != totalChacracter.Length)
                 {
-                    
+                    levelLeadershipUI.IsCheckedLevel2 = false;
                     return false;
+                    
                 }
                 
                 levelLeadershipUI.IsCheckedLevel2 = true;
@@ -240,6 +244,38 @@ namespace Leadership.Core
        public void LevelUp()
        {
             levelNow++;
+       }
+
+       public void SetPenaltyTotal()
+       {
+
+            if(levelNow == 1)
+            {
+                penalyTotal = -5;
+
+            }else if(levelNow == 2)
+            {
+                penalyTotal = -10;
+
+            }else if(levelNow == 3)
+            {
+                penalyTotal = -20;
+                
+            }else if(levelNow == 4)
+            {
+                penalyTotal = -30;
+                
+            }else if(levelNow == 5)
+            {
+                penalyTotal = -50;
+                
+            }
+       }
+
+       public void PenaltyAttribute()
+       {
+            print("Mendapatkan penalty " + penalyTotal);
+            AddAllMemberAttribute(penalyTotal);
        }
 
        public void DecisiveCaseStart()

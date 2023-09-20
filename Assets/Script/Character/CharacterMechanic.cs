@@ -14,7 +14,7 @@ namespace Leadership.Character
         [SerializeField] int levelLeadNow = 1;
 
         private bool isLevelUp = false;
-        private bool isLevelUpTwo = false;
+        [SerializeField] private bool isLevelUpTwo = false;
         private bool isLevelUpThree = false;
         private bool isLevelUpFour = false;
         private bool isLevelUpFive= false;
@@ -49,7 +49,7 @@ namespace Leadership.Character
 
         public void AddStatsCharacter(LeadershipEnum leadershipEnum, float value)
         {
-            if(CheckLevelUp(1)) return;
+            if(CheckLevelUp(1) && value > 0) return;
             characterAttributes.AddStatValue(leadershipEnum,value);
         }
 

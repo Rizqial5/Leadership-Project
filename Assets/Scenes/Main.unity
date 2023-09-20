@@ -5290,6 +5290,7 @@ MonoBehaviour:
   characterAttributes: {fileID: 11400000, guid: 9d820155717c9d447909a9384cc72332, type: 2}
   leadershipProgression: {fileID: 11400000, guid: d28fd4def187d074484055406f47e32d, type: 2}
   levelLeadNow: 1
+  isLevelUpTwo: 0
 --- !u!212 &394551107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7287,6 +7288,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 570671797}
+        m_TargetAssemblyTypeName: Leadership.Core.LeadershipMechanic, Assembly-CSharp
+        m_MethodName: SetPenaltyTotal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDecisiveCaseDone:
     m_PersistentCalls:
       m_Calls:
@@ -7304,7 +7317,19 @@ MonoBehaviour:
         m_CallState: 2
   onPenaltyActive:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 570671797}
+        m_TargetAssemblyTypeName: Leadership.Core.LeadershipMechanic, Assembly-CSharp
+        m_MethodName: PenaltyAttribute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &574514062
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,6 +8844,7 @@ MonoBehaviour:
   characterAttributes: {fileID: 11400000, guid: 3923c8cde09cff14d85b6bceb38cd098, type: 2}
   leadershipProgression: {fileID: 11400000, guid: d28fd4def187d074484055406f47e32d, type: 2}
   levelLeadNow: 1
+  isLevelUpTwo: 0
 --- !u!95 &676608764
 Animator:
   serializedVersion: 3

@@ -20,7 +20,7 @@ namespace Leadership.UI
         [SerializeField] Sprite uncheckedImage;
 
         private int percentage;
-        private GameObject[] spawnedObjects;
+        [SerializeField] private GameObject[] spawnedObjects;
         private bool isCheckedLevel2;
         private bool isCheckedLevel3;
         private bool isCheckedLevel4;
@@ -60,6 +60,8 @@ namespace Leadership.UI
 
             approxRequire.GetComponent<TextMeshProUGUI>().text = "Total "+ percentage.ToString() + "% Characters are eligible for :";
 
+            
+            
 
             SpawnDescList("Relation : "+leadershipProgression.GetRequireStat(LeadershipEnum.Relation,level).ToString(), 0, .3f);
             SpawnDescList("Influence : "+leadershipProgression.GetRequireStat(LeadershipEnum.Influence,level).ToString(), 1, .3f);
@@ -84,44 +86,67 @@ namespace Leadership.UI
             
             if(level == 2)
             {
-                if(isCheckedLevel2 == false) return;
-                if(isCheckedLevel2 == true)
+                if(isCheckedLevel2 == false)
                 {
-                    EligibleMethod();
+                    EligibleMethod(false);
+                } 
+                else if(isCheckedLevel2 == true)
+                {
+                    EligibleMethod(true);
                 }
             }
             else if(level == 3)
             {
-                if(isCheckedLevel3 == false) return;
-                if(isCheckedLevel3 == true)
+                if(isCheckedLevel3 == false)
                 {
-                    EligibleMethod();
+                    EligibleMethod(false);
+                } 
+                else if(isCheckedLevel3 == true)
+                {
+                    EligibleMethod(true);
                 }
             }else if(level == 4)
             {
-                if(isCheckedLevel4 == false) return;
-                if(isCheckedLevel4 == true)
+                if(isCheckedLevel4 == false)
                 {
-                    EligibleMethod();
+                    EligibleMethod(false);
+                } 
+                else if(isCheckedLevel4 == true)
+                {
+                    EligibleMethod(true);
                 }
             }else if(level == 5)
             {
-                if(isCheckedLevel5 == false) return;
-                if(isCheckedLevel5 == true)
+                if(isCheckedLevel5 == false)
                 {
-                    EligibleMethod();
+                    EligibleMethod(false);
+                } 
+                else if(isCheckedLevel5 == true)
+                {
+                    EligibleMethod(true);
                 }
             }
             
         }
 
-        private void EligibleMethod()
+        private void EligibleMethod(bool value)
         {
-            foreach (GameObject item in spawnedObjects)
+            if(value == true)
             {
-                item.GetComponentInChildren<Image>().sprite = checkedImage;
+                foreach (GameObject item in spawnedObjects)
+                {
+                    item.GetComponentInChildren<Image>().sprite = checkedImage;
+                }
+                SetUpgradeButton(value);
+            } else if(value == false)
+            {
+                foreach (GameObject item in spawnedObjects)
+                {
+                    item.GetComponentInChildren<Image>().sprite = uncheckedImage;
+                }
+                SetUpgradeButton(value);
             }
-            SetUpgradeButton(true);
+            
         }
 
         public bool IsCheckedLevel2
@@ -144,7 +169,7 @@ namespace Leadership.UI
 
         public void SpawnDescList( string name, int i, float beda)
         {
-   
+           
             var descList = Instantiate(spawnDescList,RequireBox.transform.position,RequireBox.transform.rotation,RequireBox.transform);
             
             descList.transform.position = new Vector3(descList.transform.position.x, (descList.transform.position.y + (i - 1) * beda));
@@ -160,7 +185,19 @@ namespace Leadership.UI
 
         public void CloseUI()
         {
+            if(spawnedObjects !=null)
+            {
+                foreach (GameObject item in spawnedObjects)
+                {
+                    Destroy(item);
+                }
+            } 
+
+            approxRequire.GetComponent<TextMeshProUGUI>().text = "";
+            SetUpgradeButton(false);
+
             gameObject.SetActive(false);
+
         }
     }
 }

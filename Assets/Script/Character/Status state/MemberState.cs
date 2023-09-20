@@ -15,12 +15,15 @@ namespace Leadership.Character
         }
 
 
+        public override void Enter()
+        {
+            
+        }
+
         public override void UpdateLogic()
         {
             if(_statusSM.EligbleToNextLevel(1))
             {
-                
-
                 _statusSM.IsCharacterLevelUpTwo(true);
 
                 //test---
@@ -39,6 +42,9 @@ namespace Leadership.Character
                     _statusSM.NextLevel();
                 }
                 // _statusSM.ChangeState(_statusSM.friendState)
+            }else if(!_statusSM.EligbleToNextLevel(1))
+            {
+                _statusSM.IsCharacterLevelUpTwo(false);
             }
         }
 
