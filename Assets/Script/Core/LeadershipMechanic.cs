@@ -54,7 +54,8 @@ namespace Leadership.Core
             }
             if(Input.GetKeyDown(KeyCode.M))
             {
-                
+                // levelNow += 1;
+                decisiveMechanic.OnLevelUp.Invoke();
             }
             if(Input.GetKeyDown(KeyCode.V))
             {

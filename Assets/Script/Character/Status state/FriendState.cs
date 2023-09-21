@@ -26,6 +26,7 @@ namespace Leadership.Character
         {
             if(_statusSM.EligbleToNextLevel(2))
             {
+                _statusSM.IsCharacterLevelUpThree(true);
                
                 //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
                 //test---
@@ -41,6 +42,13 @@ namespace Leadership.Character
             }else if(!_statusSM.EligbleToNextLevel(2))
             {
                 _statusSM.IsCharacterLevelUpThree(false);
+            }
+
+
+            // Testing Only
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                _statusSM.NextLevel();
             }
         }
     }

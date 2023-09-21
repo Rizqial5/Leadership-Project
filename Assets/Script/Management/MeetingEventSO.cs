@@ -15,7 +15,9 @@ namespace Leadership.Management
         [TextArea(3,10)]
         [SerializeField] string meetingEventDescription;
 
-        [SerializeField] AnswerCaseMeeting[] caseAnswers;   
+        [SerializeField] AnswerCaseMeeting[] caseAnswers; 
+
+        [SerializeField] Sprite illustrationImage;  
 
         public string MeetingEventName
         {
@@ -30,7 +32,12 @@ namespace Leadership.Management
         public AnswerCaseMeeting[] GetCaseAnswers()
         {
             return caseAnswers;
-        }  
+        } 
+
+        public Sprite GetImageIllustration()
+        {
+            return illustrationImage;
+        } 
         
     }
 
@@ -39,6 +46,7 @@ namespace Leadership.Management
     {
         [TextArea(2,5)]
         [SerializeField] string nameDes;
+       
         public CaseEffect[] caseEffects; 
         //Option effect
 

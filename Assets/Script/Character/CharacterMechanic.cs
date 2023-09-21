@@ -27,10 +27,10 @@ namespace Leadership.Character
 
         void Update()
         {
-            // if(Input.GetKeyDown(KeyCode.Y))
-            // {
-            //     LevelUP();
-            // }
+            if(Input.GetKeyDown(KeyCode.Y))
+            {
+                LevelUP();
+            }
             // if(Input.GetKeyDown(KeyCode.U))
             // {
             //     AddStatsCharacter(LeadershipEnum.Relation,5);

@@ -40,10 +40,12 @@ namespace Leadership.Character
                 _statusSM.IsCharacterLevelUpTwo(false);
             }
 
-            // if(Input.GetKeyDown(KeyCode.G))
-            // {
-            //     _statusSM.NextLevel();
-            // }
+
+            // Testing Only
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                _statusSM.NextLevel();
+            }
         }
 
         

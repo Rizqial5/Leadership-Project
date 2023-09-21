@@ -7255,8 +7255,8 @@ MonoBehaviour:
   decisiveCases:
   - {fileID: 11400000, guid: 7776bcbfb9742984487ec909fad9c867, type: 2}
   - {fileID: 11400000, guid: 77fd6fccb1b33ab43ba14622140e2766, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 015de98d75811894c836d150dce3452c, type: 2}
+  - {fileID: 11400000, guid: a1f6a2bee1a9b304b80ccaaa0aba3245, type: 2}
   decisionEventUI: {fileID: 1080257543}
   OnAfterChooseAnswer:
     m_PersistentCalls:

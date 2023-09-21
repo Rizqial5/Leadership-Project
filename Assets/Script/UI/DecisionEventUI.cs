@@ -12,6 +12,7 @@ public class DecisionEventUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI headerText;
     [SerializeField] TextMeshProUGUI storyText;
+    [SerializeField] GameObject imageInsert;
     [SerializeField] Button answerButton;
     [SerializeField] Transform spawnLoc;
 
@@ -38,6 +39,11 @@ public class DecisionEventUI : MonoBehaviour
     public string SetStoryText(string text)
     {
         return storyText.text = text;
+    }
+
+    public Sprite SetImage(Sprite image)
+    {
+        return imageInsert.GetComponent<Image>().sprite = image;
     }
 
     public void CloseUI()

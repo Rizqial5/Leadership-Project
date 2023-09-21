@@ -63,3 +63,13 @@ MonoBehaviour:
       requirementStat: 500
     - leadershipEnum: 3
       requirementStat: 500
+  - levelLeadership: 6
+    leadershipStats:
+    - leadershipEnum: 0
+      requirementStat: 1000
+    - leadershipEnum: 1
+      requirementStat: 1000
+    - leadershipEnum: 2
+      requirementStat: 1000
+    - leadershipEnum: 3
+      requirementStat: 1000

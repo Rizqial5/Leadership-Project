@@ -51,6 +51,8 @@ namespace Leadership.Management
             
             decisionEventUI.SetHeaderText(meetingEvents[randomNumber].MeetingEventName);
             decisionEventUI.SetStoryText(meetingEvents[randomNumber].MeetingEventDesc);
+            decisionEventUI.SetImage(meetingEvents[randomNumber].GetImageIllustration());
+
 
             AnswerCaseMeeting[] answerCaseMeetings = null;
 

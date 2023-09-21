@@ -24,8 +24,9 @@ namespace Leadership.Character
 
         public override void UpdateLogic()
         {
-            if(_statusSM.EligbleToNextLevel(5))
+            if(_statusSM.EligbleToNextLevel(4))
             {
+                _statusSM.IsCharacterLevelUpFive(true);
                
                 //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
                 //test---
@@ -38,6 +39,12 @@ namespace Leadership.Character
             }else if(!_statusSM.EligbleToNextLevel(5))
             {
                 _statusSM.IsCharacterLevelUpFive(false);
+            }
+
+            // Testing Only
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                _statusSM.NextLevel();
             }
         }
     }

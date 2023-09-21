@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headerText: {fileID: 1299772803191589098}
   storyText: {fileID: 1299772801953942660}
+  imageInsert: {fileID: 1299772801698963976}
   answerButton: {fileID: 1888187429493045575, guid: fe968119f35c5cc468b5b37e41ee7916, type: 3}
   spawnLoc: {fileID: 8551521122573283174}
 --- !u!1 &1299772803191589096
