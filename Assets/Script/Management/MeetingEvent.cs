@@ -59,10 +59,11 @@ namespace Leadership.Management
             answerCaseMeetings = meetingEvents[randomNumber].GetCaseAnswers();
 
             foreach (AnswerCaseMeeting ansCase in answerCaseMeetings)
-            {
-                decisionEventUI.SpawnButton(ansCase.GetNameDesc(),i,beda, ansCase.GetCaseEffects(),setDivisionEnum);
+            {   
+                decisionEventUI.SpawnButton(ansCase.GetNameDesc(),i,beda, ansCase.GetCaseEffects(),ansCase.GetCaseOrgEffects(),setDivisionEnum);
                 i++;
             }
+            
             i = 0;
         }
 

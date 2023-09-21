@@ -13,4 +13,36 @@ MonoBehaviour:
   m_Name: Level 4 to 5
   m_EditorClassIdentifier: 
   levelLeadershipEvent: 0
-  decisiveQuestion: []
+  decisiveQuestion:
+  - questionField: Dengan posisi anda saat ini, anda pasti memiliki kemampuan yang
+      lebih sebagai pemimpin. Dengan kemampuan itu, apakah anda tetap bersedia untuk
+      berkembang terus ?
+    decisiveAnswer:
+    - answerField: Bersedia, karena dengan tetap memiliki niat untuk mengembangkan
+        diri akan berdampak kepada organisasi
+      correctAnswer: 1
+    - answerField: Bersedia, karena dengan itu kemampuan yang dipelajari bisa untuk
+        memperkaya diri
+      correctAnswer: 0
+    - answerField: Tidak, karena kita pastinya sudah memiliki anggota yang berkemampuan
+        berbeda beda untuk dimanfaatkan
+      correctAnswer: 0
+  - questionField: Dengan level kepemimpinan anda saat ini, apakah anda menganggap
+      bahwa mengembangkan anggota itu adalah waktu yang sepadan?
+    decisiveAnswer:
+    - answerField: Tidak, dikarenakan kita sudah mempersiapkan apa yang harus dilakukan
+        oleh anggota jadi anggota bisa belajar sendiri
+      correctAnswer: 0
+    - answerField: Iya, dengan menyediakan setengah waktu untuk membina anggota akan
+        mempersiapkan anggota itu untuk periode selanjutnya
+      correctAnswer: 1
+  - questionField: Apabila anda diminta tolong oleh anggota anda untuk membantu permasalahannya
+      karena anda dirasa bisa membantu, apakah anda sedia membantu anggota itu?
+    decisiveAnswer:
+    - answerField: Tidak, dikarenakan kenapa kok harus langsung menghubungi pemimpinya,
+        semestinya bisa menghubungi anggota lain terlebih dahulu untuk membantunya
+      correctAnswer: 0
+    - answerField: Iya, karena sebuah keterbukaan pemimpin dengan anggota itu sangat
+        penting sehingga saya sangat sedia jika siapapun meminta pertolongan walaupun
+        itu hanya anggota
+      correctAnswer: 1

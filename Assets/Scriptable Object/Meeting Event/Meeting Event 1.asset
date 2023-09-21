@@ -27,6 +27,7 @@ MonoBehaviour:
       effectAttribute: 5
     - leadershipEnum: 1
       effectAttribute: 5
+    caseOrgEffects: []
   - nameDes: Memberikan sambutan yang santun
     caseEffects:
     - leadershipEnum: 0
@@ -37,6 +38,7 @@ MonoBehaviour:
       effectAttribute: 5
     - leadershipEnum: 3
       effectAttribute: 5
+    caseOrgEffects: []
   - nameDes: Memberikan sambutan yang memotivasi
     caseEffects:
     - leadershipEnum: 1
@@ -47,3 +49,5 @@ MonoBehaviour:
       effectAttribute: 5
     - leadershipEnum: 3
       effectAttribute: 5
+    caseOrgEffects: []
+  illustrationImage: {fileID: 21300000, guid: 20ad60c4bd4b70e47967e1159f8b4c1b, type: 3}

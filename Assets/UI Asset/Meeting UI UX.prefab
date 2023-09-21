@@ -1075,6 +1075,8 @@ MonoBehaviour:
   meetingEvents:
   - {fileID: 11400000, guid: 3bef9123a41d0084487dce2828693ef7, type: 2}
   - {fileID: 11400000, guid: 3a97a733b6ad26c4a97811c4d7b98348, type: 2}
+  - {fileID: 11400000, guid: e80b5a21cb04af5439bfbb71e35b0a1c, type: 2}
+  - {fileID: 11400000, guid: 6575efdc38b99b44d9e3973f041d594d, type: 2}
   decisionEventUI: {fileID: 0}
   divisionEnum: 0
   waitTimeUntilEvents: 2

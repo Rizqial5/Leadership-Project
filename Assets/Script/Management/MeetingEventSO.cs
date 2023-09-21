@@ -48,6 +48,7 @@ namespace Leadership.Management
         [SerializeField] string nameDes;
        
         public CaseEffect[] caseEffects; 
+        public CaseOrgEffect[] caseOrgEffects;
         //Option effect
 
         public string GetNameDesc()
@@ -59,12 +60,24 @@ namespace Leadership.Management
         {
             return caseEffects;
         }
+
+        public CaseOrgEffect[] GetCaseOrgEffects()
+        {
+            return caseOrgEffects;
+        }
     }
 
     [System.Serializable]
     public class CaseEffect
     {
         public LeadershipEnum leadershipEnum;
+        public float effectAttribute;
+    }
+
+    [System.Serializable]
+    public class CaseOrgEffect
+    {
+        public OrganisationEnum organisationEnum;
         public float effectAttribute;
     }
 }

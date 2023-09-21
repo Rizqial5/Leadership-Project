@@ -62,7 +62,7 @@ public class DecisionEventUI : MonoBehaviour
        
     }
 
-    public void SpawnButton( string name, int i, float beda, CaseEffect[] caseEffect, DivisionEnum divisionEnum )
+    public void SpawnButton( string name, int i, float beda, CaseEffect[] caseEffect,CaseOrgEffect[] caseOrgEffects, DivisionEnum divisionEnum )
     {
         
 
@@ -71,10 +71,21 @@ public class DecisionEventUI : MonoBehaviour
         answerOption.transform.position = new Vector3(answerOption.transform.position.x, (answerOption.transform.position.y + (i - 1) * beda));
 
         answerOption.GetComponentInChildren<TextMeshProUGUI>().text = name;
-        answerOption.GetComponent<OptionEffect>().SetEffect(caseEffect);
+        if(caseEffect.Length != 0)
+        {
+            answerOption.GetComponent<OptionEffect>().SetLeadershipEffect(caseEffect);
+        }
+
+        if(caseOrgEffects.Length != 0)
+        {
+            answerOption.GetComponent<OptionEffect>().SetOrgEffect(caseOrgEffects);
+        }
+        
         answerOption.GetComponent<OptionEffect>().SetDivisionEffect(divisionEnum);
         
     }
+
+    
 
     public void SpawnButton( string name, int i, float beda, bool correctAnswer)
     {

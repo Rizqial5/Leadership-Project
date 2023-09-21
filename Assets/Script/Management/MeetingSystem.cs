@@ -78,6 +78,7 @@ namespace Leadership.Management
                 
                 for (int i = 0; i < statusMeetingUI.Length; i++)
                 {
+                    if (statusMeetingUI[i].GetComponentInChildren<Button>() == null) continue;
                     statusMeetingUI[i].GetComponentInChildren<Button>().onClick.AddListener(() => SetStatusLeader());
                 }
             }

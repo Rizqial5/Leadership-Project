@@ -28,6 +28,7 @@ namespace Leadership.Core
         private int totalEligibleCharLevelUpThree;
         private int totalEligibleCharLevelUpFour;
         private int totalEligibleCharLevelUpFive;
+        
 
 
         private float calculatedTrusRate;

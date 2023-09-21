@@ -404,6 +404,14 @@ PrefabInstance:
       propertyPath: waitTimeUntilEvents
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5240561212319688173, guid: a734e3ba941674a4686400408e33aa3d, type: 3}
+      propertyPath: meetingEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5240561212319688173, guid: a734e3ba941674a4686400408e33aa3d, type: 3}
+      propertyPath: meetingEvents.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6575efdc38b99b44d9e3973f041d594d, type: 2}
     - target: {fileID: 5466854964219174047, guid: a734e3ba941674a4686400408e33aa3d, type: 3}
       propertyPath: m_IsActive
       value: 0

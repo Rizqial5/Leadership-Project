@@ -11,17 +11,29 @@ namespace Leadership.Core
 
         [SerializeField] bool isAdded;
         [SerializeField] DivisionEnum divisionEnum;
-        Dictionary<LeadershipEnum,float> effectOption;
+        Dictionary<LeadershipEnum,float> leadershipEffectOption;
+        Dictionary<OrganisationEnum, float> organisationEffectOption;
 
         
 
-        public void SetEffect(CaseEffect[] caseEffect)
+        public void SetLeadershipEffect(CaseEffect[] caseEffect)
         {
-            BuildLookup();
+            BUildLookupLeadership();
 
             for (int i = 0; i < caseEffect.Length; i++)
             {
-                effectOption[caseEffect[i].leadershipEnum] = caseEffect[i].effectAttribute;
+                leadershipEffectOption[caseEffect[i].leadershipEnum] = caseEffect[i].effectAttribute;
+                isAdded = true;
+            }
+        }
+
+        public void SetOrgEffect(CaseOrgEffect[] caseorgEffect)
+        {
+            BUildLookupOrg();
+
+            for (int i = 0; i < caseorgEffect.Length; i++)
+            {
+                organisationEffectOption[caseorgEffect[i].organisationEnum] = caseorgEffect[i].effectAttribute;
                 isAdded = true;
             }
         }
@@ -32,20 +44,29 @@ namespace Leadership.Core
         }
 
 
-        public void BuildLookup()
+        public void BUildLookupLeadership()
         {
-            if(effectOption != null) return;
+            if(leadershipEffectOption != null) return;
 
-            effectOption = new Dictionary<LeadershipEnum, float>();
+            leadershipEffectOption = new Dictionary<LeadershipEnum, float>();
+        }
+
+        public void BUildLookupOrg()
+        {
+            if(organisationEffectOption != null) return;
+
+            organisationEffectOption = new Dictionary<OrganisationEnum, float>();
         }
 
         public void EffectActive()
         {
-            BuildLookup();
+            BUildLookupLeadership();
+            BUildLookupOrg();
 
             LeadershipMechanic leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
+            AttributesMechanic attributesMechanic = FindObjectOfType<AttributesMechanic>();
 
-            foreach (var item in effectOption)
+            foreach (var item in leadershipEffectOption)
             {
                 //Changed in the future just test
                 
@@ -53,7 +74,16 @@ namespace Leadership.Core
                 leadershipMechanic.AddEachMemberAttribute(divisionEnum,item.Key,item.Value);
 
                 //Notif.Invoke() 
-                print(item.Key + " Effect has been activated total " + item.Value);
+                // print(item.Key + " Effect has been activated total " + item.Value);
+            }
+
+            foreach (var item in organisationEffectOption)
+            {
+                
+                attributesMechanic.AddAttributes(item.Key, item.Value);
+
+                print("Berhasil ditambahkan");
+
             }
         }
     

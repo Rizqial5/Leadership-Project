@@ -24,12 +24,14 @@ MonoBehaviour:
       effectAttribute: -5
     - leadershipEnum: 2
       effectAttribute: 5
+    caseOrgEffects: []
   - nameDes: Menghentikan rapat dan mencoba untuk mediasi orang yang terlibat
     caseEffects:
     - leadershipEnum: 3
       effectAttribute: -5
     - leadershipEnum: 0
       effectAttribute: 5
+    caseOrgEffects: []
   - nameDes: Menyuruh pemimpin rapat untuk menyelesaikan permasalahan diluar dan
       anda mengambil alih rapat.
     caseEffects:
@@ -37,3 +39,5 @@ MonoBehaviour:
       effectAttribute: -5
     - leadershipEnum: 3
       effectAttribute: 5
+    caseOrgEffects: []
+  illustrationImage: {fileID: 21300000, guid: 4eb18a85f4bc45d448c5fec612027a95, type: 3}
