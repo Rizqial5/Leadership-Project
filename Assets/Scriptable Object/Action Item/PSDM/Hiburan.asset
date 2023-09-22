@@ -13,7 +13,20 @@ MonoBehaviour:
   m_Name: Hiburan
   m_EditorClassIdentifier: 
   divisionEnum: 0
+  actionEnum: 0
   nameAction: Hiburan
   descAction: Mengadakan sebuah kegiatan yang bertujuan untuk refreshment kepengurusan
-  actionRequirementDays: 15
-  moneyRequirements: 0
+  actionRequirementDays: 7
+  meetingTime: 1
+  moneyRequirements: 10
+  specialRequirements: []
+  leadershipEffects:
+  - leadershipEnum: 0
+    value: 15
+  organizationEffects:
+  - organisationEnum: 0
+    value: -10
+  - organisationEnum: 4
+    value: 10
+  - organisationEnum: 3
+    value: -5

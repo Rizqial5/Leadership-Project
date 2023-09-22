@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54852eac858bc474abcda625a836aca1, type: 3}
+  m_Name: Progress Meeting
+  m_EditorClassIdentifier: 
+  meetingEventName: Progress Meeting
+  meetingEventDescription: Pada saat ditengah meeting kamu diberi kesempatan untuk
+    menanyakan progress kegiatan. Apa yang ingin kamu tanyakan?
+  caseAnswers:
+  - nameDes: Menanyakan serta mengingatkan mengenai teknis acara yang dirapatkan
+    caseEffects:
+    - leadershipEnum: 0
+      effectAttribute: 0
+    caseOrgEffects:
+    - organisationEnum: 3
+      effectAttribute: 5
+  - nameDes: Tidak ada yang ingin ditanyakan
+    caseEffects:
+    - leadershipEnum: 0
+      effectAttribute: 10
+    caseOrgEffects: []
+  - nameDes: Mencoba untuk memberikan saran mengenai setiap sie kegiatan.
+    caseEffects:
+    - leadershipEnum: 1
+      effectAttribute: 0
+    caseOrgEffects: []
+  illustrationImage: {fileID: 0}

@@ -1077,6 +1077,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a97a733b6ad26c4a97811c4d7b98348, type: 2}
   - {fileID: 11400000, guid: e80b5a21cb04af5439bfbb71e35b0a1c, type: 2}
   - {fileID: 11400000, guid: 6575efdc38b99b44d9e3973f041d594d, type: 2}
+  - {fileID: 11400000, guid: c05f5c223121d0f4fa2f025a9f036f66, type: 2}
+  - {fileID: 11400000, guid: bc97db41af6cd0f4e817a6093416f0cc, type: 2}
+  - {fileID: 11400000, guid: 29052a31a42bc9a43828eb2418b13ea0, type: 2}
+  - {fileID: 11400000, guid: 867a5d0e32952064a839c6d1c3e8b08d, type: 2}
   decisionEventUI: {fileID: 0}
   divisionEnum: 0
   waitTimeUntilEvents: 2

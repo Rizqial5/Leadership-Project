@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54852eac858bc474abcda625a836aca1, type: 3}
+  m_Name: Pemimpin tidak hadir
+  m_EditorClassIdentifier: 
+  meetingEventName: Pemimpin Tidak Hadir
+  meetingEventDescription: Sudah lama menunggu untuk rapat dimulai. Namun ternyata
+    pemimpin meeting tidak bisa hadir pada rapat ini. Sebagai pemimpin apa yang anda
+    lakukan ?
+  caseAnswers:
+  - nameDes: Melanjutkan rapat dan rapat dipimpin oleh anda
+    caseEffects:
+    - leadershipEnum: 1
+      effectAttribute: 10
+    caseOrgEffects:
+    - organisationEnum: 4
+      effectAttribute: -5
+  - nameDes: Reschedule rapat agar pemimpin meeting bisa menghadiri
+    caseEffects: []
+    caseOrgEffects:
+    - organisationEnum: 3
+      effectAttribute: -5
+    - organisationEnum: 4
+      effectAttribute: -5
+  - nameDes: Tunjuk salah satu anggota untuk menjadi pemimpin rapat
+    caseEffects:
+    - leadershipEnum: 2
+      effectAttribute: 10
+    caseOrgEffects:
+    - organisationEnum: 4
+      effectAttribute: -5
+  illustrationImage: {fileID: 0}

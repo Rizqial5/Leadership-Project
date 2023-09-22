@@ -13,8 +13,19 @@ MonoBehaviour:
   m_Name: Pendidikan dan Pelatihan
   m_EditorClassIdentifier: 
   divisionEnum: 0
+  actionEnum: 0
   nameAction: Pendidikan dan Pelatihan
   descAction: Mendidik dan melatih salah satu kemampuan yang ingin ditingkatkan oleh
     seluruh anggota
-  actionRequirementDays: 30
-  moneyRequirements: 0
+  actionRequirementDays: 14
+  meetingTime: 2
+  moneyRequirements: 10
+  specialRequirements: []
+  leadershipEffects:
+  - leadershipEnum: 3
+    value: 15
+  organizationEffects:
+  - organisationEnum: 3
+    value: 10
+  - organisationEnum: 0
+    value: 8
