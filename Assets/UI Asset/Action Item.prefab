@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8338498056628976578}
   - component: {fileID: 1919688620425067526}
   - component: {fileID: 311096392801020103}
+  - component: {fileID: 8806429662527048987}
   m_Layer: 5
   m_Name: Action Item
   m_TagString: Untagged
@@ -135,6 +136,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8806429662527048987}
+        m_TargetAssemblyTypeName: Leadership.Action.ActionItem, Assembly-CSharp
+        m_MethodName: ChooseActionSO
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1919688620425067526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusObejct: {fileID: 7576117289142616509}
+  reqDesc: 
   descItem: 
+  divisionEnum: 0
 --- !u!114 &311096392801020103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +174,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373ac4a835dee834980ef60e9d3d2bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8806429662527048987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082935096611840521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec21ed23e489d04a837b24bf43ff632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3838052048729239746

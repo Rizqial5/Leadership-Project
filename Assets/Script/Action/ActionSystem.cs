@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
-using System;
+using Leadership.Core;
 
 namespace Leadership.Action
 {
@@ -12,8 +10,32 @@ namespace Leadership.Action
     {
         [SerializeField] ActionSO[] actionItem;
         [SerializeField] DivisionEnum divisionEnum;
-        
-        
+
+
+        [Header("Action Planned")]
+        [SerializeField] ActionSO plannedAction;
+        [SerializeField] private int plannedActionDaysDeadline;
+
+
+
+        private ActionPlay actionPlay;
+
+
+        private void Awake()
+        {
+            actionPlay = GetComponent<ActionPlay>();    
+        }
+        private void Update()
+        {
+            if(plannedAction == null) return;
+
+            if(plannedActionDaysDeadline == 0)
+            {
+                actionPlay.ActionStart();
+            }
+            
+        }
+
         public ActionSO[] GetActionSO()
         {
             return actionItem;
@@ -23,5 +45,24 @@ namespace Leadership.Action
         {
             return divisionEnum;
         }
+
+        public void SetChosenAction(ActionSO actionItemTemp)
+        {
+            //Check persyaratan action so apakah sudah bisa
+            
+            plannedAction = actionItemTemp;
+
+            plannedActionDaysDeadline = plannedAction.GetRequirementDay();
+            
+     
+        }
+
+        public void DecreaseDay()
+        {
+            if (plannedAction == null) return;
+            plannedActionDaysDeadline -= 1;
+        }
+
+        
     }
 }

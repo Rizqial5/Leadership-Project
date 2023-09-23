@@ -10,6 +10,7 @@ namespace Leadership.Attribute
     {
         [SerializeField] ProgressionLeadershipLevel[] progressionLeadershipLevels;
         
+        
         Dictionary<int, Dictionary<LeadershipEnum,float>> progressionTableLookUp = null;
 
         public float GetRequireStat(LeadershipEnum leadershipEnum,int levelLead)
@@ -22,6 +23,7 @@ namespace Leadership.Attribute
         public Dictionary<LeadershipEnum,float> GetAllStat(int levelLead)
         {
             BuildLookupTable();
+            
             if(levelLead >= 6)
             {
                 return null;

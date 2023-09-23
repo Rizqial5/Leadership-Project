@@ -33,7 +33,11 @@ namespace Leadership.Action
         public string GetNameAction()
         {
             return nameAction;
+            
+         
         }
+
+        public DivisionEnum GetDivisionEnum() { return divisionEnum; }
 
         public ActionEnum GetActionEnum()
         {
@@ -60,6 +64,9 @@ namespace Leadership.Action
             return moneyRequirements;
         }
 
+        public LeadershipEffect[] GetLeadershipEffects() { return leadershipEffects; }
+        public OrganizationEffect[] GetOrganizationEffects() {  return organizationEffects; }
+
         //Effect umum dari action ini
 
         //Effect Khusus dari action ini berupa script sendiri
@@ -70,6 +77,16 @@ namespace Leadership.Action
     {
         [SerializeField] LeadershipEnum leadershipEnum;
         [SerializeField] float value;
+
+        public LeadershipEnum GetLeadershipEnum()
+        {
+            return leadershipEnum;
+        }
+
+        public float GetValue()
+        {
+            return value;
+        }
     }
 
     [System.Serializable]
@@ -77,6 +94,13 @@ namespace Leadership.Action
     {
         [SerializeField] OrganisationEnum organisationEnum;
         [SerializeField] float value;
+
+        public OrganisationEnum GetOrganisation()
+        {
+            return organisationEnum;
+        }
+
+        public float GetValue() { return value; }
     }
 
 

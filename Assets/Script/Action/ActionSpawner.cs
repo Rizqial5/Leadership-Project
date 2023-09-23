@@ -2,7 +2,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Leadership.UI;
-
+using Leadership.Attribute;
+using System.Collections.Generic;
 
 namespace Leadership.Action
 {
@@ -13,16 +14,21 @@ namespace Leadership.Action
         [SerializeField] Transform spawnLocation;
         [SerializeField] Transform spawnParent;
         [SerializeField] TextMeshProUGUI descBox;
+
         [SerializeField] float beda = -1f;
         private Text descActionInGame;
         private int i;
+        private GameObject[] listActions = new GameObject[10];
 
 
         private ActionDatabase actionDatabase;
-        
+
         private SpawnActionTag[] spawnedObject;
         private DivisionEnum _divisionEnum;
 
+        private Dictionary<string, float> actionUIEffect;
+
+        
         private void Awake() 
         {
             actionDatabase = GetComponent<ActionDatabase>(); 
@@ -37,7 +43,7 @@ namespace Leadership.Action
 
             spawnedObject = FindObjectsOfType<SpawnActionTag>();
             
-
+           
         }
 
         public void DeleteDesc()
@@ -53,13 +59,14 @@ namespace Leadership.Action
         }
 
 
+
         public void SpawnAction()
         {
             // print(NameAction());
 
 
             if (NameAction() == null) return;
-
+            
             
             
 
@@ -67,13 +74,41 @@ namespace Leadership.Action
             {
                 i += 1;
                 GameObject objectSpawn = Instantiate(actionObject, spawnLocation.position, spawnLocation.rotation, spawnParent);
+                listActions[i] = objectSpawn;
+
                 objectSpawn.transform.position = new Vector3(objectSpawn.transform.position.x, (objectSpawn.transform.position.y + (i - 1) * beda));
 
                 objectSpawn.GetComponent<SpawnDescChanger>().ChangeStatus(item.GetNameAction());
                 objectSpawn.GetComponent<SpawnDescChanger>().ChangeDesc(item.GetDescAction());
-                
+                objectSpawn.GetComponent<SpawnDescChanger>().ChangeReqDesc("Persiapan Hari : " + item.GetRequirementDay() + "\n" +
+                    "Dana : " + item.GetMoneyRequirement() + "\n" +
+                    "Jumlah meeting : " + item.GetTotalMeetingReq());
 
-                // print(item.GetNameAction());
+
+                LeadershipEffect[] leadershipEffect = item.GetLeadershipEffects();
+                OrganizationEffect[] organizationEffect = item.GetOrganizationEffects();
+
+                
+                objectSpawn.GetComponent<ActionItem>().SetActionSO(item);
+
+                actionUIEffect = new Dictionary<string, float>();
+
+                foreach (var item1 in leadershipEffect)
+                {
+                    actionUIEffect.Add(item1.GetLeadershipEnum().ToString(), item1.GetValue());
+                    
+
+                }
+
+                foreach (var item1 in organizationEffect)
+                {
+                    actionUIEffect.Add(item1.GetOrganisation().ToString(), item1.GetValue());
+                    
+                }
+
+
+
+                objectSpawn.GetComponent<SpawnDescChanger>().ChangeEffectDesc(actionUIEffect);
             }
 
             i=0;
@@ -81,10 +116,10 @@ namespace Leadership.Action
 
         public void DestroySpawn()
         {
-            if(spawnedObject == null) return;
-            for (int i = 0; i < spawnedObject.Length; i++)
+            if(listActions == null) return;
+            for (int i = 0; i < listActions.Length; i++)
             {
-                Destroy(spawnedObject[i].gameObject);
+                Destroy(listActions[i]);
             }
         }
 
