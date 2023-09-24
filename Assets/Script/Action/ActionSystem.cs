@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Leadership.Core;
+using Leadership.Attribute;
 
 namespace Leadership.Action
 {
@@ -19,11 +20,15 @@ namespace Leadership.Action
 
 
         private ActionPlay actionPlay;
+        private LeadershipMechanic leadershipMechanic;
+        private AttributesMechanic attributesMechanic;
 
 
         private void Awake()
         {
-            actionPlay = GetComponent<ActionPlay>();    
+            actionPlay = GetComponent<ActionPlay>();
+            leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();
         }
         private void Update()
         {
@@ -31,7 +36,7 @@ namespace Leadership.Action
 
             if(plannedActionDaysDeadline == 0)
             {
-                actionPlay.ActionStart();
+                actionPlay.ActionStart(plannedAction);
             }
             
         }
@@ -57,11 +62,36 @@ namespace Leadership.Action
      
         }
 
+        public void SetNullPlannedAction() { plannedAction = null; }
+        public void EffectActivated()
+        {
+            if (plannedAction == null) return;
+
+            if(plannedAction.GetLeadershipEffects() != null)
+            {
+                foreach (var item in plannedAction.GetLeadershipEffects())
+                {
+                    leadershipMechanic.AddEachMemberAttribute(item.GetLeadershipEnum(), item.GetValue());
+                }
+            }
+            
+            if(plannedAction.GetOrganizationEffects() != null)
+            {
+                foreach (var item in plannedAction.GetOrganizationEffects())
+                {
+                    attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue());
+                }
+            }
+            
+        }
+
         public void DecreaseDay()
         {
             if (plannedAction == null) return;
             plannedActionDaysDeadline -= 1;
         }
+
+        
 
         
     }

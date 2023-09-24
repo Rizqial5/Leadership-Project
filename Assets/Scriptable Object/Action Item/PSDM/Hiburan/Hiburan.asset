@@ -16,6 +16,7 @@ MonoBehaviour:
   actionEnum: 0
   nameAction: Hiburan
   descAction: Mengadakan sebuah kegiatan yang bertujuan untuk refreshment kepengurusan
+  imageAction: {fileID: 21300000, guid: 23ce623eb2644034c9c8012593787473, type: 3}
   actionRequirementDays: 7
   meetingTime: 1
   moneyRequirements: 10

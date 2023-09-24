@@ -18,6 +18,7 @@ namespace Leadership.Action
         
         [TextArea(2,5)]
         [SerializeField] string descAction;
+        [SerializeField] Sprite imageAction;
 
         [Header("Action Requirement")]
         [SerializeField] int actionRequirementDays;
@@ -29,12 +30,17 @@ namespace Leadership.Action
         [SerializeField] LeadershipEffect[] leadershipEffects;
         [SerializeField] OrganizationEffect[] organizationEffects;
 
+        [SerializeField] ActionEventSO[] actionEventSOs;
+
 
         public string GetNameAction()
         {
             return nameAction;
-            
-         
+        }
+
+        public Sprite GetImageAction()
+        {
+            return imageAction;
         }
 
         public DivisionEnum GetDivisionEnum() { return divisionEnum; }
@@ -62,6 +68,11 @@ namespace Leadership.Action
         public float GetMoneyRequirement()
         {
             return moneyRequirements;
+        }
+
+        public ActionEventSO[] GetActionEventSO()
+        {
+            return actionEventSOs;
         }
 
         public LeadershipEffect[] GetLeadershipEffects() { return leadershipEffects; }
