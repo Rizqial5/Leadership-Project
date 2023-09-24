@@ -427,7 +427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Outliner
+  m_text: Meet Outliner
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f20f7e192f2a8043aca42f63fdad906, type: 2}
   m_sharedMaterial: {fileID: -4424645848432460898, guid: 6f20f7e192f2a8043aca42f63fdad906, type: 2}

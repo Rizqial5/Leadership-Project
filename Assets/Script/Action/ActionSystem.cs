@@ -22,6 +22,7 @@ namespace Leadership.Action
         private ActionPlay actionPlay;
         private LeadershipMechanic leadershipMechanic;
         private AttributesMechanic attributesMechanic;
+        private int countedTimeMeeting;
 
 
         private void Awake()
@@ -36,6 +37,11 @@ namespace Leadership.Action
 
             if(plannedActionDaysDeadline == 0)
             {
+                if(countedTimeMeeting < plannedAction.GetTotalMeetingReq())
+                {
+                    print("Meeting Gagal dilaksanakan");
+                    return;
+                }
                 actionPlay.ActionStart(plannedAction);
             }
             
@@ -53,13 +59,18 @@ namespace Leadership.Action
 
         public void SetChosenAction(ActionSO actionItemTemp)
         {
-            //Check persyaratan action so apakah sudah bisa
+            
             
             plannedAction = actionItemTemp;
 
             plannedActionDaysDeadline = plannedAction.GetRequirementDay();
             
      
+        }
+
+        public ActionSO GetPlannedAction()
+        {
+            return plannedAction;
         }
 
         public void SetNullPlannedAction() { plannedAction = null; }

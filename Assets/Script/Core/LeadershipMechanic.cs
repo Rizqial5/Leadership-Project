@@ -43,7 +43,7 @@ namespace Leadership.Core
         }
         private void Update() 
         {
-            CanLevelUp(levelNow+1);
+            //CanLevelUp(levelNow+1);
             //Testing-----------
             if(Input.GetKeyDown(KeyCode.Z))
             {

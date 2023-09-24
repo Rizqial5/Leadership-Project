@@ -12,11 +12,11 @@ namespace Leadership.Attribute
 
         void Update()
         {
-            // if(Input.GetKeyDown(KeyCode.M))
-            // {
-            //     AddAttributes(OrganisationEnum.Money,10);
-            //     moneyText.text = orgAttributesSO.GetOrgAttributes(OrganisationEnum.Money).ToString();
-            // }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                AddAttributes(OrganisationEnum.Money, 100);
+                
+            }
         }
         public void AddAttributes(OrganisationEnum organisationEnum,float value)
         {

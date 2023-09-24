@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: Test 3
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Test 3
+  descEvent: Test 3
+  answerAction:
+  - descAnswer: g
+    effectUpAnswer: 10
+  - descAnswer: h
+    effectUpAnswer: 10
+  - descAnswer: i
+    effectUpAnswer: 10
