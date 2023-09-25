@@ -22,7 +22,8 @@ namespace Leadership.Action
         private ActionPlay actionPlay;
         private LeadershipMechanic leadershipMechanic;
         private AttributesMechanic attributesMechanic;
-        private int countedTimeMeeting;
+        [SerializeField] private int countedTimeMeeting;
+        [SerializeField] private int countedDaysSincePlan;
 
 
         private void Awake()
@@ -37,11 +38,11 @@ namespace Leadership.Action
 
             if(plannedActionDaysDeadline == 0)
             {
-                if(countedTimeMeeting < plannedAction.GetTotalMeetingReq())
-                {
-                    print("Meeting Gagal dilaksanakan");
-                    return;
-                }
+                //if(countedTimeMeeting < plannedAction.GetTotalMeetingReq())
+                //{
+                //    print("Meeting Gagal dilaksanakan");
+                //    return;
+                //}
                 actionPlay.ActionStart(plannedAction);
             }
             
@@ -50,6 +51,23 @@ namespace Leadership.Action
         public ActionSO[] GetActionSO()
         {
             return actionItem;
+        }
+
+        public int GetCountedMeeting()
+        {
+            return countedTimeMeeting;
+        }
+
+        public int GetCountedDays()
+        {
+            return countedDaysSincePlan;
+        }
+
+        public void AddCountedDays()
+        {
+            if (plannedAction == null) return ;
+
+            countedDaysSincePlan++ ;
         }
 
         internal DivisionEnum GetDivisionEnum()
