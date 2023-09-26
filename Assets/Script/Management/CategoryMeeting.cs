@@ -43,6 +43,11 @@ namespace Leadership.Management
             return startMeetingDay.ToString();
         }
 
+        public CategoryMeetingEnum GetCategoryMeetingEnum()
+        {
+            return categoryMeeting;
+        }
+
         public void MakePlan()
         {
            
@@ -51,13 +56,17 @@ namespace Leadership.Management
            
         }
 
-       
+        public void SetDescMeetingEvent()
+        {
+           
+            DescMeeting = meetingSystem.GetDescMeetingEvent();
+        }
 
         
     }
    public enum CategoryMeetingEnum
    {
         Regular,
-        Big
+        Event,
    } 
 }

@@ -17,7 +17,12 @@ namespace Leadership.Management
         {
             _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Activity,5);
             _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Performance,5);
-            
+
+            if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event")
+            {
+                _meetingSM.GetActionSystem().AddCountedTimeMeeting();
+            }
+
         }
         public override void UpdateLogic()
         {
@@ -25,6 +30,7 @@ namespace Leadership.Management
 
             // _meetingSM.GetLoadingText().SetActive(false);
             _meetingSM.DestroySpawnMeeting();
+            
             _meetingSM.SetMeetingTotal(0) ;
             _meetingSM.SetMeetingTime(0);
             

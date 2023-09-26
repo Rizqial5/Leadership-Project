@@ -4744,8 +4744,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11603932}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDescMeetingEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Leadership.Management.MeetingSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 832395532435929717, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 832395532568378646, guid: bcf59b9669cf99d49869f2dd74e169cd, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11636,6 +11664,8 @@ MonoBehaviour:
   divisionEnum: 3
   meetingLimit: 1
   MeetingUI: {fileID: 11603930}
+  meetingDescEvent: 
+  plannedMeetingCategory: 
 --- !u!61 &934016971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15693,6 +15723,8 @@ MonoBehaviour:
   divisionEnum: 0
   meetingLimit: 1
   MeetingUI: {fileID: 11603930}
+  meetingDescEvent: 
+  plannedMeetingCategory: 
 --- !u!224 &1349730387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18343,6 +18375,8 @@ MonoBehaviour:
   divisionEnum: 1
   meetingLimit: 1
   MeetingUI: {fileID: 11603930}
+  meetingDescEvent: 
+  plannedMeetingCategory: 
 --- !u!61 &1894792017
 BoxCollider2D:
   m_ObjectHideFlags: 0

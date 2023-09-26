@@ -410,7 +410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Big
+  m_text: Event
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f20f7e192f2a8043aca42f63fdad906, type: 2}
   m_sharedMaterial: {fileID: -4424645848432460898, guid: 6f20f7e192f2a8043aca42f63fdad906, type: 2}
@@ -1060,6 +1060,7 @@ MonoBehaviour:
   _divisionEnum: 0
   warningText: {fileID: 2818989025036968214}
   statusLeader: {fileID: 0}
+  meetingEventDesc: 
 --- !u!114 &5240561212319688173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,7 +1888,7 @@ GameObject:
   - component: {fileID: 1808710097247838237}
   - component: {fileID: 1366725669982679929}
   m_Layer: 5
-  m_Name: Big Meeting
+  m_Name: Event Meeting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1995,6 +1996,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1366725669982679929}
+        m_TargetAssemblyTypeName: Leadership.Management.CategoryMeeting, Assembly-CSharp
+        m_MethodName: SetDescMeetingEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1366725669982679929}
         m_TargetAssemblyTypeName: Leadership.Management.CategoryMeeting, Assembly-CSharp
         m_MethodName: ShowPlan

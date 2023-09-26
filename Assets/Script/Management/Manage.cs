@@ -18,7 +18,11 @@ namespace Leadership.Management
         [SerializeField] DivisionEnum divisionEnum;
         [SerializeField] int meetingLimit = 1;
         [SerializeField] GameObject MeetingUI;
+        [SerializeField] string meetingDescEvent;
         // [SerializeField] GameObject loadingText;
+
+        [Header("Planned Meeting")]
+        [SerializeField] private string plannedMeetingCategory;
 
         private int meetingCountTotal;
         private int startMeetingDate;
@@ -136,6 +140,11 @@ namespace Leadership.Management
             return meetingLimit;
         }
 
+        public string GetPlannedMeetingCategory()
+        {
+            return plannedMeetingCategory;
+        }
+
         // public GameObject GetLoadingText()
         // {
         //     return loadingText;
@@ -153,6 +162,21 @@ namespace Leadership.Management
         public string roomNameGet()
         {
             return roomName;
+        }
+
+        public void SetMeetingEventDesc(string eventDesc)
+        {
+            meetingDescEvent = eventDesc;
+        }
+
+        public string GetMeetingEventDesc()
+        {
+            return meetingDescEvent;
+        }
+
+        public void SetMeetingCategoryPlannd(string text)
+        {
+            plannedMeetingCategory = text;
         }
 
 

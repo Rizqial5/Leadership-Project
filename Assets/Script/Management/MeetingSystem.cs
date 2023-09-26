@@ -24,13 +24,18 @@ namespace Leadership.Management
         private int startMeetingTime;
         private int startMeetingTemp;
         private string meetingCategoryNameTemp;
-        private string meetingCategoryName;
+
+        [SerializeField] private string meetingCategoryName;
         private SpawnObject[] statusMeetingUI;
         private DecisionEventUI decisionEventUI;
         private ManageDatabase _manageDatabase;
+        private CategoryMeeting categoryMeeting;
+        
         [SerializeField] private DivisionEnum _divisionEnum;
         [SerializeField] GameObject warningText;
         [SerializeField] GameObject statusLeader;
+
+        [SerializeField] private string meetingEventDesc;
 
 
         private void Awake() 
@@ -117,7 +122,23 @@ namespace Leadership.Management
            get{return _divisionEnum;} set{_divisionEnum = value;}
         }
 
-        
+        public void SetDescMeetingEvent()
+        {
+            
+            meetingEventDesc = _manageDatabase.GetMeetingDesc(DivisionEnum);
+            
+            
+        }
+
+        public string GetDescMeetingEvent()
+        {
+
+            return meetingEventDesc; 
+
+
+        }
+
+
 
         public void MeetingPlan()
         {
@@ -128,8 +149,10 @@ namespace Leadership.Management
             _manageDatabase.SetMeetingCount(_divisionEnum, 1);
             
             _manageDatabase.SetStartMeetingDate(_divisionEnum,startDayTemp,startMeetingTime);
-           
+            _manageDatabase.SetMeetingCategoryPlanned(_divisionEnum, meetingCategoryNameTemp);
+
             meetingCategoryName = meetingCategoryNameTemp;
+            
 
 
 

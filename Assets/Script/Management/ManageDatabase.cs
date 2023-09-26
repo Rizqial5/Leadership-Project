@@ -73,6 +73,41 @@ namespace Leadership.Management
             return 0;
         }
 
+        public void SetMeetingDesc(DivisionEnum name, string text)
+        {
+            foreach (Manage item in totalInteractionRooms)
+            {
+                if (item.GetDivisionEnum() == name)
+                {
+                    item.SetMeetingEventDesc(text); 
+                }
+            }
+        }
+
+        public void SetMeetingCategoryPlanned(DivisionEnum name, string text)
+        {
+            foreach (Manage item in totalInteractionRooms)
+            {
+                if (item.GetDivisionEnum() == name)
+                {
+                    item.SetMeetingCategoryPlannd(text);
+                }
+            }
+        }
+
+        public string GetMeetingDesc(DivisionEnum name)
+        {
+            foreach (Manage item in totalInteractionRooms)
+            {
+                if (item.GetDivisionEnum() == name)
+                {
+                    return item.GetMeetingEventDesc();
+                }
+            }
+
+            return null;
+        }
+
         public int SetStartMeetingDate(DivisionEnum name, int dayMeeting, int timeMeeting)
         {
             foreach (Manage item in totalInteractionRooms)

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Leadership.Core;
 using Leadership.Attribute;
+using Leadership.Management;
 
 namespace Leadership.Action
 {
@@ -22,6 +23,7 @@ namespace Leadership.Action
         private ActionPlay actionPlay;
         private LeadershipMechanic leadershipMechanic;
         private AttributesMechanic attributesMechanic;
+        private ManageDatabase manageDB;
         [SerializeField] private int countedTimeMeeting;
         [SerializeField] private int countedDaysSincePlan;
 
@@ -31,6 +33,7 @@ namespace Leadership.Action
             actionPlay = GetComponent<ActionPlay>();
             leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
             attributesMechanic = FindObjectOfType<AttributesMechanic>();
+            manageDB= FindObjectOfType<ManageDatabase>();
         }
         private void Update()
         {
@@ -38,11 +41,11 @@ namespace Leadership.Action
 
             if(plannedActionDaysDeadline == 0)
             {
-                //if(countedTimeMeeting < plannedAction.GetTotalMeetingReq())
-                //{
-                //    print("Meeting Gagal dilaksanakan");
-                //    return;
-                //}
+                if (countedTimeMeeting < plannedAction.GetTotalMeetingReq())
+                {
+                    print("Meeting Gagal dilaksanakan");
+                    return;
+                }
                 actionPlay.ActionStart(plannedAction);
             }
             
@@ -70,6 +73,12 @@ namespace Leadership.Action
             countedDaysSincePlan++ ;
         }
 
+        public void AddCountedTimeMeeting()
+        {
+            if (plannedAction == null) return;
+            countedTimeMeeting++;
+        }
+
         internal DivisionEnum GetDivisionEnum()
         {
             return divisionEnum;
@@ -80,6 +89,8 @@ namespace Leadership.Action
             
             
             plannedAction = actionItemTemp;
+
+            manageDB.SetMeetingDesc(divisionEnum, "Meeting ini akan mempersiapkan kegiatan " + plannedAction.GetNameAction());
 
             plannedActionDaysDeadline = plannedAction.GetRequirementDay();
             

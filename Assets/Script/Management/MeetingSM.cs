@@ -4,6 +4,7 @@ using UnityEngine;
 using Leadership.Core;
 using Leadership.UI;
 using Leadership.Attribute;
+using Leadership.Action;
 using UnityEngine.UI;
 
 namespace Leadership.Management
@@ -30,6 +31,7 @@ namespace Leadership.Management
         private GameSM gameSM;
         private GameObject loadingText;
         private Manage manageDB;
+        private ActionSystem actionSystem;
         private int startMeetingDate;
         private GameObject MeetingUI; 
         private AttributesMechanic attributesMechanic;
@@ -50,6 +52,7 @@ namespace Leadership.Management
 
             meetingSystem = FindObjectOfType<MeetingSystem>();
             manageDB = GetComponent<Manage>();
+            actionSystem = GetComponent<ActionSystem>();
             attributesMechanic = FindObjectOfType<AttributesMechanic>();
 
  
@@ -102,6 +105,11 @@ namespace Leadership.Management
         {
             return meetingSystem;
         }
+
+        public Manage GetManage()
+        { return manageDB; }
+
+        public ActionSystem GetActionSystem() { return actionSystem; }  
 
         public GameSM GetGameSM()
         {
