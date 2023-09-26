@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
+  m_Name: Diklat Event 2
+  m_EditorClassIdentifier: 
+  titleEvent: Tanya Jawab
+  descEvent: Pada penyampaian materi oleh pemateri, anda ditunjuk oleh pemateri untuk
+    menjawab pertanyaanya sebagai pemimpin. Pertanyaanya menurut anda bagaimana idealnya
+    seorang pemimpin itu?
+  answerAction:
+  - descAnswer: Karena ini merupakan kegiatan diklat, oleh karena itu disini saya
+      ingin belajar untuk memahmi lebih dalam mengenai kepemimpinan
+    effectUpAnswer: 0
+  - descAnswer: Pemimpin yang ideal itu bisa menyatukan dari segi visi misi organisasi
+      serta visi misi pemimpin
+    effectUpAnswer: 5
+  - descAnswer: Pemimpin yang ideal itu bisa dekat dengan anggota, bisa mengajak
+      produktif, membina kemampuan anggota serta membawa anggota itu menuju ke puncak
+    effectUpAnswer: 10

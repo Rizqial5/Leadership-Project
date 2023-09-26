@@ -32,6 +32,10 @@ namespace Leadership.Core
                 _gameSM.ChangeState(_gameSM.pauseState);
             }
 
+            if(_gameSM.GetActionDatabase().GetActionIsPlay() == true)
+            {
+                _gameSM.ChangeState(_gameSM.pauseState);
+            }
 
             if (_gameSM.turnSystem.TurnTime  >= 3f)
             {

@@ -1823,6 +1823,17 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!114 &82419961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6267394774796410479, guid: 969100a9f24616f419685d313a81f3c7, type: 3}
+  m_PrefabInstance: {fileID: 2002155150}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4938dc0a55553e84db11b98d0bd8949a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!213 &88056828
 Sprite:
   m_ObjectHideFlags: 0
@@ -4197,7 +4208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeDays.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4237,6 +4248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
@@ -4280,6 +4295,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 570671799}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 82419961}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeDays.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -4317,6 +4336,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
@@ -4360,6 +4383,10 @@ PrefabInstance:
       value: ReducePenalty
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DecreaseRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeDays.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Leadership.Management.MeetingEvent, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -4400,6 +4427,10 @@ PrefabInstance:
       value: Leadership.Decisive.DecisiveMechanic, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Leadership.Action.ActionDatabase, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeDays.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -4437,6 +4468,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
       propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522447152054002164, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6598002114950888436, guid: 12b06193cd3cd244ebbe8f017cf0a30f, type: 3}

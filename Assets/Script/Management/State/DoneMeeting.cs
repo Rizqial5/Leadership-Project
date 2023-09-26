@@ -15,13 +15,10 @@ namespace Leadership.Management
 
         public override void Enter()
         {
-            _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Activity,5);
-            _meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Performance,5);
+            //_meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Activity,5);
+            //_meetingSM.AttributesMechanic().AddAttributes(Attribute.OrganisationEnum.Performance,5);
 
-            if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event")
-            {
-                _meetingSM.GetActionSystem().AddCountedTimeMeeting();
-            }
+            
 
         }
         public override void UpdateLogic()
@@ -36,10 +33,9 @@ namespace Leadership.Management
             
             
 
-            if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().planState)
-            {
-                _meetingSM.ChangeState(_meetingSM.planMeetingState);
-            }
+            
+            _meetingSM.ChangeState(_meetingSM.planMeetingState);
+            
 
            
         }

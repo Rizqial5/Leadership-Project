@@ -18,6 +18,7 @@ namespace Leadership.Action
 
         private GameObject actionPanel;
         private bool isActionPanelDone;
+        private bool isActionPlay;
         private GameObject actionEventPanel;
 
         private int indexNumber = 0;
@@ -26,6 +27,7 @@ namespace Leadership.Action
         public void ActionStart(ActionSO actionSO)
         {
             ShowImageAction(actionSO);
+            isActionPlay = true;
         }
 
         private void ShowImageAction(ActionSO actionSO)
@@ -86,9 +88,14 @@ namespace Leadership.Action
 
             Destroy(actionEventPanel);
 
-            GetComponent<ActionSystem>().EffectActivated();
+            GetComponent<ActionSystem>().EffectActivated(accumulationPoint);
             GetComponent<ActionSystem>().SetNullPlannedAction();
             
+        }
+
+        public bool GetActionPLay()
+        {
+            return isActionPlay;
         }
     }
 }

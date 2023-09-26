@@ -13,8 +13,26 @@ MonoBehaviour:
   m_Name: Pertemuan Besar
   m_EditorClassIdentifier: 
   divisionEnum: 3
+  actionEnum: 0
   nameAction: Pertemuan Besar
   descAction: Pertemuan ini memiliki tujuan untuk berdiskusi mengenai permasalahan
     yang dirasakan oleh mahasiswa dan mencari solusi
-  actionRequirementDays: 10
-  moneyRequirements: 0
+  imageAction: {fileID: 21300000, guid: 15fcd55da064b494aa3c58ced5492c31, type: 3}
+  actionRequirementDays: 20
+  meetingTime: 2
+  moneyRequirements: 20
+  specialRequirements: []
+  leadershipEffects:
+  - leadershipEnum: 2
+    value: 15
+  - leadershipEnum: 3
+    value: -10
+  organizationEffects:
+  - organisationEnum: 4
+    value: 15
+  - organisationEnum: 1
+    value: 15
+  - organisationEnum: 0
+    value: 20
+  respawnActionTimeLimit: 7
+  actionEventSOs: []

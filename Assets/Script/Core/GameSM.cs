@@ -1,3 +1,4 @@
+using Leadership.Action;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Leadership.Core
         [SerializeField] public TurnSystem turnSystem;
 
         private LeadershipMechanic leadershipMechanic;
+        private ActionDatabase actionDatabase;
         
 
         
@@ -27,6 +29,7 @@ namespace Leadership.Core
             pauseState = new Pause(this);
 
             leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
+            actionDatabase = FindObjectOfType<ActionDatabase>();
         }
 
         public override void PlayButton()
@@ -76,6 +79,11 @@ namespace Leadership.Core
         public LeadershipMechanic GetLeadershipMechanic()
         {
             return leadershipMechanic;
+        }
+
+        public ActionDatabase GetActionDatabase()
+        {
+            return actionDatabase;
         }
     }
 }

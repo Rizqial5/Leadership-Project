@@ -17,6 +17,7 @@ MonoBehaviour:
   nameAction: Pendidikan dan Pelatihan
   descAction: Mendidik dan melatih salah satu kemampuan yang ingin ditingkatkan oleh
     seluruh anggota
+  imageAction: {fileID: 21300000, guid: 3072548310c7d1640bd0dbf473d4d9c5, type: 3}
   actionRequirementDays: 14
   meetingTime: 2
   moneyRequirements: 10
@@ -29,3 +30,8 @@ MonoBehaviour:
     value: 10
   - organisationEnum: 0
     value: 8
+  respawnActionTimeLimit: 5
+  actionEventSOs:
+  - {fileID: 11400000, guid: c8cfaf4c00dab194fba0a355fb5b8bc9, type: 2}
+  - {fileID: 11400000, guid: 30f8749e5500ee94c90f1424cf5657fc, type: 2}
+  - {fileID: 11400000, guid: e7c43119a6e55404cba32fdd5503cd69, type: 2}

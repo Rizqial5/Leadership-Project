@@ -13,8 +13,26 @@ MonoBehaviour:
   m_Name: Survey Mahasiswa
   m_EditorClassIdentifier: 
   divisionEnum: 3
+  actionEnum: 0
   nameAction: Survey Mahasiswa
   descAction: Kegiatan ini berfokus kepada mencari permasalahan yang akan terjadi
     pada lingkungan mahasiswa
-  actionRequirementDays: 30
-  moneyRequirements: 0
+  imageAction: {fileID: 21300000, guid: 1f145b13fcaef614caeef6bfb6119e87, type: 3}
+  actionRequirementDays: 9
+  meetingTime: 1
+  moneyRequirements: 10
+  specialRequirements: []
+  leadershipEffects:
+  - leadershipEnum: 3
+    value: 10
+  - leadershipEnum: 1
+    value: 10
+  organizationEffects:
+  - organisationEnum: 4
+    value: -10
+  - organisationEnum: 3
+    value: 15
+  - organisationEnum: 0
+    value: 10
+  respawnActionTimeLimit: 3
+  actionEventSOs: []

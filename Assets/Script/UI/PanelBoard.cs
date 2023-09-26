@@ -42,7 +42,15 @@ namespace Leadership.UI
 
         public void CloseFunction()
         {
+            ObjectItem[] totalObjectItem = FindObjectsOfType<ObjectItem>();
+            foreach (var item in totalObjectItem)
+            {
+                Destroy(item);
+            }
+
             Destroy(this.gameObject);
+            
+
         }
 
         

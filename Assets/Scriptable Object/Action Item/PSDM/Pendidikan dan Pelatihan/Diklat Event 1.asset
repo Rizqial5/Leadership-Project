@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
+  m_Name: Diklat Event 1
+  m_EditorClassIdentifier: 
+  titleEvent: Sambutan Kegiatan
+  descEvent: Sebelum dibukanya kegiatan pendidikan dan pelatihan ini, kamu diberi
+    kesempatan untuk menyampaikan sambutan kepada seluruh pengurus organisasi tentang
+    kegiatan ini. Apa yang kamu sampaikan?
+  answerAction:
+  - descAnswer: Menyampaikan tujuan kegiatan ini dan output yang ingin dicapai oleh
+      seluruh pengurus
+    effectUpAnswer: 2
+  - descAnswer: Hanya menyampaikan sambutan biasa aja
+    effectUpAnswer: 0
+  - descAnswer: Menyampaikan untuk bersungguh - sungguh dalam mengikuti kegiatan
+      ini, karena banyaknya ilmu - ilmu yang ada pada kegiatan ini
+    effectUpAnswer: 5

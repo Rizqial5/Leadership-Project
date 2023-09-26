@@ -24,6 +24,7 @@ namespace Leadership.Action
         private LeadershipMechanic leadershipMechanic;
         private AttributesMechanic attributesMechanic;
         private ManageDatabase manageDB;
+        private ActionDatabase actionDatabase;
         [SerializeField] private int countedTimeMeeting;
         [SerializeField] private int countedDaysSincePlan;
 
@@ -34,6 +35,7 @@ namespace Leadership.Action
             leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
             attributesMechanic = FindObjectOfType<AttributesMechanic>();
             manageDB= FindObjectOfType<ManageDatabase>();
+            actionDatabase = FindObjectOfType<ActionDatabase>();
         }
         private void Update()
         {
@@ -76,7 +78,7 @@ namespace Leadership.Action
         public void AddCountedTimeMeeting()
         {
             if (plannedAction == null) return;
-            countedTimeMeeting++;
+            countedTimeMeeting += 1;
         }
 
         internal DivisionEnum GetDivisionEnum()
@@ -102,16 +104,22 @@ namespace Leadership.Action
             return plannedAction;
         }
 
-        public void SetNullPlannedAction() { plannedAction = null; }
-        public void EffectActivated()
+        public void SetNullPlannedAction() 
+        {
+            actionDatabase.DeleteTotalAction(plannedAction);
+            plannedAction = null; 
+        }
+        public void EffectActivated(float accumulationPoint)
         {
             if (plannedAction == null) return;
+
+            plannedAction.RespawnActionTime = plannedAction.GetRespawnActionTimeLimit();
 
             if(plannedAction.GetLeadershipEffects() != null)
             {
                 foreach (var item in plannedAction.GetLeadershipEffects())
                 {
-                    leadershipMechanic.AddEachMemberAttribute(item.GetLeadershipEnum(), item.GetValue());
+                    leadershipMechanic.AddEachMemberAttribute(item.GetLeadershipEnum(), item.GetValue() + accumulationPoint);
                 }
             }
             
@@ -119,7 +127,14 @@ namespace Leadership.Action
             {
                 foreach (var item in plannedAction.GetOrganizationEffects())
                 {
-                    attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue());
+                    if(item.GetValue() < 0)
+                    {
+                        attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue());
+                    }else
+                    {
+                        attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue() + accumulationPoint);
+                    }
+                    
                 }
             }
             
@@ -129,6 +144,11 @@ namespace Leadership.Action
         {
             if (plannedAction == null) return;
             plannedActionDaysDeadline -= 1;
+        }
+
+        public bool GetIsPLayAction()
+        {
+            return actionPlay.GetActionPLay();
         }
 
         

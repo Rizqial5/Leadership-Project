@@ -29,9 +29,12 @@ namespace Leadership.Action
         [Header("Action Effect")]
         [SerializeField] LeadershipEffect[] leadershipEffects;
         [SerializeField] OrganizationEffect[] organizationEffects;
+        [SerializeField] int respawnActionTimeLimit;
+        [System.NonSerialized] int respawnActionTime = 0;
 
         [SerializeField] ActionEventSO[] actionEventSOs;
 
+        
 
         public string GetNameAction()
         {
@@ -69,6 +72,15 @@ namespace Leadership.Action
         {
             return moneyRequirements;
         }
+
+        public int GetRespawnActionTimeLimit()
+        {
+            return respawnActionTimeLimit;
+        }
+
+        public int RespawnActionTime{ set {respawnActionTime = value;} get{ return respawnActionTime; }}
+        
+            
 
         public ActionEventSO[] GetActionEventSO()
         {

@@ -46,6 +46,7 @@ namespace Leadership.Action
         public void MakeActionPlan()
         {
             if(choosedActionSOTemp == null) return;
+            //if(choosedActionSOTemp.GetRespawnActionTime)
             if(attributesSO.GetOrgAttributes(OrganisationEnum.Money) < choosedActionSOTemp.GetMoneyRequirement())
             {
                 warningText.GetComponent<TextMeshProUGUI>().text = "Uang tidak cukup !!";
@@ -54,7 +55,7 @@ namespace Leadership.Action
 
 
             warningText.GetComponent<TextMeshProUGUI>().text = "";
-            attributesSO.SetOrgAttributes(OrganisationEnum.Money, -choosedActionSOTemp.GetMoneyRequirement());
+            
             //Persyaratan
 
             foreach (var item in FindObjectsOfType<ActionSystem>())
@@ -67,8 +68,32 @@ namespace Leadership.Action
                         return;
                     }
 
+                    if (choosedActionSOTemp.RespawnActionTime > 0) 
+                    {
+                        warningText.GetComponent<TextMeshProUGUI>().text = "Kegiatan baru dilaksanakan, tunggu "
+                            + choosedActionSOTemp.GetRespawnActionTimeLimit() + " Turn lagi";
+                        return;
+                    }
+
+
+                    
                     totalActions.Add(choosedActionSOTemp);
                     item.SetChosenAction(choosedActionSOTemp);
+                }
+            }
+
+            attributesSO.SetOrgAttributes(OrganisationEnum.Money, -choosedActionSOTemp.GetMoneyRequirement());
+        }
+
+        public void DecreaseRespawn()
+        {
+            foreach (var item in totalInteractionRooms)
+            {
+                foreach (var action in item.GetActionSO())
+                {
+                    if (action.RespawnActionTime == 0) continue;
+
+                    action.RespawnActionTime-- ;
                 }
             }
         }
@@ -76,6 +101,24 @@ namespace Leadership.Action
         public List<ActionSO> GetTotalActionSO()
         {
             return totalActions;
+        }
+
+        public void DeleteTotalAction(ActionSO actionSO)
+        {
+            totalActions.Remove(actionSO);
+        }
+
+        public bool GetActionIsPlay()
+        {
+            foreach (var item in totalInteractionRooms)
+            {
+                if(item.GetIsPLayAction() == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

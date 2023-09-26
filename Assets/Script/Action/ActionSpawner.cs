@@ -80,9 +80,11 @@ namespace Leadership.Action
 
                 objectSpawn.GetComponent<SpawnDescChanger>().ChangeStatus(item.GetNameAction());
                 objectSpawn.GetComponent<SpawnDescChanger>().ChangeDesc(item.GetDescAction());
-                objectSpawn.GetComponent<SpawnDescChanger>().ChangeReqDesc("Persiapan Hari : " + item.GetRequirementDay() + "\n" +
-                    "Dana : " + item.GetMoneyRequirement() + "\n" +
-                    "Jumlah meeting : " + item.GetTotalMeetingReq());
+                objectSpawn.GetComponent<SpawnDescChanger>().ChangeReqDesc("Persiapan Hari : " + item.GetRequirementDay() + "\n\n" +
+                    "Dana : " + item.GetMoneyRequirement() + "\n\n" +
+                    "Jumlah meeting : " + item.GetTotalMeetingReq() + "\n\n"
+                    + "Respawn Time : " + item.RespawnActionTime +" / " + item.GetRespawnActionTimeLimit() +" Turn"
+                    );
 
 
                 LeadershipEffect[] leadershipEffect = item.GetLeadershipEffects();

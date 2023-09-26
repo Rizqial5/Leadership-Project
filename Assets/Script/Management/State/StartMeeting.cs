@@ -67,6 +67,11 @@ namespace Leadership.Management
         {
             base.Exit();
 
+            if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event")
+            {
+                _meetingSM.GetActionSystem().AddCountedTimeMeeting();
+                _meetingSM.PrintString("masuk");
+            }
             // _meetingSM.SaveOldState(this);
         }
 
