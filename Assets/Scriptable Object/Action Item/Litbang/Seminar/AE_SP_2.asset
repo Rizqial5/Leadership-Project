@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: AE_SP_2
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Kebingungan Peserta
+  descEvent: Dalam kegiatan ini terdapat salah satu peserta yang kebingungan mengenai
+    materi yang disampaikan oleh narasumber, butuh adanya penyampaikan kembali atau
+    bimbingan yang lebih mengenai materi itu. Apa yang ingin anda sarankan kepada
+    panitia mengenai permasalahan itu?
+  answerAction:
+  - descAnswer: Menyampaikan bahwa panitia harus mendampingi peserta yang mengalami
+      kesulitan sampai akhirnya acara
+    effectUpAnswer: 2
+  - descAnswer: Menyampaikan bahwa panitia tidak perlu melakukan apapun karena peserta
+      pasti mencatat
+    effectUpAnswer: -5
+  - descAnswer: Menyampaikan bahwa panitia akan membagikan modul materi serta video
+      dari kegiatan ini, sehingga bisa dilihat setelah kegiatan
+    effectUpAnswer: 5

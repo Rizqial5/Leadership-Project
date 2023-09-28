@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: AE_SP_3
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Akhir kegiatan
+  descEvent: Kegiatan seminar pelatihan sudah selesai. Seminar Pelatihan dilaksanakan
+    dengan lancar. Untuk evaluasi kepanitiaan, apa yang ingin anda sampaikan?
+  answerAction:
+  - descAnswer: Menyampaikan terimakasih kepada panitia atas kehadiran dan kontribusinya
+    effectUpAnswer: 2
+  - descAnswer: Menyampaikan terimakasih kepada panitia dan mengingatkan untuk hasil
+      evaluasi dijadikan sebagai penilaian kedepannya
+    effectUpAnswer: 5
+  - descAnswer: Menyampaikan terimakasih kepada panitia serta mentraktir kepanitiaan
+    effectUpAnswer: 8

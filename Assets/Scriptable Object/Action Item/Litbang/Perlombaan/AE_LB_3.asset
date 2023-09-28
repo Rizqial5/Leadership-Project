@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: AE_LB_3
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Akhir Perlombaan
+  descEvent: Perlombaan telah selesai, hasil dari peserta yang juara mengikuti kegiatan
+    itu akan disampaikan kemudian hari. Karena hasil lomba perlu direkapitulasi ulang.
+    Sebelum melakukan rekap apa yang ingin anda sampaikan kepada panitia?
+  answerAction:
+  - descAnswer: Menyarankan bahwa harus direkap dengan jujur adil sesuai peraturan
+      yang berlaku.
+    effectUpAnswer: 5
+  - descAnswer: Menyarankan bahwa jangan sampai ada titipan juara sehingga merubah
+      hasil yang sudah ada
+    effectUpAnswer: -5
+  - descAnswer: Tidak perlu menyampaikan saran
+    effectUpAnswer: 2

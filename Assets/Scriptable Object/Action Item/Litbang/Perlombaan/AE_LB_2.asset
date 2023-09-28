@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: AE_LB_2
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Peserta Protes
+  descEvent: Pada pertengahan perlombaan, Terdapat peserta yang protes terhadap kebijakan
+    panitia perlombaan ini. Apa yang ingin anda sarankan kepada panitia dalam menghadapi
+    hal ini?
+  answerAction:
+  - descAnswer: Menyarankan untuk melihat permasalahnya itu dulu kemudian diselesaikan
+      apabila itu benar adanya
+    effectUpAnswer: 5
+  - descAnswer: Hanya menenangkan peserta saja, yang penting kita mendengar keluh
+      kesahnya
+    effectUpAnswer: 1
+  - descAnswer: Tidak perlu ditanggapi, karena peraturan itu sudah mutlak dan tidak
+      dapat diganggu gugat
+    effectUpAnswer: -5

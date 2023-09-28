@@ -17,8 +17,8 @@ MonoBehaviour:
   nameAction: Perlombaan
   descAction: Pada kegiatan ini ristek mengadakan sebuah perlombaan untuk meningkatkan
     tingkat prestasi didalam lingkungan mahasiswa
-  imageAction: {fileID: 0}
-  actionRequirementDays: 30
+  imageAction: {fileID: 21300000, guid: 9ca312cf478ef8c4d9fd42b370b735f0, type: 3}
+  actionRequirementDays: 35
   meetingTime: 4
   moneyRequirements: 40
   specialRequirements: []

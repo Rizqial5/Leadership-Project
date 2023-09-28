@@ -20,6 +20,7 @@ namespace Leadership.Core
         [SerializeField] Text trustNumber;
         [SerializeField] int levelNow = 1;
         private DecisiveMechanic decisiveMechanic;
+        private InsightSystem insightSystem;
         [SerializeField] OurCharacterUI ourCharacterUI;
         [SerializeField] LevelLeadershipUI levelLeadershipUI;
 
@@ -38,6 +39,7 @@ namespace Leadership.Core
         void Awake()
         {
             decisiveMechanic = GetComponent<DecisiveMechanic>();
+            insightSystem = GetComponent<InsightSystem>();
             
               
         }
@@ -320,6 +322,13 @@ namespace Leadership.Core
             decisiveMechanic.LevelNow = levelNow;
             decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
        }
+
+        //Implementation Insight
+
+       public void SpawnInsight()
+        {
+            StartCoroutine(insightSystem.SpawnInsight(levelNow));
+        }
 
        
 

@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: AE_SP_1
   m_EditorClassIdentifier: 
   titleEvent: Sambutan Kegiatan
-  descEvent: 
-  answerAction: []
+  descEvent: Pada kegiatan Seminar Pelatihan ini anda diberikan kesempatan untuk
+    memberikan sambutan sebelum dimulainya acara. Apa yang ingin anda sampaikan?
+  answerAction:
+  - descAnswer: Menyampaikan  bahwa kegiatan ini ada karena kebutuhan peserta yang
+      tinggi
+    effectUpAnswer: 5
+  - descAnswer: Menyampaikan bahwa harus semangat dalam mengikuti kegiatan kepelatihan
+      ini untuk meningkatkan prestasi
+    effectUpAnswer: 5
+  - descAnswer: Menyampaikan bahwa kegiatan ini memberi kesempatan kepada peserta
+      untuk mendalami keilmuannya
+    effectUpAnswer: 5

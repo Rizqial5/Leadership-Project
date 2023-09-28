@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
   m_Name: AE_LB_1
   m_EditorClassIdentifier: 
-  titleEvent: 
-  descEvent: 
-  answerAction: []
+  titleEvent: Sambutan Kegiatan
+  descEvent: Pada kegiatan perlombaan ini, anda sebagai pemimpin diberi kesempatan
+    untuk memberikan sambutan. Apa yang ingin anda sampaikan?
+  answerAction:
+  - descAnswer: Sambutan seperti biasanya
+    effectUpAnswer: 1
+  - descAnswer: Menyampaikan bahwa perlombaan ini memiliki tujuan untuk meningkatkan
+      kompetensi
+    effectUpAnswer: 5
+  - descAnswer: Menyampaikan bahwa perlombaan ini akan memberikan kesempatan pengalaman
+      pada peserta
+    effectUpAnswer: 5
