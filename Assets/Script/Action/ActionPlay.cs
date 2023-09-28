@@ -83,6 +83,7 @@ namespace Leadership.Action
         {
             indexNumber = 0;
             isActionPanelDone = false;
+            isActionPlay = false;
             accumulationPoint = actionEventPanel.GetComponent<PanelStoryEvent>().GetAccumulation();
 
 

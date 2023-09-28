@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58f630d3bd4892428db68d2abf0fc25, type: 3}
+  m_Name: Perlombaan
+  m_EditorClassIdentifier: 
+  divisionEnum: 4
+  actionEnum: 0
+  nameAction: Perlombaan
+  descAction: Pada kegiatan ini ristek mengadakan sebuah perlombaan untuk meningkatkan
+    tingkat prestasi didalam lingkungan mahasiswa
+  imageAction: {fileID: 0}
+  actionRequirementDays: 30
+  meetingTime: 4
+  moneyRequirements: 40
+  specialRequirements: []
+  leadershipEffects:
+  - leadershipEnum: 0
+    value: 20
+  organizationEffects:
+  - organisationEnum: 1
+    value: 10
+  - organisationEnum: 4
+    value: 15
+  - organisationEnum: 3
+    value: -10
+  - organisationEnum: 0
+    value: 30
+  respawnActionTimeLimit: 10
+  actionEventSOs:
+  - {fileID: 11400000, guid: 37e07a2ce445f62458bd1fd4559daebe, type: 2}
+  - {fileID: 11400000, guid: 485e0f90a0287f147a1b9aa2254c2740, type: 2}
+  - {fileID: 11400000, guid: 1ce9bc2f473722a42b58c3fd673f8615, type: 2}

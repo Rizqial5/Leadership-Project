@@ -3,5 +3,6 @@ public enum DivisionEnum
     PSDM,
     Humas,
     Kominfo,
-    Advokasi
+    Advokasi,
+    Litbang
 }

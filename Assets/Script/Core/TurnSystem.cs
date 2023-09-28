@@ -14,7 +14,8 @@ namespace Leadership.Core
         private int timeInADay;
         private int calenderTime = 1;
         private bool isPlay = false;
-        private int totalWeek;
+        [SerializeField] private int totalWeek;
+        [SerializeField] private int totalDay;
 
         public UnityEvent OnChangeDays;
         public UnityEvent OnChangeWeek;
@@ -115,6 +116,11 @@ namespace Leadership.Core
         public int ToatlWeek
         {
             get{return totalWeek;} set{totalWeek += value;}
+        }
+        public int TotalDay
+        {
+            get { return totalDay; }
+            set { totalDay += value;}
         }
 
         public float TurnTime

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2418415382ee8764b9ea317b9cdb52ac, type: 3}
+  m_Name: AE_PB_1
+  m_EditorClassIdentifier: 
+  titleEvent: Sambutan
+  descEvent: Pada saat sebelum pertemuan besar, anda diberi kesempatan untuk menyampaikan
+    sambutan dalam kegiatan ini. Apa yang ingin kamu sampaikan
+  answerAction:
+  - descAnswer: Menyampaikan bahwa kegiatan ini memiliki tujuan untuk mencari solusi
+      atas permasalahan yang terjadi di angkatan
+    effectUpAnswer: 5
+  - descAnswer: Menyampaikan bahwa kegiatan ini merupakan tempat sidang untuk kita
+      menghargai pendapat orang lain
+    effectUpAnswer: 8
+  - descAnswer: Menyampaikan bahwa kegiatan ini hanyalah sebuah pertemuan biasa saja
+      dengan angkatan untuk silaturahmi
+    effectUpAnswer: 3

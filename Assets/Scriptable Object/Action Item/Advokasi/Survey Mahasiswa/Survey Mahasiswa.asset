@@ -35,4 +35,7 @@ MonoBehaviour:
   - organisationEnum: 0
     value: 10
   respawnActionTimeLimit: 3
-  actionEventSOs: []
+  actionEventSOs:
+  - {fileID: 11400000, guid: 915552e2fe83f0c458a1e7babe9cd8f9, type: 2}
+  - {fileID: 11400000, guid: 10db55e2f25a3544697e4495e31259f9, type: 2}
+  - {fileID: 11400000, guid: 6931e1ae5a2a0004986607fef2f6d267, type: 2}

@@ -137,6 +137,9 @@ namespace Leadership.Action
                     
                 }
             }
+
+            countedTimeMeeting = 0;
+            countedDaysSincePlan = 0;
             
         }
 
