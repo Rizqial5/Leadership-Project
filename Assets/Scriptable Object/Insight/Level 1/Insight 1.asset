@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f0ef03ace11ec4f8a2d3ccb578e760, type: 3}
   m_Name: Insight 1
   m_EditorClassIdentifier: 
-  insightText: Level 1
+  insightText: '"Jabatan diberikan karena orang itu memiliki potensi untuk memimpin"'

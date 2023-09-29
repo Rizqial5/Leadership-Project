@@ -7579,14 +7579,70 @@ MonoBehaviour:
   - levelLeadership: 1
     insightItems:
     - {fileID: 11400000, guid: b8f70c7fac69c2d4f9b71ee4ebbf10f0, type: 2}
+    - {fileID: 11400000, guid: 82c28839f4dfd1c479b5af392a96c0d0, type: 2}
+    - {fileID: 11400000, guid: 7266f6dfcc684dd44a9a5644d7cd7822, type: 2}
+    - {fileID: 11400000, guid: 7578732fa2ae787469157220c4b3f13c, type: 2}
+    - {fileID: 11400000, guid: 52ee5ae7dbf883d489ffbdb573c5467a, type: 2}
+    - {fileID: 11400000, guid: 322e3ac00d2d1ea4d828f7b92c07959c, type: 2}
+    - {fileID: 11400000, guid: ad7121335ad1318449093a09687ef6a6, type: 2}
+    - {fileID: 11400000, guid: 0565f1088d123624cbfdbf4c80ca7f77, type: 2}
+    - {fileID: 11400000, guid: 26db7909d2a471541a44a1baf979161c, type: 2}
+    - {fileID: 11400000, guid: 4cd9fa0ddfe095b4ca47f7f79079216d, type: 2}
+    - {fileID: 11400000, guid: 7268991dc91ee474abfa67287b87258b, type: 2}
+    - {fileID: 11400000, guid: 18842fad43e816c46b53c881f47c1a1b, type: 2}
+    - {fileID: 11400000, guid: 38019880196397543a1773045f66d74c, type: 2}
+    - {fileID: 11400000, guid: ee668939e7585f041aea2a91476136a8, type: 2}
+    - {fileID: 11400000, guid: 157c273b4638c2a48acaeff77572781f, type: 2}
+    - {fileID: 11400000, guid: 5c85c8f5d8b4b6f4bba8cd2c0ad185ec, type: 2}
+    - {fileID: 11400000, guid: d6fa182551c5f9f43b1310f164f1ae58, type: 2}
+    - {fileID: 11400000, guid: 786fb55b50ac5da4f802137d0d1ef7e2, type: 2}
+    - {fileID: 11400000, guid: 070efbef7eb7725498f543b882096701, type: 2}
   - levelLeadership: 2
     insightItems:
     - {fileID: 11400000, guid: 7f28668d3d0e58745a35d9eeb1979fd1, type: 2}
-  - levelLeadership: 0
+    - {fileID: 11400000, guid: 51bc822b2c54b074289d84954a70d2b0, type: 2}
+    - {fileID: 11400000, guid: 810d5d943217c6d43994d8f46eb11b23, type: 2}
+    - {fileID: 11400000, guid: fa121468efd164448ae37f8f780a0679, type: 2}
+    - {fileID: 11400000, guid: 4d3a11b29a719bf4ba5c7b5f88450249, type: 2}
+    - {fileID: 11400000, guid: f06b5300de744fb4bbb42fe060ece956, type: 2}
+    - {fileID: 11400000, guid: e1e6140cbbe1f6d458edfbb1f7409a7c, type: 2}
+    - {fileID: 11400000, guid: 1df9f817085a4f444bbbc3df265a6d66, type: 2}
+    - {fileID: 11400000, guid: dd787fe912c94c74baa19397e78ea7b0, type: 2}
+    - {fileID: 11400000, guid: e40bef0ebcf4eca47b4ea3083652ce31, type: 2}
+    - {fileID: 11400000, guid: c5674b5f66951b647bbd820c4c4c61b5, type: 2}
+    - {fileID: 11400000, guid: 1b9c8bb18461c0e49a4ac81c18b8a568, type: 2}
+    - {fileID: 11400000, guid: d0bae54206dd16f459da2fef48712929, type: 2}
+    - {fileID: 11400000, guid: 8e55cd86072c0a94d8f7b99abf676ee0, type: 2}
+    - {fileID: 11400000, guid: d5047e95d1346a34abc90ff34111ff71, type: 2}
+    - {fileID: 11400000, guid: 4b4c81af526b6244eacf62209652b61a, type: 2}
+    - {fileID: 11400000, guid: 06efeee4cf0089e4197bb62ce4e100c0, type: 2}
+    - {fileID: 11400000, guid: da653c0a441701f419c0c475c9afe5b8, type: 2}
+    - {fileID: 11400000, guid: 6af5fd8ed90310243a86d707fe9aef34, type: 2}
+  - levelLeadership: 3
+    insightItems:
+    - {fileID: 11400000, guid: ae177af4e81db214eb01929206847b8c, type: 2}
+    - {fileID: 11400000, guid: 31b66beef60f2a54b93fff8d00def2be, type: 2}
+    - {fileID: 11400000, guid: b637923048dc6b4479020da90da9f5a5, type: 2}
+    - {fileID: 11400000, guid: 2c875a60b6af02f48b04e481b919aeaf, type: 2}
+    - {fileID: 11400000, guid: 64a5eb29426d46b4abf0a696d0a14c20, type: 2}
+    - {fileID: 11400000, guid: 74fdf4227dfc5034d9045e17daa02534, type: 2}
+    - {fileID: 11400000, guid: 1bf5cd54085b9b643964efa999f4b3e6, type: 2}
+    - {fileID: 11400000, guid: bb7fe36592c2f3b46a7ca05b088f34f6, type: 2}
+    - {fileID: 11400000, guid: 0912c5862a38cd5408a80fbb14685baf, type: 2}
+    - {fileID: 11400000, guid: bff69d2517d95034bad44fd5d80ca09a, type: 2}
+    - {fileID: 11400000, guid: 692025bedd57a444294b4d28c2fae324, type: 2}
+    - {fileID: 11400000, guid: c4a3e18ff81a28f4cb209b6e94711be0, type: 2}
+    - {fileID: 11400000, guid: cda713e436baa4a4fa5ca65674efca01, type: 2}
+    - {fileID: 11400000, guid: df3af665b39d9e84fb32ac985176188e, type: 2}
+    - {fileID: 11400000, guid: 146912eef539aec499aa598a38deb9fd, type: 2}
+    - {fileID: 11400000, guid: 9a9fc6bbcffac3243899557dd79eb468, type: 2}
+    - {fileID: 11400000, guid: 3c1de0f2781713b4d9c4962c9f8131b3, type: 2}
+    - {fileID: 11400000, guid: f6946079436d15f43a299b67e5ac081b, type: 2}
+    - {fileID: 11400000, guid: 184fe864a06f86f479922b922fb331c8, type: 2}
+    - {fileID: 11400000, guid: 5929ddc79445f8b479554c3846179ce6, type: 2}
+  - levelLeadership: 4
     insightItems: []
-  - levelLeadership: 0
-    insightItems: []
-  - levelLeadership: 0
+  - levelLeadership: 5
     insightItems: []
   insightUI: {fileID: 2293020918857207953, guid: a85152c095064a64dbb52fd4046b4ce7, type: 3}
   parentInsightUI: {fileID: 792356639}

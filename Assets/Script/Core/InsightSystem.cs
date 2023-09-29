@@ -26,6 +26,7 @@ namespace Leadership.Core
                     insightSpawn = Instantiate(insightUI, parentInsightUI);
 
                     insightSpawn.GetComponent<MessageScript>().ChangeText("Insight Leadership LV. " + item.LevelLeadership, item.GetInsightSO()[randomNumber].InsightText);
+                    insightSpawn.GetComponent<MessageScript>().SetActiveButton(false);
 
                 }
             }
@@ -41,7 +42,8 @@ namespace Leadership.Core
 
         public IEnumerator DestroyGameObject(GameObject item)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
+            insightSpawn.GetComponent<MessageScript>().SetActiveButton(true);
         }
     }
 
