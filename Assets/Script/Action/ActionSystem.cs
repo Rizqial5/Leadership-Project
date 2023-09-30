@@ -88,9 +88,17 @@ namespace Leadership.Action
 
         public void SetChosenAction(ActionSO actionItemTemp)
         {
-            
-            
             plannedAction = actionItemTemp;
+
+            //Add check activities
+            if (attributesMechanic.CheckActivitiesRate())
+            {
+                print("Penalty");
+                attributesMechanic.AddAttributes(OrganisationEnum.Unity, -10);
+                leadershipMechanic.AddEachMemberAttribute(plannedAction.GetDivisionEnum(), LeadershipEnum.Relation, -10);
+            }
+
+            
 
             manageDB.SetMeetingDesc(divisionEnum, "Meeting ini akan mempersiapkan kegiatan " + plannedAction.GetNameAction());
 
@@ -113,13 +121,21 @@ namespace Leadership.Action
         {
             if (plannedAction == null) return;
 
+            float penalty = 0;
+
+            //Add Check performance
+            if(attributesMechanic.CheckPerformance())
+            {
+                penalty = -10;
+            }
+
             plannedAction.RespawnActionTime = plannedAction.GetRespawnActionTimeLimit();
 
             if(plannedAction.GetLeadershipEffects() != null)
             {
                 foreach (var item in plannedAction.GetLeadershipEffects())
                 {
-                    leadershipMechanic.AddEachMemberAttribute(item.GetLeadershipEnum(), item.GetValue() + accumulationPoint);
+                    leadershipMechanic.AddEachMemberAttribute(item.GetLeadershipEnum(), item.GetValue() + accumulationPoint + penalty);
                 }
             }
             
@@ -132,7 +148,7 @@ namespace Leadership.Action
                         attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue());
                     }else
                     {
-                        attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue() + accumulationPoint);
+                        attributesMechanic.AddAttributes(item.GetOrganisation(), item.GetValue() + accumulationPoint + penalty);
                     }
                     
                 }

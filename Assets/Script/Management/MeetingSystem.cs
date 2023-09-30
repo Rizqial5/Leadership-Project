@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Leadership.Core;
 using Leadership.UI;
-
+using Leadership.Attribute;
 
 namespace Leadership.Management
 {
@@ -30,6 +30,8 @@ namespace Leadership.Management
         private DecisionEventUI decisionEventUI;
         private ManageDatabase _manageDatabase;
         private CategoryMeeting categoryMeeting;
+        private AttributesMechanic attributesMechanic;
+        private LeadershipMechanic leadershipMechanic;
         
         [SerializeField] private DivisionEnum _divisionEnum;
         [SerializeField] GameObject warningText;
@@ -40,7 +42,9 @@ namespace Leadership.Management
 
         private void Awake() 
         {
-            _manageDatabase = GetComponent<ManageDatabase>();    
+            _manageDatabase = GetComponent<ManageDatabase>();
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();
+            leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
         }
         
         // Start is called before the first frame update
@@ -145,6 +149,14 @@ namespace Leadership.Management
             if(meetingCategoryNameTemp == null) return;
             if(IsMeetingFull()) return;
             if(startMeetingTime == 0) return;
+
+            //Add check activities rate
+            if(attributesMechanic.CheckActivitiesRate())
+            {
+                print("Penalty");
+                attributesMechanic.AddAttributes(OrganisationEnum.Unity, -10);
+                leadershipMechanic.AddEachMemberAttribute(_divisionEnum, LeadershipEnum.Relation, -10);
+            }
             
             _manageDatabase.SetMeetingCount(_divisionEnum, 1);
             

@@ -21,6 +21,7 @@ namespace Leadership.Core
         [SerializeField] int levelNow = 1;
         private DecisiveMechanic decisiveMechanic;
         private InsightSystem insightSystem;
+        private AttributesMechanic attributesMechanic;
         [SerializeField] OurCharacterUI ourCharacterUI;
         [SerializeField] LevelLeadershipUI levelLeadershipUI;
 
@@ -35,11 +36,13 @@ namespace Leadership.Core
         private float calculatedTrusRate;
         private float penalyTotal = -5;
         
+        
 
         void Awake()
         {
             decisiveMechanic = GetComponent<DecisiveMechanic>();
             insightSystem = GetComponent<InsightSystem>();
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();
             
               
         }
@@ -111,7 +114,7 @@ namespace Leadership.Core
         //Change in the future
         public void AddEachMemberAttribute(LeadershipEnum category, float value)
         {
-
+            
             for (int i = 0; i < totalChacracter.Length; i++)
             {
                 totalChacracter[i].AddStatsCharacter(category, value);
@@ -122,11 +125,12 @@ namespace Leadership.Core
 
         public void AddEachMemberAttribute(DivisionEnum divisionEnum,LeadershipEnum category, float value)
         {
+            
 
             for (int i = 0; i < totalChacracter.Length; i++)
             {
                 if(totalChacracter[i].GetDivisionCharacter() != divisionEnum) continue;
-                totalChacracter[i].AddStatsCharacter(category, value);
+                totalChacracter[i].AddStatsCharacter(category, value );
                 // print("bsia");
             }
 

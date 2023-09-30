@@ -23,8 +23,16 @@ namespace Leadership.Character
         private bool isLevelUpThree = false;
         private bool isLevelUpFour = false;
         private bool isLevelUpFive= false;
-        
 
+        private float penaltyUnity;
+        private AttributesMechanic attributesMechanic;
+
+
+
+        private void Awake()
+        {
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();    
+        }
         void Update()
         {
             if(Input.GetKeyDown(KeyCode.Y))
@@ -65,27 +73,36 @@ namespace Leadership.Character
         public void AddStatsCharacter(LeadershipEnum leadershipEnum, float value)
         {
             if(CheckLevelUp(1) && value > 0) return;
+
+            //Add penalty unity
+            penaltyUnity = 0;
+            if(attributesMechanic.CheckUnity())
+            {
+                penaltyUnity = -5;
+            }
+
+
             if(leadershipEnum == LeadershipEnum.Relation)
             {
-                characterAttributes.AddStatValue(leadershipEnum,value * modifierRelation);
+                characterAttributes.AddStatValue(leadershipEnum, (value * modifierRelation) + penaltyUnity);
 
             }else if(leadershipEnum == LeadershipEnum.Trust)
             {
-                characterAttributes.AddStatValue(leadershipEnum,value * modifierTrust);
+                characterAttributes.AddStatValue(leadershipEnum,(value * modifierTrust) + penaltyUnity);
 
             }else if(leadershipEnum == LeadershipEnum.Influence)
             {
-                characterAttributes.AddStatValue(leadershipEnum,value * modifierInfluence);
+                characterAttributes.AddStatValue(leadershipEnum,(value * modifierInfluence) + penaltyUnity);
 
             }
             else if(leadershipEnum == LeadershipEnum.Morale)
             {
-                characterAttributes.AddStatValue(leadershipEnum,value * modifierMorale);
+                characterAttributes.AddStatValue(leadershipEnum,(value * modifierMorale) + penaltyUnity);
 
             }
             else
             {
-                 characterAttributes.AddStatValue(leadershipEnum,value);
+                 characterAttributes.AddStatValue(leadershipEnum,value + penaltyUnity);
             }
 
             
@@ -117,11 +134,16 @@ namespace Leadership.Character
         // testing------------------
         public void AddAllStatsChar(float value)
         {
-            
-            characterAttributes.AddStatValue(LeadershipEnum.Relation,value);
-            characterAttributes.AddStatValue(LeadershipEnum.Trust,value);
-            characterAttributes.AddStatValue(LeadershipEnum.Influence,value);
-            characterAttributes.AddStatValue(LeadershipEnum.Morale,value);
+            penaltyUnity = 0;
+            if (attributesMechanic.CheckUnity())
+            {
+                penaltyUnity = -5;
+            }
+
+            characterAttributes.AddStatValue(LeadershipEnum.Relation,value + penaltyUnity);
+            characterAttributes.AddStatValue(LeadershipEnum.Trust,value + penaltyUnity);
+            characterAttributes.AddStatValue(LeadershipEnum.Influence,value + penaltyUnity);
+            characterAttributes.AddStatValue(LeadershipEnum.Morale,value + penaltyUnity);
         }
 
         public string GetNameCharacter()
