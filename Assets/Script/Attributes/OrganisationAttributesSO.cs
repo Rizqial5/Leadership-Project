@@ -16,6 +16,13 @@ namespace Leadership.Attribute
         {
             BuildLookupTable();
 
+            if(orgEnum == OrganisationEnum.Money)
+            {
+                organisationTableLookUp[orgEnum] += value;
+            }
+
+            if (organisationTableLookUp[orgEnum] == 100) return;
+
             organisationTableLookUp[orgEnum] += value; 
         }
 

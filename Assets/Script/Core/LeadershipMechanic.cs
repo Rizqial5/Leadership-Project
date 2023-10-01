@@ -286,6 +286,7 @@ namespace Leadership.Core
 
        public void LevelUp()
        {
+            if (levelNow == 5) return;
             levelNow++;
        }
 

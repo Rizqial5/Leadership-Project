@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Leadership.Core;
 using Leadership.UI;
 using Leadership.Attribute;
+using Leadership.Character;
 
 namespace Leadership.Management
 {
@@ -32,6 +33,7 @@ namespace Leadership.Management
         private CategoryMeeting categoryMeeting;
         private AttributesMechanic attributesMechanic;
         private LeadershipMechanic leadershipMechanic;
+        private CharacterMechanic[] characterMechanics;
         
         [SerializeField] private DivisionEnum _divisionEnum;
         [SerializeField] GameObject warningText;
@@ -45,6 +47,7 @@ namespace Leadership.Management
             _manageDatabase = GetComponent<ManageDatabase>();
             attributesMechanic = FindObjectOfType<AttributesMechanic>();
             leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
+            
         }
         
         // Start is called before the first frame update
@@ -163,6 +166,8 @@ namespace Leadership.Management
             _manageDatabase.SetStartMeetingDate(_divisionEnum,startDayTemp,startMeetingTime);
             _manageDatabase.SetMeetingCategoryPlanned(_divisionEnum, meetingCategoryNameTemp);
 
+            SetTargetCharacters();
+
             meetingCategoryName = meetingCategoryNameTemp;
             
 
@@ -242,8 +247,21 @@ namespace Leadership.Management
             return turnSystem.GetTimeDay();
         }
 
-        
+//Set target loc character
+//      
 
+        public void SetTargetCharacters()
+        {
+            characterMechanics = FindObjectsOfType<CharacterMechanic>();
+
+            foreach (var item in characterMechanics)
+            {
+                if(item.GetDivisionCharacter() == _divisionEnum)
+                {
+                    item.SetTargetCharacterLoc(_manageDatabase.SetTargetCharacterMeetLoc(_divisionEnum));
+                }
+            }
+        }
         
 
         

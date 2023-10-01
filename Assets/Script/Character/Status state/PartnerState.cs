@@ -42,10 +42,10 @@ namespace Leadership.Character
             }
 
             // Testing Only
-            if(Input.GetKeyDown(KeyCode.G))
-            {
-                _statusSM.NextLevel();
-            }
+            //if(Input.GetKeyDown(KeyCode.G))
+            //{
+            //    _statusSM.NextLevel();
+            //}
         }
     }
 }

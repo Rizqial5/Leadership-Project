@@ -26,12 +26,14 @@ namespace Leadership.Character
 
         private float penaltyUnity;
         private AttributesMechanic attributesMechanic;
+        private MovementSM movementSM;
 
 
 
         private void Awake()
         {
-            attributesMechanic = FindObjectOfType<AttributesMechanic>();    
+            attributesMechanic = FindObjectOfType<AttributesMechanic>();
+            movementSM = GetComponent<MovementSM>();
         }
         void Update()
         {
@@ -179,6 +181,11 @@ namespace Leadership.Character
         public bool IsLevelUpFive
         {
             get{return isLevelUpFive;} set{isLevelUpFive= value;}
+        }
+
+        public void SetTargetCharacterLoc( Transform target)
+        {
+            movementSM.SetTransfromTarget(target);
         }
     }
 }

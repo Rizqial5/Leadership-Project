@@ -154,6 +154,19 @@ namespace Leadership.Management
         //     meetingsInQueue.Add();
         // }
 
+        public Transform SetTargetCharacterMeetLoc(DivisionEnum divisionEnum)
+        {
+            foreach (Manage item in totalInteractionRooms)
+            {
+                if (item.GetDivisionEnum() == divisionEnum)
+                {
+                    return item.gameObject.transform;
+                }
+            }
+
+            return null;
+        }
+
 
 
     

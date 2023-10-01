@@ -12,7 +12,7 @@ namespace Leadership.Attribute
 
         [Header("Attribute Limit")]
         [SerializeField] private int activitityRateLimit = 50;
-        [SerializeField] private int performanceLimit = 30;
+        [SerializeField] private int performanceMinLimit = 30;
         [SerializeField] private int unityLimit = 30;
 
 
@@ -58,7 +58,7 @@ namespace Leadership.Attribute
 
         public bool CheckPerformance()
         {
-            if(orgAttributesSO.GetOrgAttributes(OrganisationEnum.Performance) < performanceLimit)
+            if(orgAttributesSO.GetOrgAttributes(OrganisationEnum.Performance) < performanceMinLimit)
             {
                 return true;
             }
@@ -79,6 +79,11 @@ namespace Leadership.Attribute
         public void UnityDecreasing()
         {
             AddAttributes(OrganisationEnum.Unity, -0.2f);
+        }
+
+        public void PerformanceDecreasing()
+        {
+            if(CheckActivitiesRate()) { AddAttributes(OrganisationEnum.Performance, -5f); }
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Leadership.Core;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,7 +19,9 @@ namespace Leadership.Character
         [HideInInspector] public Animator animator;
         [HideInInspector] public NavMeshAgent agent;
 
-        [SerializeField] public Transform target;
+        [SerializeField] public Transform targetLoc;
+
+        private TurnSystem turnSystem;
 
         private void Awake() 
         {
@@ -29,6 +32,8 @@ namespace Leadership.Character
             gameSM = FindObjectOfType<GameSM>();
             animator = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
+
+            turnSystem = FindObjectOfType<TurnSystem>();
 
             
         }
@@ -52,6 +57,16 @@ namespace Leadership.Character
         {
             return planCharState;
 
+        }
+
+        public void SetTransfromTarget(Transform target)
+        {
+            targetLoc = target;
+        }
+
+        public float  GetSpeedModifier()
+        {
+            return turnSystem.SpeedModifier;
         }
 
         // public bool IsThereTarget()

@@ -36,12 +36,13 @@ namespace Leadership.Character
 
 
 
-            if(_moveSM.target == null) return;
+            if(_moveSM.targetLoc == null) return;
 
             _moveSM.animator.SetBool("IsTarget", true);
             _moveSM.agent.isStopped = false;
+            _moveSM.agent.speed *= _moveSM.GetSpeedModifier() / 2;
            
-            _moveSM.agent.SetDestination(_moveSM.target.position);
+            _moveSM.agent.SetDestination(_moveSM.targetLoc.position);
 
             
 
@@ -52,9 +53,9 @@ namespace Leadership.Character
             base.UpdatePhysics();
             _moveSM.animator.speed = 1;
             
-            if(_moveSM.target == null) return;
+            if(_moveSM.targetLoc == null) return;
 
-            _moveSM.dir = _moveSM.target.position - _moveSM.transform.position;
+            _moveSM.dir = _moveSM.targetLoc.position - _moveSM.transform.position;
             _moveSM.dir.Normalize();
             
             
