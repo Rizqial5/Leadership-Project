@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace Leadership.Character
 {
-    public class PlanCharacter : BaseState
+    public class StopCharacter : BaseState
     {
         protected MovementSM _moveSM;
-        public PlanCharacter(MovementSM stateMachine) : base("PlanChar", stateMachine)
+        public StopCharacter(MovementSM stateMachine) : base("StopChar", stateMachine)
         {
             _moveSM = (MovementSM)stateMachine;
         }

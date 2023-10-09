@@ -10,9 +10,9 @@ namespace Leadership.Character
     public class MovementSM : StateMachine
     {
         [HideInInspector]
-        public PlanCharacter planCharState;
+        public StopCharacter stopCharState;
         public MoveCharacter moveCharState;
-        public PauseCharacter pauseCharState;
+        
         
         [HideInInspector] public GameSM gameSM;
         [HideInInspector] public Vector3 dir;
@@ -25,10 +25,9 @@ namespace Leadership.Character
 
         private void Awake() 
         {
-            planCharState = new PlanCharacter(this);
+            stopCharState = new StopCharacter(this);
             moveCharState = new MoveCharacter(this);
-            pauseCharState = new PauseCharacter(this);
-
+           
             gameSM = FindObjectOfType<GameSM>();
             animator = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
@@ -47,15 +46,15 @@ namespace Leadership.Character
 
         public override void PauseButton()
         {
-            if(currentState == planCharState) return;
+            if(currentState == stopCharState) return;
             base.PauseButton();
             
-            currentState = pauseCharState;
+            currentState = stopCharState;
         }
 
         protected override BaseState GetInitialState()
         {
-            return planCharState;
+            return stopCharState;
 
         }
 

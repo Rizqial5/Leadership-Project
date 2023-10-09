@@ -24,15 +24,12 @@ namespace Leadership.Character
         {
             base.UpdateLogic();
 
-            if(_moveSM.gameSM.GetCurrentState() == _moveSM.gameSM.planState)
+            if(_moveSM.gameSM.GetCurrentState() == _moveSM.gameSM.planState || _moveSM.gameSM.GetCurrentState() == _moveSM.gameSM.pauseState)
             {
-                stateMachine.ChangeState(_moveSM.planCharState);
+                stateMachine.ChangeState(_moveSM.stopCharState);
             }
 
-            if(_moveSM.gameSM.GetCurrentState() == _moveSM.gameSM.pauseState)
-            {
-                _moveSM.ChangeState(_moveSM.pauseCharState);
-            }
+            
 
 
 
