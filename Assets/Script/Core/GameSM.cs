@@ -1,6 +1,7 @@
 using Leadership.Action;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ namespace Leadership.Core
         public Pause pauseState;
 
         [SerializeField] public TurnSystem turnSystem;
+        [SerializeField] TextMeshProUGUI statusTextNow;
 
         private LeadershipMechanic leadershipMechanic;
         private ActionDatabase actionDatabase;
@@ -84,6 +86,11 @@ namespace Leadership.Core
         public ActionDatabase GetActionDatabase()
         {
             return actionDatabase;
+        }
+
+        public void ChangeModeText()
+        {
+            statusTextNow.text = currentState.name;
         }
     }
 }

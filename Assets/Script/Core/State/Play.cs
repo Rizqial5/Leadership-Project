@@ -8,7 +8,7 @@ namespace Leadership.Core
     public class Play : BaseState
     {
         protected GameSM _gameSM;
-        public Play(GameSM stateMachine) : base("Play", stateMachine)
+        public Play(GameSM stateMachine) : base("Mode Play", stateMachine)
         {
             _gameSM = (GameSM)stateMachine;
         }
@@ -17,7 +17,7 @@ namespace Leadership.Core
         {
             base.Enter();
 
-          
+            _gameSM.ChangeModeText();
         }
 
         public override void UpdateLogic()

@@ -7,9 +7,16 @@ namespace Leadership.Core
     public class Pause : BaseState
     {
         protected GameSM _gameSM;
-        public Pause(GameSM stateMachine) : base("Pause", stateMachine)
+        public Pause(GameSM stateMachine) : base("Mode Pause", stateMachine)
         {
             _gameSM = (GameSM)stateMachine;
+        }
+
+        public override void Enter()
+        {
+            base.Enter();
+
+            _gameSM.ChangeModeText();
         }
 
         public override void UpdateLogic()

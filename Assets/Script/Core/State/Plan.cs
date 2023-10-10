@@ -7,7 +7,7 @@ namespace Leadership.Core
     public class Plan : BaseState
     {
         protected GameSM _gameSM;
-        public Plan(GameSM stateMachine) : base("Plan", stateMachine)
+        public Plan(GameSM stateMachine) : base("Mode Plan", stateMachine)
         {
             _gameSM = (GameSM)stateMachine;
         }
@@ -15,11 +15,11 @@ namespace Leadership.Core
         public override void Enter()
         {
             base.Enter();
-        
-            
 
-            
-            
+
+            _gameSM.ChangeModeText();
+
+
         }
 
         public override void UpdateLogic()

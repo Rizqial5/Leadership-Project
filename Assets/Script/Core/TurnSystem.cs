@@ -27,7 +27,7 @@ namespace Leadership.Core
         [SerializeField] TextMeshProUGUI SpeedModText;
 
         [SerializeField] TextMeshProUGUI calenderTimeText ;
-        [SerializeField] Text TimeDayText;
+        [SerializeField] TextMeshProUGUI TimeDayText;
         
         
 
