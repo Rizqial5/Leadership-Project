@@ -1,9 +1,7 @@
 using Leadership.Action;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 namespace Leadership.Core
 {
@@ -20,10 +18,6 @@ namespace Leadership.Core
         private LeadershipMechanic leadershipMechanic;
         private ActionDatabase actionDatabase;
         
-
-        
-
-
         private void Awake() 
         {
             planState = new Plan(this);
@@ -69,15 +63,6 @@ namespace Leadership.Core
             print(value);
         }
 
-        
-
-        // private void OnGUI() 
-        // {
-        //     string content = currentState != null ? currentState.name : "(no current state)";
-        //     GUILayout.Label($"<color='black'><size=40>{content}</size></color>");    
-        // }
-
-
         public LeadershipMechanic GetLeadershipMechanic()
         {
             return leadershipMechanic;
@@ -92,5 +77,12 @@ namespace Leadership.Core
         {
             statusTextNow.text = currentState.name;
         }
+
+
+        // private void OnGUI() 
+        // {
+        //     string content = currentState != null ? currentState.name : "(no current state)";
+        //     GUILayout.Label($"<color='black'><size=40>{content}</size></color>");    
+        // }
     }
 }

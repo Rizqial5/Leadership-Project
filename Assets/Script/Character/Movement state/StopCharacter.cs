@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using Leadership.Core;
-using UnityEngine;
-
 namespace Leadership.Character
 {
     public class StopCharacter : BaseState
@@ -17,11 +13,9 @@ namespace Leadership.Character
         {
             base.Enter();
             
-
             _moveSM.agent.updateRotation = false;
             _moveSM.agent.updateUpAxis = false;
 
-            
         }
 
         public override void UpdateLogic()
@@ -41,45 +35,5 @@ namespace Leadership.Character
             base.UpdatePhysics();
             _moveSM.animator.speed = 0;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-       
     }
 }

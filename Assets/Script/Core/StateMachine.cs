@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Leadership.Core
@@ -9,7 +7,7 @@ namespace Leadership.Core
 
         protected BaseState currentState;
         protected BaseState oldState;
-    // Start is called before the first frame update
+  
         void Start()
         {
             currentState = GetInitialState();
@@ -19,7 +17,7 @@ namespace Leadership.Core
             }
         }
 
-        // Update is called once per frame
+       
         void Update()
         {
             if(currentState != null)
