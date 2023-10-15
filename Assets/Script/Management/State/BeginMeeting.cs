@@ -27,6 +27,8 @@ namespace Leadership.Management
 
             
 
+            
+
         }
 
         public override void UpdateLogic()
@@ -88,7 +90,7 @@ namespace Leadership.Management
         public override void Exit()
         {
             base.Exit();
-
+            
             // _meetingSM.PrintString("exit");
         }
     }

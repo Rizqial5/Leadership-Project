@@ -15,15 +15,23 @@ namespace Leadership.Management
         [SerializeField] float beda = 1f;
 
         private bool isDoneJoinMeeting;
+
+        private TrialScript cameraBehaviour;
         
 
         private int i;
+
+
+        private void Awake()
+        {
+            cameraBehaviour = FindObjectOfType<TrialScript>();
+        }
 
         // public IEnumerator StartEvent()
         // {
         //     yield return new WaitForSeconds(waitTimeUntilEvents);
 
-            
+
         //     // FindObjectOfType<LeaderTag>().gameObject.SetActive(false);
 
         //     ShowMeetingEvent();
@@ -33,9 +41,10 @@ namespace Leadership.Management
         {
             yield return new WaitForSeconds(waitTimeUntilEvents);
 
-            
+
             // FindObjectOfType<LeaderTag>().gameObject.SetActive(false);
 
+            cameraBehaviour.SetCameraStop(true);
             ShowMeetingEvent(setDivisionEnum);
         }
 

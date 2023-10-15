@@ -9,11 +9,15 @@ public class TrialScript : MonoBehaviour
     [SerializeField] float zoomOutBoundary = 7;
     [SerializeField] float zoomInBoundary = 2;
 
+
+    private bool isCameraStop;
+
     // Start is called before the first frame update
     
     // Update is called once per frame
     void Update()
     {
+        if (isCameraStop) return;
         ZoomController();
         if(Input.GetKey(KeyCode.W))
         {
@@ -71,5 +75,10 @@ public class TrialScript : MonoBehaviour
     public void ZoomMovement(float speed)
     {
         Camera.main.orthographicSize += speed * Time.deltaTime;
+    }
+
+    public void SetCameraStop(bool isStop)
+    {
+        isCameraStop = isStop;
     }
 }

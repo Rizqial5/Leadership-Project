@@ -8637,7 +8637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4951018281676284297, guid: e27a61c53db61414ca31c1bc0fd7e647, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -308.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4951018281676284297, guid: e27a61c53db61414ca31c1bc0fd7e647, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11311,6 +11311,7 @@ GameObject:
   - component: {fileID: 934016974}
   - component: {fileID: 934016975}
   - component: {fileID: 934016976}
+  - component: {fileID: 934016977}
   m_Layer: 0
   m_Name: Interaction Room Advokasi
   m_TagString: Untagged
@@ -11499,6 +11500,21 @@ MonoBehaviour:
   showActionPanel: {fileID: 6652186363666483434, guid: b90510c008f16e24281d1a8eade3584d, type: 3}
   parentPanel: {fileID: 792356639}
   showActionEventPanel: {fileID: 6652186363666483434, guid: cd514a537aae9044fb57c00959805f93, type: 3}
+--- !u!114 &934016977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934016968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a980e71143ab4774693f62b47ea78e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  divisionEnum: 3
+  characterAttributes:
+  - {fileID: 11400000, guid: 9d820155717c9d447909a9384cc72332, type: 2}
 --- !u!213 &973658401
 Sprite:
   m_ObjectHideFlags: 0
@@ -15353,6 +15369,7 @@ GameObject:
   - component: {fileID: 1349730388}
   - component: {fileID: 1349730389}
   - component: {fileID: 1349730390}
+  - component: {fileID: 1349730391}
   m_Layer: 0
   m_Name: Interaction Room Kemendagri
   m_TagString: Untagged
@@ -15541,6 +15558,21 @@ MonoBehaviour:
   showActionPanel: {fileID: 6652186363666483434, guid: b90510c008f16e24281d1a8eade3584d, type: 3}
   parentPanel: {fileID: 792356639}
   showActionEventPanel: {fileID: 6652186363666483434, guid: cd514a537aae9044fb57c00959805f93, type: 3}
+--- !u!114 &1349730391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349730382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a980e71143ab4774693f62b47ea78e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  divisionEnum: 0
+  characterAttributes:
+  - {fileID: 11400000, guid: 3923c8cde09cff14d85b6bceb38cd098, type: 2}
 --- !u!114 &1352085069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18109,6 +18141,7 @@ GameObject:
   - component: {fileID: 1894792020}
   - component: {fileID: 1894792021}
   - component: {fileID: 1894792022}
+  - component: {fileID: 1894792023}
   m_Layer: 0
   m_Name: Interaction Room litbang
   m_TagString: Untagged
@@ -18297,6 +18330,20 @@ MonoBehaviour:
   showActionPanel: {fileID: 6652186363666483434, guid: b90510c008f16e24281d1a8eade3584d, type: 3}
   parentPanel: {fileID: 792356639}
   showActionEventPanel: {fileID: 6652186363666483434, guid: cd514a537aae9044fb57c00959805f93, type: 3}
+--- !u!114 &1894792023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894792014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a980e71143ab4774693f62b47ea78e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  divisionEnum: 3
+  characterAttributes: []
 --- !u!213 &1900382605
 Sprite:
   m_ObjectHideFlags: 0

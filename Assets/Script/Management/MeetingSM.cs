@@ -32,6 +32,7 @@ namespace Leadership.Management
         private GameObject loadingText;
         private Manage manageDB;
         private ActionSystem actionSystem;
+        private TrialScript cameraScript;
         private int startMeetingDate;
         private GameObject MeetingUI; 
         private AttributesMechanic attributesMechanic;
@@ -54,6 +55,7 @@ namespace Leadership.Management
             manageDB = GetComponent<Manage>();
             actionSystem = GetComponent<ActionSystem>();
             attributesMechanic = FindObjectOfType<AttributesMechanic>();
+            cameraScript = FindObjectOfType<TrialScript>();
 
  
         }
@@ -105,6 +107,9 @@ namespace Leadership.Management
         {
             return meetingSystem;
         }
+
+        public TrialScript CameraSystem()
+        { return cameraScript; }
 
         public Manage GetManage()
         { return manageDB; }
@@ -220,6 +225,7 @@ namespace Leadership.Management
             
             gameSM.ChangeState(gameSM.playState);
             statusLeaderUI.SetActive(false);
+            cameraScript.SetCameraStop(false);
    
             
         }

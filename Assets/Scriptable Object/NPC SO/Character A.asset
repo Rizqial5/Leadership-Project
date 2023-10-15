@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character A
   m_EditorClassIdentifier: 
   nameCharacter: Andy
-  divisionEnum: 1
+  divisionEnum: 3
   characterLeaderStatsTotal:
   - category: 0
     value: 50

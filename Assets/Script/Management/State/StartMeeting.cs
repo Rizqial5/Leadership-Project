@@ -20,6 +20,7 @@ namespace Leadership.Management
             base.Enter();
 
             _meetingSM.GetStatusScript().ChangeStatus("Meeting in Progress");
+            
         }
         public override void UpdateLogic()
         {
@@ -66,6 +67,8 @@ namespace Leadership.Management
         public override void Exit()
         {
             base.Exit();
+
+           
 
             if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event")
             {

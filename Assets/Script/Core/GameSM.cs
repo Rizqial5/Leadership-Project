@@ -18,6 +18,7 @@ namespace Leadership.Core
         private LeadershipMechanic leadershipMechanic;
         private ActionDatabase actionDatabase;
         
+        
         private void Awake() 
         {
             planState = new Plan(this);
@@ -26,6 +27,7 @@ namespace Leadership.Core
 
             leadershipMechanic = FindObjectOfType<LeadershipMechanic>();
             actionDatabase = FindObjectOfType<ActionDatabase>();
+            
         }
 
         public override void PlayButton()
@@ -72,6 +74,8 @@ namespace Leadership.Core
         {
             return actionDatabase;
         }
+
+        
 
         public void ChangeModeText()
         {
