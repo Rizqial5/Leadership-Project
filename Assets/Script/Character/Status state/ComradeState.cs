@@ -18,8 +18,6 @@ namespace Leadership.Character
         {
             _statusSM.GetCharacterMechanic().SetModifierAttribute(1.2f,LeadershipEnum.Influence);
 
-            //relationship Event Unlock
-            //notif relationship event
         }
 
         public override void UpdateLogic()
@@ -28,8 +26,6 @@ namespace Leadership.Character
             {
                 _statusSM.IsCharacterLevelUpFive(true);
                
-                //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
-                //test---
                if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(5))
                 {
                     _statusSM.PrintText("Anggota level Up");
@@ -39,12 +35,6 @@ namespace Leadership.Character
             }else if(!_statusSM.EligbleToNextLevel(5))
             {
                 _statusSM.IsCharacterLevelUpFive(false);
-            }
-
-            // Testing Only
-            if(Input.GetKeyDown(KeyCode.G))
-            {
-                _statusSM.NextLevel();
             }
         }
     }

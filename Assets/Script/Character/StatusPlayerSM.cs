@@ -1,4 +1,4 @@
- using Leadership.Core;
+using Leadership.Core;
 using UnityEngine;
 
 namespace Leadership.Character

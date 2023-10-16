@@ -57,13 +57,5 @@ namespace Leadership.Character
             _moveSM.animator.SetFloat("Horizontal", ( _moveSM.dir.x));
             _moveSM.animator.SetFloat("Vertical", ( _moveSM.dir.y));
         }
-
-
-
-
-
-
-
-        
     }
 }

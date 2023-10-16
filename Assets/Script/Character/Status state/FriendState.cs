@@ -18,8 +18,7 @@ namespace Leadership.Character
         {
             _statusSM.GetCharacterMechanic().SetModifierAttribute(1.2f, LeadershipEnum.Relation);
 
-            //relationship Event Unlock
-            //notif relationship event
+         
         }
 
         public override void UpdateLogic()
@@ -27,11 +26,6 @@ namespace Leadership.Character
             if(_statusSM.EligbleToNextLevel(2))
             {
                 _statusSM.IsCharacterLevelUpThree(true);
-               
-                //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
-                //test---
-               
-                //test----
 
                 if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(3))
                 {

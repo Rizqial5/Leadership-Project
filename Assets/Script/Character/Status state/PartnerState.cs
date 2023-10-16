@@ -17,9 +17,6 @@ namespace Leadership.Character
         public override void Enter()
         {
             _statusSM.GetCharacterMechanic().SetModifierAttribute(1.2f, LeadershipEnum.Trust);
-
-            //relationship Event Unlock
-            //notif relationship event
         }
 
         public override void UpdateLogic()
@@ -27,8 +24,7 @@ namespace Leadership.Character
             if(_statusSM.EligbleToNextLevel(3))
             {
                 _statusSM.IsCharacterLevelUpFour(true);
-                //bertujuan untuk memberikan tanda bahwa character itu sudah bisa level up
-                //test---
+                
                
                 if(_statusSM.GetCharacterLevelUpTwo() && _statusSM.LeadershipIsLevelUp(4))
                 {
@@ -41,11 +37,6 @@ namespace Leadership.Character
                 _statusSM.IsCharacterLevelUpFour(false);
             }
 
-            // Testing Only
-            //if(Input.GetKeyDown(KeyCode.G))
-            //{
-            //    _statusSM.NextLevel();
-            //}
         }
     }
 }
