@@ -69,6 +69,8 @@ namespace Leadership.Core
         {
             base.Exit();
             int levelPlayerNow = _gameSM.GetLeadershipMechanic().GetLevelLeadershipPlayer() + 1;
+
+            _gameSM.GetLeadershipMechanic().CanLevelUp(levelPlayerNow);
             
         }
     }

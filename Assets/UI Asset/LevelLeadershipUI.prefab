@@ -780,8 +780,9 @@ MonoBehaviour:
   ChangeBox: {fileID: 2634128440781684342}
   spawnDescList: {fileID: 1501028416923489186, guid: b32b2f7eb08f3af468c939d15f175ceb, type: 3}
   upgradeButton: {fileID: 8999398026289239007}
-  checkedImage: {fileID: 0}
-  uncheckedImage: {fileID: 0}
+  checkedImage: {fileID: -4394085250580673567, guid: c9ac123cff3bf4445912ae5e82dd54e2, type: 3}
+  uncheckedImage: {fileID: -5413787436848311653, guid: c9ac123cff3bf4445912ae5e82dd54e2, type: 3}
+  spawnedObjects: []
 --- !u!1 &1665357148273842718
 GameObject:
   m_ObjectHideFlags: 0

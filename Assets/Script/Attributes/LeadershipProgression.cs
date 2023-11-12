@@ -12,12 +12,20 @@ namespace Leadership.Attribute
         
         
         Dictionary<int, Dictionary<LeadershipEnum,float>> progressionTableLookUp = null;
+        Dictionary<int, string> benefitLeadershipText = null;
 
         public float GetRequireStat(LeadershipEnum leadershipEnum,int levelLead)
         {
             BuildLookupTable();
 
             return progressionTableLookUp[levelLead][leadershipEnum];
+        }
+
+        public string GetBenefitLeadershipText(int levelNow)
+        {
+            BuildLookupBenefitTabel();
+
+            return benefitLeadershipText[levelNow];
         }
 
         public Dictionary<LeadershipEnum,float> GetAllStat(int levelLead)
@@ -48,6 +56,19 @@ namespace Leadership.Attribute
                 progressionTableLookUp[progressionLeadershipLevel.levelLeadership] = statLeadLookup;
             }
         }
+
+        public void BuildLookupBenefitTabel()
+        {
+            if (benefitLeadershipText != null) return;
+
+            benefitLeadershipText = new Dictionary<int, string>();
+
+            foreach (ProgressionLeadershipLevel progressionLeadershipLevel in progressionLeadershipLevels)
+            {
+
+                benefitLeadershipText[progressionLeadershipLevel.levelLeadership] = progressionLeadershipLevel.benefitLevel;
+            }
+        }
     }
 
     [System.Serializable]
@@ -55,6 +76,9 @@ namespace Leadership.Attribute
     {
         public int levelLeadership;
         public LeadershipStat[] leadershipStats;
+
+        [TextArea(2, 10)]
+        public string benefitLevel;
     } 
 
     [System.Serializable]

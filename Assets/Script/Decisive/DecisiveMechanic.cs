@@ -20,6 +20,7 @@ namespace Leadership.Decisive
         private int numberQuestion = 1;
         private bool isDecisiveCase;
         private int levelNow;
+        private int wwrongAnswerCOunt;
         
         public UnityEvent OnAfterChooseAnswer;
         public UnityEvent OnLevelUp;
@@ -83,8 +84,10 @@ namespace Leadership.Decisive
         {
             yield return new WaitForSeconds(1f);
 
-            ///edit untuk menentukan maks
+      
+
             
+
             SpawnDecisiveCase(LevelNow - 1,numberQuestion); // perlu diedit
             numberQuestion++;
 
@@ -98,8 +101,9 @@ namespace Leadership.Decisive
         {
             totalCorrectAnswer += 1;
             print("Total jawaban betul " + totalCorrectAnswer);
-            
-            if(totalCorrectAnswer == 3)
+
+
+            if (totalCorrectAnswer == 3)
             {
                 OnLevelUp.Invoke();
                 totalCorrectAnswer = 0;
@@ -108,13 +112,24 @@ namespace Leadership.Decisive
             
         }
 
+        public int CountWrongAnswer()
+        {
+            wwrongAnswerCOunt++;
+            print(wwrongAnswerCOunt);
+
+            return wwrongAnswerCOunt;
+
+
+        }
+
         public void PenaltyAccumulation()
         {
-            if(totalCorrectAnswer < 3)
+            if(wwrongAnswerCOunt >= 1)
             {
-                // penaltyDecisiveCaseCount = 3;
+                penaltyDecisiveCaseCount = 3;
                 onPenaltyActive.Invoke();
                 totalCorrectAnswer = 0;
+                wwrongAnswerCOunt = 0;
             }
         }
 

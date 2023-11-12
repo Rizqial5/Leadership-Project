@@ -31,6 +31,6 @@ MonoBehaviour:
   - nameDes: Mencoba untuk memberikan saran mengenai setiap sie kegiatan.
     caseEffects:
     - leadershipEnum: 1
-      effectAttribute: 0
+      effectAttribute: 10
     caseOrgEffects: []
   illustrationImage: {fileID: 0}

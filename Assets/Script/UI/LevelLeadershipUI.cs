@@ -4,7 +4,7 @@ using UnityEngine;
 using Leadership.Attribute;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.AI;
+
 
 namespace Leadership.UI
 {
@@ -68,10 +68,12 @@ namespace Leadership.UI
             SpawnDescList("Morale : "+leadershipProgression.GetRequireStat(LeadershipEnum.Morale,level).ToString(), 2, .3f);
             SpawnDescList("Trust : "+leadershipProgression.GetRequireStat(LeadershipEnum.Trust,level).ToString(), 3, .3f);
 
+            ChangeBox.GetComponent<TextMeshProUGUI>().text = leadershipProgression.GetBenefitLeadershipText(level);
+
             spawnedObjects = GameObject.FindGameObjectsWithTag("SpawnObject");
 
             
-
+            
         }
 
         public void CheckIfEligible(int level)

@@ -48,9 +48,9 @@ namespace Leadership.Core
         }
         private void Update() 
         {
-            //CanLevelUp(levelNow+1);
+            //CanLevelUp(levelNow + 1);
             //Testing-----------
-            if(Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 AddAllMemberAttribute(50);
             }
@@ -238,7 +238,7 @@ namespace Leadership.Core
                     return false;
                     
                 }
-                
+                print("bisa");
                 levelLeadershipUI.IsCheckedLevel2 = true;
                 return true;
             }else if(levelUp == 3)

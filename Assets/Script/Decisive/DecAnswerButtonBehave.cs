@@ -16,6 +16,9 @@ namespace Leadership.Decisive
             if(correctAnswer == true)
             {
                 FindObjectOfType<DecisiveMechanic>().CountCorrectAnswer();
+            }else if(correctAnswer == false)
+            {
+                FindObjectOfType<DecisiveMechanic>().CountWrongAnswer();
             }
 
             FindObjectOfType<DecisiveMechanic>().OnAfterChooseAnswer.Invoke();
