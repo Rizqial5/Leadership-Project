@@ -24,3 +24,4 @@ MonoBehaviour:
   - category: 3
     value: 50
   leadershpLevel: 0
+  characterPicture: {fileID: 1090217281897295437, guid: 201dd9c6da0a0ee448fc6e708626b269, type: 3}

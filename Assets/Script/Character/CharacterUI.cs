@@ -21,6 +21,8 @@ namespace Leadership.Character
 
         [SerializeField] public TextMeshProUGUI statusState;
 
+        [SerializeField] public Image characterPicture;
+
         public void CloseUI()
         {
             gameObject.SetActive(false);

@@ -34,9 +34,11 @@ namespace Leadership.Character
             characterUI.relationAttribute.text = characterAttributesSO.GetStatValue(Attribute.LeadershipEnum.Relation).ToString();
             characterUI.influenceAttribute.text = characterAttributesSO.GetStatValue(Attribute.LeadershipEnum.Influence).ToString();
             characterUI.moraleAttribute.text = characterAttributesSO.GetStatValue(Attribute.LeadershipEnum.Morale).ToString();
+            characterUI.characterPicture.sprite = characterAttributesSO.GetCharacterPicture();
 
             characterUI.leadershipLevels.text = GetComponent<CharacterMechanic>().GetLevelLead().ToString();
             characterUI.statusState.text = GetComponent<StatusPlayerSM>().GetCurentStatusStateText();
+            
 
                 
                 

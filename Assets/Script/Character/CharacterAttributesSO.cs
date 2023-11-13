@@ -15,6 +15,7 @@ namespace Leadership.Character
         [SerializeField] DivisionEnum divisionEnum;
         [SerializeField] CharacterLeaderStats[] characterLeaderStatsTotal;
         [SerializeField] int leadershpLevel;
+        [SerializeField] Sprite characterPicture;
         
 
         Dictionary<LeadershipEnum, float> characterValueStatsTable;
@@ -48,6 +49,11 @@ namespace Leadership.Character
         public string GetNameCharacter()
         {
             return nameCharacter;
+        }
+
+        public Sprite GetCharacterPicture()
+        {
+            return characterPicture;
         }
 
         public DivisionEnum GetDivisionCharacter()
