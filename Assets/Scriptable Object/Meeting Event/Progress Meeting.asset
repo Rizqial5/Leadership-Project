@@ -33,4 +33,4 @@ MonoBehaviour:
     - leadershipEnum: 1
       effectAttribute: 10
     caseOrgEffects: []
-  illustrationImage: {fileID: 0}
+  illustrationImage: {fileID: 21300000, guid: 13f331a50d5ba484a8ea5147e6629df9, type: 3}

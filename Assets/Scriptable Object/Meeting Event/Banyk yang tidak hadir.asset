@@ -45,4 +45,4 @@ MonoBehaviour:
     - leadershipEnum: 3
       effectAttribute: -5
     caseOrgEffects: []
-  illustrationImage: {fileID: 0}
+  illustrationImage: {fileID: 21300000, guid: a20be17d5b6589747957679e44350d3b, type: 3}

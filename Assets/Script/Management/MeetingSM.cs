@@ -37,6 +37,8 @@ namespace Leadership.Management
         private GameObject MeetingUI; 
         private AttributesMechanic attributesMechanic;
         private GameObject statusRoomButton;
+
+        private bool isToPause;
         
         
 
@@ -196,6 +198,8 @@ namespace Leadership.Management
             stateNow = manageDB.startMeetingDay.ToString();
         }
 
+        
+
         public int GetMeetingTotal()
         {
             return manageDB.meetingTotal;
@@ -247,6 +251,16 @@ namespace Leadership.Management
         {
             return decisionEventUI.gameObject.activeSelf ;
             
+        }
+
+        public bool SetBooleanPause(bool value)
+        {
+            return isToPause = value;
+        }
+
+        public bool GetBoolPause()
+        {
+            return isToPause;
         }
 
         //Start Meeting Mechanic

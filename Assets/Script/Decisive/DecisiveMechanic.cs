@@ -14,6 +14,7 @@ namespace Leadership.Decisive
         [SerializeField] DecisivieCaseSO[] decisiveCases;
 
         [SerializeField] DecisionEventUI decisionEventUI;
+        [SerializeField] Sprite imageIllustration;
         private int penaltyDecisiveCaseCount = 0;
 
         private int totalCorrectAnswer;
@@ -60,6 +61,7 @@ namespace Leadership.Decisive
 
             decisionEventUI.SetHeaderText(decisiveCase.name);
             decisionEventUI.SetStoryText(decisiveCase.GetDecisiveQuestion(decisiveQuestionNumber));
+            decisionEventUI.SetImage(imageIllustration);
 
             print(decisiveCase.GetDecisiveAnswer(decisiveQuestionNumber).Length);
 

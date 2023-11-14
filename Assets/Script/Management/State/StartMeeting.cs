@@ -20,6 +20,7 @@ namespace Leadership.Management
             base.Enter();
 
             _meetingSM.GetStatusScript().ChangeStatus("Meeting in Progress");
+            _meetingSM.SetBooleanPause(false);
             
         }
         public override void UpdateLogic()
@@ -47,6 +48,7 @@ namespace Leadership.Management
 
             if(_meetingSM.GetGameSM().GetCurrentState() == _meetingSM.GetGameSM().pauseState)
             {
+                _meetingSM.SetBooleanPause(true);
                 _meetingSM.ChangeState(_meetingSM.pauseMeetingState);
             }
 
@@ -70,10 +72,12 @@ namespace Leadership.Management
 
            
 
-            if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event")
+            if (_meetingSM.GetManage().GetPlannedMeetingCategory() == "Event" && !_meetingSM.GetBoolPause()) 
             {
                 _meetingSM.GetActionSystem().AddCountedTimeMeeting();
-                _meetingSM.PrintString("masuk");
+                //_meetingSM.GetCurrentState();
+                //_meetingSM.PrintString("masuk" + _meetingSM.GetManage().GetPlannedMeetingCategory());
+                
             }
             // _meetingSM.SaveOldState(this);
         }

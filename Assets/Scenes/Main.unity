@@ -7137,6 +7137,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 015de98d75811894c836d150dce3452c, type: 2}
   - {fileID: 11400000, guid: a1f6a2bee1a9b304b80ccaaa0aba3245, type: 2}
   decisionEventUI: {fileID: 1080257543}
+  imageIllustration: {fileID: 21300000, guid: cfcbf4095e6ddb84582cbda2e59c674d, type: 3}
   OnAfterChooseAnswer:
     m_PersistentCalls:
       m_Calls:

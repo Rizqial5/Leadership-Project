@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 namespace Leadership.Core
@@ -24,7 +25,7 @@ namespace Leadership.Core
         void Update()
         {
             
-            // print(turnSystem.IsPlay());
+            if(Input.GetKeyDown(KeyCode.Escape)) { SceneManager.LoadScene("Menu Scene"); }
             
         }
     }

@@ -38,4 +38,4 @@ MonoBehaviour:
     caseOrgEffects:
     - organisationEnum: 4
       effectAttribute: -5
-  illustrationImage: {fileID: 0}
+  illustrationImage: {fileID: 21300000, guid: 0c61ebc52493c4349a30b13b29b90381, type: 3}
