@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC_05
   m_EditorClassIdentifier: 
   nameCharacter: Avila
-  divisionEnum: 0
+  divisionEnum: 3
   characterLeaderStatsTotal:
   - category: 0
     value: 50
@@ -24,4 +24,4 @@ MonoBehaviour:
   - category: 3
     value: 50
   leadershpLevel: 0
-  characterPicture: {fileID: 0}
+  characterPicture: {fileID: -7433895053108454224, guid: 2e5fdc9b3a969bf45a52a1845e33f357, type: 3}

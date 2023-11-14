@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea84dd52b06e8c7418c433aa31793f75, type: 3}
-  m_Name: NPC_04
+  m_Name: NPC_10
   m_EditorClassIdentifier: 
-  nameCharacter: Jasmine
-  divisionEnum: 0
+  nameCharacter: Taylor
+  divisionEnum: 4
   characterLeaderStatsTotal:
   - category: 0
     value: 50
@@ -24,4 +24,4 @@ MonoBehaviour:
   - category: 3
     value: 50
   leadershpLevel: 0
-  characterPicture: {fileID: 4080856591846350418, guid: 973aa0b01a8a5b840a5b0897b8c3069b, type: 3}
+  characterPicture: {fileID: 7478852906852563822, guid: a417fe90ea900c948816aa969db6d43a, type: 3}
