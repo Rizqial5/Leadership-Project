@@ -903,6 +903,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSystem: {fileID: 1522447151746986753}
+  leadershipMechanic: {fileID: 570671797}
+  gameEndObject: {fileID: 4706289689001028173, guid: d030cbb01e68b30429213619bad9b136, type: 3}
+  parentGameEnd: {fileID: 792356639}
+  timeLimit: 20
 --- !u!4 &37565403
 Transform:
   m_ObjectHideFlags: 0
@@ -24698,6 +24702,10 @@ PrefabInstance:
       propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 37565405}
+    - target: {fileID: 5725873638356702508, guid: a030091f605a3904cb4e92e0c17fe5a9, type: 3}
+      propertyPath: OnChangeWeek.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: set_TotalWeek
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a030091f605a3904cb4e92e0c17fe5a9, type: 3}
 --- !u!1001 &8350737114592177112

@@ -113,7 +113,7 @@ namespace Leadership.Core
         {
             get{return calenderTime;} set{calenderTime = value;}
         }
-        public int ToatlWeek
+        public int TotalWeek
         {
             get{return totalWeek;} set{totalWeek += value;}
         }

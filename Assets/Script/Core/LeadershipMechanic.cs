@@ -328,6 +328,11 @@ namespace Leadership.Core
             decisiveMechanic.SpawnDecisiveCase(levelNow-1,0);
        }
 
+        public int GetLevelNow()
+        {
+            return levelNow;
+        }
+
         //Implementation Insight
 
        public void SpawnInsight()
